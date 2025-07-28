@@ -1,0 +1,1666 @@
+/*
+ * ========================================
+ * UMAY AJANS - MARKANIZI ÖNE ÇIKARALIM!
+ * ========================================
+ * Website: https://www.umayajans.com
+ * Email: hi@umayajans.com
+ * Phone: +90 (850) 242 56 40
+ * 
+ * Project: Anka Space Website
+ * File: Custom CSS Styles
+ * Version: 1.0
+ * Date: 2025
+ * 
+ * © 2025 Umay Ajans. All rights reserved.
+ * ========================================
+ */
+
+/* Font Families */
+
+.font-orbitron {
+    font-family: 'Orbitron', monospace;
+}
+
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+.font-geist-mono {
+    font-family: 'Geist Mono', monospace;
+}
+
+/* Modern Smooth Scroll & Custom Scrollbar */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar for Webkit browsers (Chrome, Safari, Edge) */
+
+::-webkit-scrollbar {
+    width: 12px;
+    background: #000000;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 6px;
+    border: 2px solid #000000;
+    transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e5e5e5;
+    border: 1px solid #000000;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #d4d4d4;
+}
+
+/* Custom Scrollbar for Firefox */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff #000000;
+}
+
+/* Enhanced scroll snap for sections */
+
+section {
+    scroll-margin-top: 80px;
+}
+
+/* Rising Stars Animation for Header Decoration */
+
+.stars-rising {
+    height: 212px;
+    left: 50%;
+    -webkit-mask-image: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, .8) 25%, #d9d9d9 50%, rgba(217, 217, 217, .8) 75%, rgba(217, 217, 217, 0) 100%);
+    mask-image: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, .8) 25%, #d9d9d9 50%, rgba(217, 217, 217, .8) 75%, rgba(217, 217, 217, 0) 100%);
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    position: absolute;
+    top: 350px;
+    transform: translate(-50%);
+    width: 936px;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.stars-rising::before,
+.stars-rising::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: starFloat 8s ease-in-out infinite;
+}
+
+.stars-rising::before {
+    top: 20%;
+    left: 25%;
+    animation-delay: 0s;
+    box-shadow: 50px 30px 0 rgba(255, 255, 255, 0.8), 120px 10px 0 rgba(255, 255, 255, 0.6), 200px 45px 0 rgba(255, 255, 255, 0.9), 300px 25px 0 rgba(255, 255, 255, 0.7), 400px 35px 0 rgba(255, 255, 255, 0.8), 500px 15px 0 rgba(255, 255, 255, 0.6), 600px 40px 0 rgba(255, 255, 255, 0.9), 700px 20px 0 rgba(255, 255, 255, 0.7);
+}
+
+.stars-rising::after {
+    top: 60%;
+    left: 35%;
+    animation-delay: 4s;
+    box-shadow: 80px 20px 0 rgba(255, 255, 255, 0.7), 150px 35px 0 rgba(255, 255, 255, 0.8), 250px 15px 0 rgba(255, 255, 255, 0.6), 350px 40px 0 rgba(255, 255, 255, 0.9), 450px 25px 0 rgba(255, 255, 255, 0.7), 550px 30px 0 rgba(255, 255, 255, 0.8), 650px 10px 0 rgba(255, 255, 255, 0.6);
+}
+
+/* What We Do Stars Animation */
+
+.www-stars-rising {
+    height: 212px;
+    left: 50%;
+    -webkit-mask-image: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, .8) 25%, #d9d9d9 50%, rgba(217, 217, 217, .8) 75%, rgba(217, 217, 217, 0) 100%);
+    mask-image: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, .8) 25%, #d9d9d9 50%, rgba(217, 217, 217, .8) 75%, rgba(217, 217, 217, 0) 100%);
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    position: absolute;
+    top: 350px;
+    transform: translate(-50%);
+    width: 936px;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.www-stars-rising::before,
+.www-stars-rising::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: starFloat 8s ease-in-out infinite;
+}
+
+.www-stars-rising::before {
+    top: 20%;
+    left: 25%;
+    animation-delay: 1s;
+    box-shadow: 60px 25px 0 rgba(255, 255, 255, 0.8), 130px 15px 0 rgba(255, 255, 255, 0.6), 210px 40px 0 rgba(255, 255, 255, 0.9), 310px 30px 0 rgba(255, 255, 255, 0.7), 410px 20px 0 rgba(255, 255, 255, 0.8), 510px 35px 0 rgba(255, 255, 255, 0.6), 610px 25px 0 rgba(255, 255, 255, 0.9);
+}
+
+.www-stars-rising::after {
+    top: 60%;
+    left: 35%;
+    animation-delay: 5s;
+    box-shadow: 70px 15px 0 rgba(255, 255, 255, 0.7), 140px 30px 0 rgba(255, 255, 255, 0.8), 240px 20px 0 rgba(255, 255, 255, 0.6), 340px 35px 0 rgba(255, 255, 255, 0.9), 440px 25px 0 rgba(255, 255, 255, 0.7), 540px 15px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Harvard Advantage Stars Animation */
+
+.harvard-stars-rising {
+    height: 212px;
+    left: 50%;
+    -webkit-mask-image: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, .8) 25%, #d9d9d9 50%, rgba(217, 217, 217, .8) 75%, rgba(217, 217, 217, 0) 100%);
+    mask-image: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, .8) 25%, #d9d9d9 50%, rgba(217, 217, 217, .8) 75%, rgba(217, 217, 217, 0) 100%);
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    position: absolute;
+    top: 60px;
+    transform: translate(-50%);
+    width: 936px;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.harvard-stars-rising::before,
+.harvard-stars-rising::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: starFloat 8s ease-in-out infinite;
+}
+
+.harvard-stars-rising::before {
+    top: 20%;
+    left: 25%;
+    animation-delay: 1.5s;
+    box-shadow: 55px 30px 0 rgba(255, 255, 255, 0.8), 125px 15px 0 rgba(255, 255, 255, 0.6), 205px 45px 0 rgba(255, 255, 255, 0.9), 305px 25px 0 rgba(255, 255, 255, 0.7), 405px 35px 0 rgba(255, 255, 255, 0.8), 505px 20px 0 rgba(255, 255, 255, 0.6), 605px 40px 0 rgba(255, 255, 255, 0.9);
+}
+
+.harvard-stars-rising::after {
+    top: 60%;
+    left: 35%;
+    animation-delay: 5.5s;
+    box-shadow: 75px 20px 0 rgba(255, 255, 255, 0.7), 145px 35px 0 rgba(255, 255, 255, 0.8), 245px 15px 0 rgba(255, 255, 255, 0.6), 345px 40px 0 rgba(255, 255, 255, 0.9), 445px 25px 0 rgba(255, 255, 255, 0.7), 545px 30px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Why This Matters Stars Animation */
+
+.wtm-stars-rising {
+    height: 212px;
+    left: 50%;
+    -webkit-mask-image: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, .8) 25%, #d9d9d9 50%, rgba(217, 217, 217, .8) 75%, rgba(217, 217, 217, 0) 100%);
+    mask-image: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, .8) 25%, #d9d9d9 50%, rgba(217, 217, 217, .8) 75%, rgba(217, 217, 217, 0) 100%);
+    -webkit-mask-size: cover;
+    mask-size: cover;
+    position: absolute;
+    top: 350px;
+    transform: translate(-50%);
+    width: 936px;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.wtm-stars-rising::before,
+.wtm-stars-rising::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: starFloat 8s ease-in-out infinite;
+}
+
+.wtm-stars-rising::before {
+    top: 20%;
+    left: 25%;
+    animation-delay: 2s;
+    box-shadow: 45px 35px 0 rgba(255, 255, 255, 0.8), 115px 20px 0 rgba(255, 255, 255, 0.6), 195px 50px 0 rgba(255, 255, 255, 0.9), 295px 15px 0 rgba(255, 255, 255, 0.7), 395px 40px 0 rgba(255, 255, 255, 0.8), 495px 25px 0 rgba(255, 255, 255, 0.6), 595px 30px 0 rgba(255, 255, 255, 0.9);
+}
+
+.wtm-stars-rising::after {
+    top: 60%;
+    left: 35%;
+    animation-delay: 6s;
+    box-shadow: 85px 25px 0 rgba(255, 255, 255, 0.7), 155px 40px 0 rgba(255, 255, 255, 0.8), 255px 10px 0 rgba(255, 255, 255, 0.6), 355px 45px 0 rgba(255, 255, 255, 0.9), 455px 20px 0 rgba(255, 255, 255, 0.7), 555px 35px 0 rgba(255, 255, 255, 0.8);
+}
+
+@keyframes starFloat {
+    0% {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-80px);
+        opacity: 0;
+    }
+}
+
+/* Responsive adjustments for rising stars */
+
+@media (max-width: 1200px) {
+    .stars-rising,
+    .www-stars-rising,
+    .wtm-stars-rising {
+        width: 700px;
+        height: 160px;
+        top: 280px;
+    }
+    .harvard-stars-rising {
+        width: 700px;
+        height: 160px;
+        top: 200px;
+    }
+    .stars-rising::before,
+    .www-stars-rising::before,
+    .wtm-stars-rising::before,
+    .harvard-stars-rising::before {
+        box-shadow: 40px 25px 0 rgba(255, 255, 255, 0.8), 100px 8px 0 rgba(255, 255, 255, 0.6), 160px 35px 0 rgba(255, 255, 255, 0.9), 240px 20px 0 rgba(255, 255, 255, 0.7), 320px 30px 0 rgba(255, 255, 255, 0.8), 400px 12px 0 rgba(255, 255, 255, 0.6), 480px 32px 0 rgba(255, 255, 255, 0.9);
+    }
+    .stars-rising::after,
+    .www-stars-rising::after,
+    .wtm-stars-rising::after,
+    .harvard-stars-rising::after {
+        box-shadow: 60px 15px 0 rgba(255, 255, 255, 0.7), 120px 28px 0 rgba(255, 255, 255, 0.8), 200px 12px 0 rgba(255, 255, 255, 0.6), 280px 32px 0 rgba(255, 255, 255, 0.9), 360px 20px 0 rgba(255, 255, 255, 0.7), 440px 25px 0 rgba(255, 255, 255, 0.8);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Hide rising stars on mobile - they interfere with content */
+    .stars-rising,
+    .www-stars-rising,
+    .wtm-stars-rising {
+        display: none !important;
+    }
+    /* Show Harvard stars on mobile with adjusted size */
+    .harvard-stars-rising {
+        width: 300px !important;
+        height: 120px !important;
+        top: 120px !important;
+        /* Bring stars higher up */
+        opacity: 0.8 !important;
+        z-index: 80 !important;
+        /* Below text but above cards */
+    }
+    .stars-rising::before,
+    .www-stars-rising::before,
+    .wtm-stars-rising::before,
+    .stars-rising::after,
+    .www-stars-rising::after,
+    .wtm-stars-rising::after {
+        display: none !important;
+    }
+    /* Harvard stars mobile adjustment */
+    .harvard-stars-rising::before,
+    .harvard-stars-rising::after {
+        display: block !important;
+    }
+    .harvard-stars-rising::before {
+        box-shadow: 25px 15px 0 rgba(255, 255, 255, 0.8), 60px 8px 0 rgba(255, 255, 255, 0.6), 95px 20px 0 rgba(255, 255, 255, 0.9), 130px 12px 0 rgba(255, 255, 255, 0.7);
+    }
+    .harvard-stars-rising::after {
+        box-shadow: 40px 10px 0 rgba(255, 255, 255, 0.7), 75px 18px 0 rgba(255, 255, 255, 0.8), 110px 6px 0 rgba(255, 255, 255, 0.6);
+    }
+}
+
+/* Hero Background */
+
+.space-bg {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 70%, rgba(0, 0, 0, 0) 100%), radial-gradient(ellipse at bottom center, rgba(59, 130, 246, 0.3) 0%, rgba(139, 92, 246, 0.2) 30%, rgba(16, 185, 129, 0.1) 60%, rgba(0, 0, 0, 0.9) 80%, #000000 100%), radial-gradient(ellipse at center, #1a1a2e 0%, #0f0f23 50%, #000000 100%);
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    height: 100vh;
+}
+
+/* Radar Background */
+
+.radar-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../images/radar_dec.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+/* Radar Ping Effects */
+
+.radar-background::before,
+.radar-background::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background: rgba(147, 51, 234, 0.9);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: radar-ping-purple 4s ease-out infinite;
+    box-shadow: 0 0 10px rgba(147, 51, 234, 0.6);
+}
+
+.radar-background::before {
+    animation-delay: 0s;
+}
+
+.radar-background::after {
+    animation-delay: 2s;
+}
+
+@keyframes radar-ping-purple {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+        box-shadow: 0 0 10px rgba(147, 51, 234, 0.8);
+    }
+    20% {
+        transform: translate(-50%, -50%) scale(5);
+        opacity: 0.8;
+        box-shadow: 0 0 20px rgba(147, 51, 234, 0.6);
+    }
+    40% {
+        transform: translate(-50%, -50%) scale(12);
+        opacity: 0.5;
+        box-shadow: 0 0 30px rgba(147, 51, 234, 0.4);
+    }
+    60% {
+        transform: translate(-50%, -50%) scale(20);
+        opacity: 0.3;
+        box-shadow: 0 0 40px rgba(147, 51, 234, 0.2);
+    }
+    80% {
+        transform: translate(-50%, -50%) scale(30);
+        opacity: 0.1;
+        box-shadow: 0 0 50px rgba(147, 51, 234, 0.1);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(40);
+        opacity: 0;
+        box-shadow: 0 0 60px rgba(147, 51, 234, 0);
+    }
+}
+
+/* Floating Glow Effects */
+
+.floating-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(29, 78, 216, 0.15) 0%, rgba(59, 130, 246, 0.08) 40%, transparent 70%);
+    animation: float-glow 15s ease-in-out infinite;
+    top: 20%;
+    left: -10%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-glow:nth-child(2) {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, rgba(34, 197, 94, 0.05) 40%, transparent 70%);
+    top: 60%;
+    right: -5%;
+    animation-delay: -8s;
+    animation-duration: 20s;
+}
+
+@keyframes float-glow {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0.3;
+    }
+    25% {
+        transform: translate(30px, -40px) scale(1.1);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translate(-20px, -60px) scale(0.9);
+        opacity: 0.4;
+    }
+    75% {
+        transform: translate(40px, -30px) scale(1.05);
+        opacity: 0.6;
+    }
+}
+
+/* Stars */
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+.star:nth-child(odd) {
+    animation-delay: 1s;
+}
+
+.star:nth-child(3n) {
+    animation-delay: 2s;
+}
+
+@keyframes twinkle {
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+/* Mission Stars */
+
+.mission-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: mission-twinkle 2s ease-in-out infinite alternate;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.mission-star:nth-child(even) {
+    animation-delay: 0.5s;
+}
+
+.mission-star:nth-child(3n) {
+    animation-delay: 1s;
+}
+
+.mission-star:nth-child(5n) {
+    animation-delay: 1.5s;
+}
+
+@keyframes mission-twinkle {
+    0%,
+    80%,
+    100% {
+        opacity: 0.1;
+        transform: scale(1);
+    }
+    10%,
+    20% {
+        opacity: 0.8;
+        transform: scale(1.5);
+    }
+    30%,
+    70% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+}
+
+/* Mobile Mission Stars - Hide from card backgrounds */
+
+@media (max-width: 768px) {
+    /* Hide all stars from card backgrounds on mobile */
+    .mission-star {
+        display: none !important;
+    }
+    #what-we-do-stars-container .mission-star,
+    #why-this-matters-stars-container .mission-star {
+        display: none !important;
+    }
+    /* Only show decoration stars - small and minimal */
+    .decoration-stars {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: 50%;
+        width: 2px !important;
+        height: 2px !important;
+        z-index: 40 !important;
+        /* Above cards but below text */
+        animation: decoration-star-float 8s ease-in-out infinite;
+        box-shadow: 0 0 4px rgba(255, 255, 255, 0.6);
+    }
+    @keyframes decoration-star-float {
+        0% {
+            transform: translateY(0px);
+            opacity: 0.3;
+        }
+        50% {
+            opacity: 0.8;
+        }
+        100% {
+            transform: translateY(-40px);
+            opacity: 0;
+        }
+    }
+}
+
+/* Rocket Image */
+
+.rocket-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 25;
+}
+
+.rocket-image-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rocket-image-container img {
+    transition: transform 0.2s ease-out;
+}
+
+.rocket-image-container:hover img {
+    transform: scale(1.05);
+}
+
+/* Roket Drag Özelliği için Düzeltmeler */
+
+#mission-stars-container {
+    pointer-events: none !important;
+    z-index: 20;
+}
+
+/* Mission section'daki engelleyici elementler */
+
+#mission .absolute.inset-0 {
+    pointer-events: none !important;
+}
+
+/* Text içeren elementler için özel durum */
+
+#mission .absolute.inset-0.flex.flex-col.items-center.justify-center {
+    z-index: 15 !important;
+    pointer-events: auto;
+}
+
+/* Background pattern dots */
+
+.floating-glow {
+    pointer-events: none !important;
+    z-index: 1;
+}
+
+/* Glassmorphism */
+
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    z-index: 50;
+}
+
+/* Navigation */
+
+#navbar {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 10000;
+}
+
+#navbar.scrolled {
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-link {
+    font-family: 'Geist Mono', monospace;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.2s ease;
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-link.scrambling {
+    animation: none;
+}
+
+/* Newsletter Section */
+
+.newsletter-stars {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: newsletter-twinkle 3s ease-in-out infinite;
+}
+
+.newsletter-stars:nth-child(odd) {
+    animation-delay: 1s;
+}
+
+.newsletter-stars:nth-child(3n) {
+    animation-delay: 2s;
+}
+
+@keyframes newsletter-twinkle {
+    0%,
+    100% {
+        opacity: 0.2;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.3);
+    }
+}
+
+/* Footer */
+
+.footer-bg {
+    background: #0d1117;
+}
+
+.footer-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+    color: white;
+}
+
+.footer-heading {
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.footer-social {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 20px;
+    transition: all 0.2s ease;
+}
+
+.footer-social:hover {
+    color: white;
+    transform: translateY(-2px);
+}
+
+.footer-copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 24px;
+    margin-top: 32px;
+}
+
+/* Umay Ajans Heart Effect */
+
+.heart-icon {
+    animation: heartbeat 2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+    14% {
+        transform: scale(1.2);
+    }
+    28% {
+        transform: scale(1);
+    }
+    42% {
+        transform: scale(1.2);
+    }
+    70% {
+        transform: scale(1);
+    }
+}
+
+/* Umay Ajans Space Effects */
+
+.umay-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.umay-text {
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 5px rgba(0, 87, 255, 0.5), 0 0 10px rgba(0, 87, 255, 0.3), 0 0 15px rgba(0, 87, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.umay-link:hover .umay-text {
+    text-shadow: 0 0 5px rgba(0, 87, 255, 0.8), 0 0 10px rgba(0, 87, 255, 0.6), 0 0 20px rgba(0, 87, 255, 0.4), 0 0 30px rgba(0, 87, 255, 0.2);
+    color: #3374FF;
+}
+
+.umay-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.umay-link:hover .umay-particles {
+    opacity: 1;
+}
+
+.umay-particles::before,
+.umay-particles::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #0057FF;
+    border-radius: 50%;
+    animation: particle-float 2s ease-in-out infinite;
+    box-shadow: 0 0 6px #0057FF, 0 0 12px #0057FF;
+}
+
+.umay-particles::before {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.umay-particles::after {
+    top: 60%;
+    right: 15%;
+    animation-delay: 1s;
+}
+
+@keyframes particle-float {
+    0% {
+        transform: translateY(0px) scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-10px) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-20px) scale(0);
+        opacity: 0;
+    }
+}
+
+/* Feature Icon Box Hover Effects */
+
+.feature-icon {
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Sustainable Icon Specific Hover */
+
+.sustainable .feature-icon:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(197, 136, 240, 0.4);
+}
+
+/* Innovative Icon Specific Hover */
+
+.innovative .feature-icon:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(231, 208, 249, 0.4);
+}
+
+/* Accessible Icon Specific Hover */
+
+.accessible .feature-icon:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(122, 57, 230, 0.4);
+}
+
+/* Moving Border Newsletter Card */
+
+.newsletter-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem 2rem;
+    overflow: hidden;
+}
+
+.moving-border-wrapper {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+.moving-border-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.moving-border-element {
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, rgba(147, 51, 234, 0.3), rgba(147, 51, 234, 1), rgba(79, 70, 229, 1), rgba(147, 51, 234, 1), rgba(147, 51, 234, 0.3), transparent);
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+    box-shadow: 0 0 15px rgba(147, 51, 234, 0.6);
+    transition: transform 0.1s linear;
+}
+
+/* Enhanced Newsletter Form Styles */
+
+.newsletter-enhanced-input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.newsletter-enhanced-input:focus {
+    outline: none;
+    border-color: rgba(147, 51, 234, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.2);
+    transform: translateY(-1px);
+}
+
+.newsletter-enhanced-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ========================================
+ * RESPONSIVE DESIGN IMPROVEMENTS
+ * ========================================
+ */
+
+/* Mobile First Approach - Base styles for mobile */
+
+@media (max-width: 640px) {
+    /* Prevent horizontal scroll */
+    html,
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        max-width: 100vw;
+    }
+    /* Hero Section Mobile */
+    .space-bg {
+        min-height: 100vh;
+        padding: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+    /* Radar adjustments for mobile */
+    .radar-background {
+        background-size: contain;
+        opacity: 0.4;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+    }
+    /* Hero content mobile */
+    .hero-content {
+        padding: 1rem;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
+    }
+    /* Typography mobile - Much smaller */
+    .hero-title {
+        font-size: 1.75rem !important;
+        /* Much smaller */
+        line-height: 1.2;
+        margin-bottom: 0.75rem;
+        text-align: center;
+        padding: 0 0.5rem;
+        word-wrap: break-word;
+    }
+    .hero-subtitle {
+        font-size: 0.9rem !important;
+        /* Much smaller */
+        margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
+        text-align: center;
+        line-height: 1.4;
+    }
+    /* Buttons mobile - Smaller */
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+        padding: 0 1rem;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .hero-buttons button {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        /* Smaller padding */
+        font-size: 0.85rem !important;
+        /* Smaller font */
+        justify-content: center;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    /* All sections mobile container */
+    section {
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+    /* Harvard section specific mobile fixes */
+    #harvard-advantage {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+        position: relative !important;
+    }
+    /* Harvard section main container */
+    #harvard-advantage>.relative.z-10 {
+        z-index: 50 !important;
+        position: relative !important;
+    }
+    /* Mission Section Mobile */
+    .mission-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        margin-top: -60px !important;
+        width: 100%;
+        max-width: 100%;
+    }
+    /* Decoration images mobile - Bigger for better visibility */
+    .decoration-image {
+        width: 95% !important;
+        height: auto !important;
+        max-width: 450px !important;
+        /* Much bigger for mobile */
+        margin: 0 auto;
+        position: relative !important;
+        z-index: 5 !important;
+        display: block !important;
+        object-fit: contain !important;
+        object-position: center !important;
+    }
+    /* Section headings mobile - Bigger for better visibility */
+    section h2 {
+        font-size: 2rem !important;
+        /* Bigger */
+        line-height: 1.2;
+        padding: 0 0.5rem;
+        text-align: center;
+        word-wrap: break-word;
+    }
+    section p {
+        font-size: 1rem !important;
+        /* Bigger */
+        line-height: 1.5;
+        padding: 0 0.5rem;
+    }
+    /* Cards mobile */
+    .glass {
+        padding: 1rem !important;
+        /* Smaller padding */
+        margin: 0 0.5rem;
+        width: calc(100% - 1rem);
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    /* Rocket container mobile - Bigger for better visibility */
+    .rocket-image-container {
+        min-height: 450px !important;
+        /* Much bigger */
+        padding: 1rem;
+        width: 100%;
+        max-width: 100%;
+    }
+    /* Phoenix rocket image mobile - Bigger */
+    .rocket-image-container img {
+        max-height: 400px !important;
+        /* Much bigger */
+        width: auto !important;
+    }
+    /* Navigation mobile */
+    .nav-link {
+        font-size: 0.9rem;
+        /* Smaller */
+        padding: 0.75rem 0;
+        text-align: center;
+    }
+    /* Footer mobile - Hide video */
+    .video-footer-section {
+        background: #000 !important;
+        /* Solid background instead of video */
+    }
+    .video-footer-section video {
+        display: none !important;
+        /* Hide video on mobile */
+    }
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+        text-align: center !important;
+    }
+    .footer-copyright {
+        flex-direction: column !important;
+        gap: 1rem;
+        text-align: center !important;
+    }
+    .footer-copyright p {
+        font-size: 0.7rem !important;
+        /* Much smaller */
+    }
+    /* Container max-widths */
+    .max-w-7xl,
+    .max-w-6xl,
+    .max-w-5xl,
+    .max-w-4xl {
+        max-width: 100% !important;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+    /* Mission Phoenix grid mobile fix */
+    .mission-grid {
+        margin-top: -60px !important;
+        /* Closer to decoration image */
+        position: relative !important;
+        z-index: 10 !important;
+    }
+    /* What We Do & Why This Matters sections mobile fixes */
+    .what-we-do-grid,
+    .why-this-matters-grid {
+        margin-top: -60px !important;
+        /* Closer to decoration image */
+        position: relative !important;
+        z-index: 10 !important;
+    }
+    /* Mission Phoenix header container - Balanced space */
+    #mission .text-center.mb-6 {
+        margin-bottom: 2rem !important;
+        /* Balanced space */
+    }
+    /* Mission Phoenix specific decoration image - Much bigger */
+    #mission .decoration-image {
+        max-width: 600px !important;
+        /* Even bigger */
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        /* Center it */
+        position: relative !important;
+        z-index: 5 !important;
+        opacity: 1 !important;
+        /* Full opacity */
+        display: block !important;
+        /* Ensure it's visible */
+        min-height: 300px !important;
+        /* Minimum height to ensure visibility */
+    }
+    /* What We Do header container - Balanced space */
+    #what-we-do .text-center.mb-6 {
+        margin-bottom: 2rem !important;
+        /* Balanced space */
+    }
+    /* Why This Matters header container - Balanced space */
+    #why-this-matters .text-center.mb-6 {
+        margin-bottom: 2rem !important;
+        /* Balanced space */
+    }
+    /* What We Do specific decoration image - Much bigger */
+    #what-we-do .decoration-image {
+        max-width: 1200px !important;
+        /* Even bigger */
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        /* Center it */
+        position: relative !important;
+        z-index: 5 !important;
+        opacity: 1 !important;
+        /* Full opacity */
+        display: block !important;
+        /* Ensure it's visible */
+        min-height: 300px !important;
+        /* Minimum height to ensure visibility */
+    }
+    /* Why This Matters specific decoration image - Much bigger */
+    #why-this-matters .decoration-image {
+        max-width: 600px !important;
+        /* Even bigger */
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        /* Center it */
+        position: relative !important;
+        z-index: 5 !important;
+        opacity: 1 !important;
+        /* Full opacity */
+        display: block !important;
+        /* Ensure it's visible */
+        min-height: 300px !important;
+        /* Minimum height to ensure visibility */
+    }
+    /* Harvard Advantage header container - Higher up on mobile */
+    #harvard-advantage .text-center.mb-6 {
+        margin-bottom: 1rem !important;
+        /* Less margin to bring image up */
+        margin-top: 1rem !important;
+        /* Bring container up */
+    }
+    /* Harvard Advantage specific decoration image - Better mobile positioning */
+    #harvard-advantage .decoration-image {
+        max-width: 300px !important;
+        /* Controlled width */
+        width: 85% !important;
+        /* Responsive width */
+        height: auto !important;
+        margin: 0 auto !important;
+        /* Center it */
+        position: relative !important;
+        z-index: 5 !important;
+        opacity: 1 !important;
+        /* Full opacity */
+        display: block !important;
+        /* Ensure it's visible */
+        min-height: 500px !important;
+        /* Appropriate height */
+        margin-top: 3rem !important;
+        /* Pull image up more */
+    }
+    /* Harvard Advantage grid mobile fix */
+    #harvard-advantage .grid.lg\\:grid-cols-2 {
+        margin-top: -40px !important;
+        /* Less negative margin to avoid overlap */
+        position: relative !important;
+        z-index: 10 !important;
+        grid-template-columns: 1fr !important;
+        /* Single column on mobile */
+        gap: 1.5rem !important;
+    }
+    /* Glass cards mobile - Higher z-index and better visibility */
+    #what-we-do .glass,
+    #why-this-matters .glass,
+    #harvard-advantage .glass {
+        position: relative !important;
+        z-index: 15 !important;
+        /* Higher than decoration image */
+        background: rgba(255, 255, 255, 0.08) !important;
+        /* Slightly more opaque */
+        backdrop-filter: blur(15px) !important;
+        /* More blur */
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        /* More visible border */
+        margin-top: 0 !important;
+        /* Reset any negative margins */
+    }
+    /* Fix content alignment in cards */
+    #what-we-do .glass .text-center,
+    #why-this-matters .glass .text-center,
+    #harvard-advantage .glass .text-center {
+        padding-top: 0 !important;
+        margin-top: 0 !important;
+    }
+    /* Text overlay fixes for mobile - Make section titles visible */
+    #mission .absolute.inset-0 h2,
+    #what-we-do .absolute.inset-0 h2,
+    #why-this-matters .absolute.inset-0 h2 {
+        font-size: 1.8rem !important;
+        /* Bigger on mobile */
+        font-weight: 900 !important;
+        /* Bolder */
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8) !important;
+        /* Strong shadow */
+        color: white !important;
+        z-index: 20 !important;
+        /* Above everything */
+        position: relative !important;
+        margin-bottom: 0.5rem !important;
+    }
+    /* Harvard Advantage title - maximum z-index */
+    #harvard-advantage .absolute.inset-0 h2 {
+        font-size: 1.8rem !important;
+        /* Bigger on mobile */
+        font-weight: 900 !important;
+        /* Bolder */
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8) !important;
+        /* Strong shadow */
+        color: white !important;
+        z-index: 100 !important;
+        /* Maximum z-index */
+        position: relative !important;
+        margin-bottom: 0.5rem !important;
+    }
+    /* Harvard Advantage text overlay container - maximum z-index */
+    .harvard-title-position {
+        top: 15% !important;
+        /* Mobil pozisyonu - değiştir */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        z-index: 100 !important;
+        /* Maximum z-index */
+        padding: 1rem !important;
+        position: absolute !important;
+        /* Ensure it's above everything */
+    }
+}
+
+/* Text overlay subtitle fixes */
+
+#mission .absolute.inset-0 p,
+#what-we-do .absolute.inset-0 p,
+#why-this-matters .absolute.inset-0 p,
+#harvard-advantage .absolute.inset-0 p {
+    font-size: 1rem !important;
+    /* Bigger on mobile */
+    font-weight: 500 !important;
+    /* Medium weight */
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7) !important;
+    /* Shadow for readability */
+    color: #e5e7eb !important;
+    /* Light gray */
+    z-index: 20 !important;
+    position: relative !important;
+    line-height: 1.4 !important;
+}
+
+/* Text overlay container positioning fix */
+
+#mission .absolute.inset-0,
+#what-we-do .absolute.inset-0,
+#why-this-matters .absolute.inset-0 {
+    top: 40% !important;
+    /* Better positioning on mobile */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 20 !important;
+    padding: 1rem !important;
+}
+
+/* Harvard title positioning for all screens */
+
+.harvard-title-position {
+    top: -25% !important;
+    /* Mobil default */
+    position: absolute !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 100 !important;
+}
+
+/* Desktop Harvard title positioning (641px ve üzeri) */
+
+@media (min-width: 641px) {
+    .harvard-title-position {
+        top: -25% !important;
+        /* Desktop - senin bulduğun değer */
+    }
+}
+
+/* Tablet styles */
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    /* Hero adjustments for tablet */
+    .hero-title {
+        font-size: 3.5rem !important;
+    }
+    .hero-subtitle {
+        font-size: 1.25rem !important;
+    }
+    /* Mission grid for tablet */
+    .mission-grid {
+        gap: 3rem !important;
+        margin-top: -120px !important;
+    }
+    /* Cards tablet */
+    .glass {
+        padding: 2rem !important;
+    }
+    /* Decoration images tablet */
+    .decoration-image {
+        max-width: 600px;
+    }
+}
+
+/* Large mobile landscape */
+
+@media (max-width: 640px) and (orientation: landscape) {
+    .space-bg {
+        min-height: 100vh;
+    }
+    .hero-content {
+        padding: 1rem;
+        justify-content: center;
+    }
+    .hero-title {
+        font-size: 2rem !important;
+        margin-bottom: 0.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem !important;
+        margin-bottom: 1rem;
+    }
+    .hero-buttons {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .hero-buttons button {
+        width: auto;
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+/* Very small screens */
+
+@media (max-width: 375px) {
+    .hero-title {
+        font-size: 2rem !important;
+    }
+    .hero-subtitle {
+        font-size: 1rem !important;
+    }
+    .glass {
+        padding: 1rem !important;
+        margin: 0 0.5rem;
+    }
+    .decoration-image {
+        max-width: 300px;
+    }
+}
+
+/* High DPI screens */
+
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+    .radar-background {
+        background-size: cover;
+    }
+}
+
+/* Mobile Navigation Improvements */
+
+/* Hide mobile menu on desktop */
+
+@media (min-width: 1024px) {
+    #mobile-menu {
+        display: none !important;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* Hide desktop navigation on mobile */
+    .desktop-nav {
+        display: none !important;
+    }
+    /* Mobile hamburger animation */
+    #mobile-toggle:hover span {
+        background-color: #e5e5e5;
+    }
+    /* Mobile menu links hover */
+    .mobile-link {
+        transition: none;
+    }
+}
+
+/* Feature cards responsive improvements */
+
+@media (max-width: 640px) {
+    .feature-card {
+        padding: 0.75rem !important;
+        /* Even smaller */
+    }
+    .feature-icon {
+        width: 2rem !important;
+        /* Smaller */
+        height: 2rem !important;
+    }
+    .feature-title {
+        font-size: 0.65rem !important;
+        /* Smaller */
+        margin-bottom: 0.25rem !important;
+    }
+    .feature-description {
+        font-size: 0.65rem !important;
+        /* Smaller */
+    }
+    /* Grid for features */
+    .grid.md\\:grid-cols-3 {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    /* Technical specs in cards */
+    .glass .space-y-3>div {
+        font-size: 0.7rem !important;
+    }
+    .glass h3 {
+        font-size: 0.8rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    .glass p {
+        font-size: 0.75rem !important;
+        line-height: 1.3 !important;
+    }
+}
+
+/* Newsletter form mobile improvements */
+
+@media (max-width: 640px) {
+    .newsletter-enhanced-input {
+        font-size: 16px !important;
+        /* Prevents zoom on iOS */
+        padding: 0.75rem 1rem;
+        /* Smaller padding */
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .newsletter-card {
+        margin: 0 0.5rem;
+        padding: 1rem !important;
+        width: calc(100% - 1rem);
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    /* Newsletter headings smaller */
+    .newsletter-card h2 {
+        font-size: 1.5rem !important;
+        /* Much smaller */
+        margin-bottom: 0.75rem !important;
+    }
+    .newsletter-card p {
+        font-size: 0.8rem !important;
+        /* Much smaller */
+        margin-bottom: 1rem !important;
+    }
+    /* Newsletter form */
+    #newsletter-form {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 !important;
+    }
+    #newsletter-form button {
+        padding: 0.75rem 1rem !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+/* Video section mobile improvements */
+
+@media (max-width: 640px) {
+    .video-footer-section {
+        height: auto !important;
+        min-height: 100vh;
+    }
+    .footer-bg {
+        position: relative !important;
+        height: auto !important;
+        min-height: 60vh;
+    }
+}
+
+/* Improved touch targets for mobile */
+
+@media (max-width: 640px) {
+    button,
+    .nav-link,
+    .footer-link {
+        min-height: 44px;
+        min-width: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .scramble-btn {
+        padding: 0.75rem 1rem !important;
+        /* Consistent with other buttons */
+        font-size: 0.85rem !important;
+        /* Consistent with other buttons */
+    }
+    /* Navbar mobile fixes */
+    #navbar {
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+    #navbar .flex {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    /* Logo mobile */
+    #navbar img {
+        max-width: 120px !important;
+        /* Smaller logo */
+        height: auto !important;
+    }
+    /* Mobile menu improvements */
+    #mobile-menu {
+        width: 100vw;
+        height: 100vh;
+        max-width: 100vw;
+        overflow-x: hidden;
+    }
+    /* Footer links smaller */
+    .footer-link {
+        font-size: 0.75rem !important;
+        padding: 0.5rem 0 !important;
+    }
+    .footer-heading {
+        font-size: 0.8rem !important;
+        margin-bottom: 0.75rem !important;
+    }
+    /* Prevent any element from causing horizontal scroll */
+    * {
+        max-width: 100vw;
+        box-sizing: border-box;
+    }
+    /* Specific fixes for common overflow causes */
+    .absolute {
+        max-width: 100vw;
+    }
+    .w-full {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 640px) {
+    #harvard-advantage .absolute.inset-0 {
+        top: 15% !important;
+    }
+}
+
+.scramble-btn {
+    position: relative;
+    z-index: 60 !important;
+    pointer-events: auto !important;
+}
+
+.feature-card {
+    position: relative;
+    z-index: 55;
+    pointer-events: auto;
+}
+
+#mission .relative.z-10 {
+    z-index: 60 !important;
+}
+
+#what-we-do .relative.z-10,
+#why-this-matters .relative.z-10 {
+    z-index: 60 !important;
+}
+
+.absolute.inset-0.flex.flex-col.items-center.justify-center {
+    z-index: 65 !important;
+    pointer-events: none;
+}
+
+.absolute.inset-0.flex.flex-col.items-center.justify-center h2,
+.absolute.inset-0.flex.flex-col.items-center.justify-center p {
+    pointer-events: none !important;
+}

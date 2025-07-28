@@ -1,0 +1,455 @@
+/*
+ * ========================================
+ * UMAY AJANS - MARKANIZI ÖNE ÇIKARALIM!
+ * ========================================
+ * Website: https://www.umayajans.com
+ * Email: hi@umayajans.com
+ * Phone: +90 (850) 242 56 40
+ * 
+ * Project: Anka Space Website
+ * File: Contact Us CSS Styles
+ * Version: 1.0
+ * Date: 2025
+ * 
+ * © 2025 Umay Ajans. All rights reserved.
+ * ========================================
+ */
+
+/* Hero Section Styles */
+#contact-hero {
+    background: #000000;
+    position: relative;
+}
+
+/* Sparkles Effect */
+#sparkles-container {
+    pointer-events: none;
+}
+
+.sparkle {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: sparkle-twinkle 3s infinite ease-in-out;
+}
+
+@keyframes sparkle-twinkle {
+    0%, 100% {
+        opacity: 0.1;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.sparkle.moving {
+    animation: sparkle-move 8s infinite linear, sparkle-twinkle 3s infinite ease-in-out;
+}
+
+@keyframes sparkle-move {
+    0% {
+        transform: translateY(0px) translateX(0px) scale(0.8);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) translateX(20px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Floating particles under title */
+.floating-particle {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float-up 6s infinite linear;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(0px) translateX(0px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-200px) translateX(var(--drift, 0px));
+        opacity: 0;
+    }
+}
+
+/* Concentrated particles area */
+.particles-zone {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 200px;
+    pointer-events: none;
+}
+
+/* Responsive Title */
+@media (max-width: 768px) {
+    #contact-hero h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.1 !important;
+    }
+    
+    #contact-hero .w-\[40rem\] {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 640px) {
+    #contact-hero h1 {
+        font-size: 2rem !important;
+        line-height: 1.1 !important;
+    }
+}
+
+/* Contact Hero Section */
+#contact-hero {
+    background: #000000;
+    position: relative;
+}
+
+#contact-hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+}
+
+/* Responsive typography */
+@media (max-width: 1024px) {
+    #contact-hero h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    #contact-hero h1 {
+        font-size: 32px;
+    }
+}
+
+#sparkles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.sparkle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+.click-sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #60a5fa;
+    border-radius: 50%;
+    animation: clickSparkle 1s ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes clickSparkle {
+    0% { opacity: 1; transform: scale(0); }
+    50% { opacity: 1; transform: scale(1.5); }
+    100% { opacity: 0; transform: scale(0.5); }
+}
+
+.floating-particle {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: floatUp var(--duration, 6s) ease-out forwards;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 0;
+        transform: translateY(0) translateX(0);
+    }
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-200px) translateX(var(--drift, 0px));
+    }
+}
+
+/* Premium Contact Styles */
+
+/* Enhanced Background Animations */
+.animate-gradient {
+    background-size: 400% 400%;
+    animation: gradient-shift 35s ease infinite;
+}
+
+@keyframes gradient-shift {
+    0%, 100% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+}
+
+.animate-float-slow {
+    animation: float-slow 30s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+    animation: float-reverse 25s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(200px, 100px) scale(1.3); }
+    66% { transform: translate(-100px, 50px) scale(1.1); }
+}
+
+@keyframes float-reverse {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(-150px, -80px) scale(1.2); }
+    66% { transform: translate(100px, -40px) scale(1.1); }
+}
+
+/* Gradient Text Animation */
+.animate-gradient-text {
+    background-size: 200% 200%;
+    animation: gradient-text 5s ease-in-out infinite;
+}
+
+@keyframes gradient-text {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Spin Animation */
+.animate-spin-slow {
+    animation: spin-slow 3s linear infinite;
+}
+
+@keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Scale Animation */
+.animate-scale-in {
+    animation: scale-in 0.5s ease-out forwards;
+}
+
+@keyframes scale-in {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* Communication Lines */
+.communication-line {
+    position: absolute;
+    width: 1px;
+    height: 160px;
+    background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: line-pulse 3s ease-in-out infinite;
+}
+
+@keyframes line-pulse {
+    0%, 100% { 
+        opacity: 0.2; 
+        transform: scaleY(1);
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: scaleY(1.5);
+    }
+}
+
+/* Content Styles */
+.glass {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.glass:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(99, 179, 237, 0.3);
+    box-shadow: 0 12px 40px rgba(99, 179, 237, 0.1);
+}
+
+/* Interactive Stars for Content Sections */
+#content-stars-container,
+#positions-stars-container,
+#form-stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.twinkling-star {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    animation: starTwinkle 3s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes starTwinkle {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.5); }
+}
+
+.card-hover-container {
+    transition: transform 0.3s ease;
+}
+
+.card-hover-container:hover {
+    transform: translateY(-5px);
+}
+
+/* Form Enhancements */
+#contact-form input:focus,
+#contact-form textarea:focus {
+    box-shadow: 0 0 0 2px rgba(99, 179, 237, 0.2);
+}
+
+#contact-form input.error,
+#contact-form textarea.error {
+    border-color: #ef4444;
+    box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+/* Button Hover Effects */
+.group-hover\:rotate-y-180:hover {
+    transform: rotateY(180deg);
+}
+
+/* Floating Elements */
+.floating-element {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    animation: float-element 4s ease-in-out infinite;
+}
+
+@keyframes float-element {
+    0%, 100% { 
+        transform: translateY(0) scale(1);
+        opacity: 0.2;
+    }
+    50% { 
+        transform: translateY(-40px) scale(2);
+        opacity: 0.8;
+    }
+}
+
+/* Success Message Animation */
+#success-message.show {
+    animation: slide-in-up 0.5s ease-out forwards;
+}
+
+@keyframes slide-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading Animation */
+.loading-spinner {
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #contact-hero {
+        height: 25rem;
+    }
+    
+    #contact-hero h1 {
+        font-size: 2.5rem;
+        line-height: 1.1;
+    }
+}
+
+@media (max-width: 640px) {
+    #contact-hero {
+        height: 20rem;
+    }
+    
+    #contact-hero h1 {
+        font-size: 2rem;
+        line-height: 1.1;
+    }
+}
+
+@media (max-width: 480px) {
+    #contact-hero {
+        height: 18rem;
+    }
+    
+    #contact-hero h1 {
+        font-size: 1.75rem;
+        line-height: 1.1;
+    }
+} 

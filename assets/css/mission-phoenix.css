@@ -1,0 +1,294 @@
+/*
+ * ========================================
+ * UMAY AJANS - MARKANIZI ÖNE ÇIKARALIM!
+ * ========================================
+ * Website: https://www.umayajans.com
+ * Email: hi@umayajans.com
+ * Phone: +90 (850) 242 56 40
+ * 
+ * Project: Anka Space Website - Mission Phoenix Page
+ * File: Mission Phoenix Specific CSS Styles
+ * Version: 1.0
+ * Date: 2025
+ * 
+ * © 2025 Umay Ajans. All rights reserved.
+ * ========================================
+ */
+
+/* Card Hover Effects */
+.card-hover-container {
+    cursor: pointer;
+}
+
+.card-hover-container:hover .glass {
+    transform: translateY(-2px);
+}
+
+.card-hover-container:hover h2 {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.card-hover-container:hover h3 {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.card-hover-container:hover p {
+    color: #e5e7eb;
+}
+
+/* Digital Serenity Animations */
+@keyframes word-appear { 
+    0% { opacity: 0; transform: translateY(30px) scale(0.8); filter: blur(10px); } 
+    50% { opacity: 0.8; transform: translateY(10px) scale(0.95); filter: blur(2px); } 
+    100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); } 
+}
+
+@keyframes grid-draw { 
+    0% { stroke-dashoffset: 1000; opacity: 0; } 
+    50% { opacity: 0.4; } 
+    100% { stroke-dashoffset: 0; opacity: 0.2; } 
+}
+
+@keyframes pulse-glow { 
+    0%, 100% { opacity: 0.15; transform: scale(1); } 
+    50% { opacity: 0.4; transform: scale(1.1); } 
+}
+
+@keyframes underline-grow { 
+    to { width: 100%; } 
+}
+
+@keyframes float { 
+    0%, 100% { transform: translateY(0) translateX(0); opacity: 0.2; } 
+    25% { transform: translateY(-15px) translateX(8px); opacity: 0.4; } 
+    50% { transform: translateY(-8px) translateX(-5px); opacity: 0.3; } 
+    75% { transform: translateY(-20px) translateX(10px); opacity: 0.5; } 
+}
+
+.word-animate { 
+    display: inline-block; 
+    opacity: 0; 
+    margin: 0 0.1em; 
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.word-animate:hover { 
+    color: #cbd5e1; 
+    transform: translateY(-2px); 
+}
+
+.grid-line { 
+    stroke: #94a3b8; 
+    stroke-width: 0.6; 
+    opacity: 0; 
+    stroke-dasharray: 8 8; 
+    stroke-dashoffset: 1000; 
+    animation: grid-draw 2.5s ease-out forwards; 
+}
+
+.detail-dot { 
+    fill: #cbd5e1; 
+    opacity: 0; 
+    animation: pulse-glow 2.5s ease-in-out infinite; 
+}
+
+.text-decoration-animate { 
+    position: relative; 
+}
+
+.text-decoration-animate::after { 
+    content: ''; 
+    position: absolute; 
+    bottom: -4px; 
+    left: 0; 
+    width: 0; 
+    height: 2px; 
+    background: linear-gradient(90deg, transparent, #cbd5e1, transparent); 
+    animation: underline-grow 2s ease-out forwards; 
+    animation-delay: 2s; 
+    box-shadow: 0 0 10px rgba(203, 213, 225, 0.5);
+}
+
+.floating-element-animate { 
+    position: absolute; 
+    width: 3px; 
+    height: 3px; 
+    background: #cbd5e1; 
+    border-radius: 50%; 
+    opacity: 0; 
+    animation: float 4s ease-in-out infinite; 
+    animation-play-state: running;
+    box-shadow: 0 0 6px rgba(203, 213, 225, 0.8);
+}
+
+.ripple-effect { 
+    position: fixed; 
+    width: 6px; 
+    height: 6px; 
+    background: rgba(203, 213, 225, 0.8); 
+    border-radius: 50%; 
+    transform: translate(-50%, -50%); 
+    pointer-events: none; 
+    animation: pulse-glow 1s ease-out forwards; 
+    z-index: 9999;
+    box-shadow: 0 0 15px rgba(203, 213, 225, 0.6);
+}
+
+/* Mission Phoenix Specific Styles */
+.phoenix-gradient {
+    background: linear-gradient(135deg, #ff6b35, #f7931e, #ffcc02);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.tech-card {
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.tech-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.phoenix-icon {
+    color: #ff6b35;
+    filter: drop-shadow(0 0 8px rgba(255, 107, 53, 0.3));
+}
+
+/* Moving Border Newsletter Card */
+.newsletter-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem 2rem;
+    overflow: hidden;
+}
+
+.moving-border-wrapper {
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    pointer-events: none;
+}
+
+.moving-border-svg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.moving-border-element {
+    position: absolute;
+    width: 40px;
+    height: 3px;
+    background: linear-gradient(to right, 
+        transparent, 
+        rgba(147, 51, 234, 0.3),
+        rgba(147, 51, 234, 1), 
+        rgba(79, 70, 229, 1), 
+        rgba(147, 51, 234, 1),
+        rgba(147, 51, 234, 0.3),
+        transparent
+    );
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+    box-shadow: 0 0 15px rgba(147, 51, 234, 0.6);
+    transition: transform 0.1s linear;
+}
+
+/* Enhanced Newsletter Form Styles */
+.newsletter-enhanced-input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+.newsletter-enhanced-input:focus {
+    outline: none;
+    border-color: rgba(147, 51, 234, 0.6);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.2);
+    transform: translateY(-1px);
+}
+
+.newsletter-enhanced-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Mobile Hero Typography Optimization */
+@media (max-width: 640px) {
+    /* Mission Phoenix header - mobile optimization */
+    #mission-hero .text-center h2.font-mono {
+        font-size: 0.625rem !important;
+        letter-spacing: 0.1em !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    /* VTVL System text - mobile optimization */
+    #mission-hero .text-center h2.font-mono:last-of-type {
+        font-size: 0.625rem !important;
+        letter-spacing: 0.1em !important;
+        margin-top: 0.75rem !important;
+    }
+    
+    #mission-hero .text-decoration-animate {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+        letter-spacing: -0.025em !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    #mission-hero .text-decoration-animate .word-animate {
+        margin: 0 0.05em !important;
+        font-weight: 300 !important;
+    }
+    
+    #mission-hero .text-decoration-animate div:first-child {
+        margin-bottom: 1.5rem !important;
+        font-size: 2rem !important;
+        line-height: 1.1 !important;
+    }
+    
+    #mission-hero .text-decoration-animate div:last-child {
+        font-size: 1.125rem !important;
+        line-height: 1.4 !important;
+        font-weight: 200 !important;
+        letter-spacing: 0.01em !important;
+        margin-top: 1rem !important;
+    }
+    
+    /* Mobile center section max-width optimization */
+    #mission-hero .max-w-5xl {
+        max-width: 100% !important;
+        padding: 0 1rem !important;
+    }
+    
+    /* Mobile word spacing adjustment */
+    #mission-hero .word-animate {
+        word-spacing: normal !important;
+    }
+    
+    /* Quote text mobile optimization */
+    #mission-hero .text-decoration-animate div:last-child .word-animate {
+        display: inline !important;
+        margin: 0 0.15em !important;
+    }
+} 

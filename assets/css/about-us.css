@@ -1,0 +1,196 @@
+/*
+ * ========================================
+ * UMAY AJANS - MARKANIZI ÖNE ÇIKARALIM!
+ * ========================================
+ * Website: https://www.umayajans.com
+ * Email: hi@umayajans.com
+ * Phone: +90 (850) 242 56 40
+ * 
+ * Project: Anka Space Website - About Us Page
+ * File: About Us Specific CSS Styles
+ * Version: 1.0
+ * Date: 2025
+ * 
+ * © 2025 Umay Ajans. All rights reserved.
+ * ========================================
+ */
+
+/* Card Hover Effects */
+.card-hover-container {
+    cursor: pointer;
+}
+
+.card-hover-container:hover .glass {
+    transform: translateY(-2px);
+}
+
+.card-hover-container:hover h2 {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.card-hover-container:hover p {
+    color: #e5e7eb;
+}
+
+/* Digital Serenity Animations */
+@keyframes word-appear { 
+    0% { opacity: 0; transform: translateY(30px) scale(0.8); filter: blur(10px); } 
+    50% { opacity: 0.8; transform: translateY(10px) scale(0.95); filter: blur(2px); } 
+    100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); } 
+}
+
+@keyframes grid-draw { 
+    0% { stroke-dashoffset: 1000; opacity: 0; } 
+    50% { opacity: 0.4; } 
+    100% { stroke-dashoffset: 0; opacity: 0.2; } 
+}
+
+@keyframes pulse-glow { 
+    0%, 100% { opacity: 0.15; transform: scale(1); } 
+    50% { opacity: 0.4; transform: scale(1.1); } 
+}
+
+@keyframes underline-grow { 
+    to { width: 100%; } 
+}
+
+@keyframes float { 
+    0%, 100% { transform: translateY(0) translateX(0); opacity: 0.2; } 
+    25% { transform: translateY(-15px) translateX(8px); opacity: 0.4; } 
+    50% { transform: translateY(-8px) translateX(-5px); opacity: 0.3; } 
+    75% { transform: translateY(-20px) translateX(10px); opacity: 0.5; } 
+}
+
+
+
+.word-animate { 
+    display: inline-block; 
+    opacity: 0; 
+    margin: 0 0.1em; 
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+
+.word-animate:hover { 
+    color: #cbd5e1; 
+    transform: translateY(-2px); 
+}
+
+.grid-line { 
+    stroke: #94a3b8; 
+    stroke-width: 0.8; 
+    opacity: 0; 
+    stroke-dasharray: 8 8; 
+    stroke-dashoffset: 1000; 
+    animation: grid-draw 2.5s ease-out forwards; 
+}
+
+.detail-dot { 
+    fill: #cbd5e1; 
+    opacity: 0; 
+    animation: pulse-glow 2.5s ease-in-out infinite; 
+}
+
+
+
+.text-decoration-animate { 
+    position: relative; 
+}
+
+.text-decoration-animate::after { 
+    content: ''; 
+    position: absolute; 
+    bottom: -4px; 
+    left: 0; 
+    width: 0; 
+    height: 2px; 
+    background: linear-gradient(90deg, transparent, #cbd5e1, transparent); 
+    animation: underline-grow 2s ease-out forwards; 
+    animation-delay: 2s; 
+    box-shadow: 0 0 10px rgba(203, 213, 225, 0.5);
+}
+
+.floating-element-animate { 
+    position: absolute; 
+    width: 3px; 
+    height: 3px; 
+    background: #cbd5e1; 
+    border-radius: 50%; 
+    opacity: 0; 
+    animation: float 4s ease-in-out infinite; 
+    animation-play-state: running;
+    box-shadow: 0 0 6px rgba(203, 213, 225, 0.8);
+}
+
+.ripple-effect { 
+    position: fixed; 
+    width: 6px; 
+    height: 6px; 
+    background: rgba(203, 213, 225, 0.8); 
+    border-radius: 50%; 
+    transform: translate(-50%, -50%); 
+    pointer-events: none; 
+    animation: pulse-glow 1s ease-out forwards; 
+    z-index: 9999;
+    box-shadow: 0 0 15px rgba(203, 213, 225, 0.6);
+}
+
+/* Mobile Hero Typography Optimization */
+@media (max-width: 640px) {
+    /* About Anka Space header - mobile optimization */
+    #about .text-center h2.font-mono {
+        font-size: 0.625rem !important;
+        letter-spacing: 0.1em !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    /* Founder of the Republic text - mobile optimization */
+    #about .text-center h2.font-mono:last-of-type {
+        font-size: 0.625rem !important;
+        letter-spacing: 0.1em !important;
+        margin-top: 0.75rem !important;
+    }
+    
+    #about .text-decoration-animate {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+        letter-spacing: -0.025em !important;
+        margin-bottom: 2rem !important;
+    }
+    
+    #about .text-decoration-animate .word-animate {
+        margin: 0 0.05em !important;
+        font-weight: 300 !important;
+    }
+    
+    #about .text-decoration-animate div:first-child {
+        margin-bottom: 1.5rem !important;
+        font-size: 2rem !important;
+        line-height: 1.1 !important;
+    }
+    
+    #about .text-decoration-animate div:last-child {
+        font-size: 1.125rem !important;
+        line-height: 1.4 !important;
+        font-weight: 200 !important;
+        letter-spacing: 0.01em !important;
+        margin-top: 1rem !important;
+    }
+    
+    /* Mobile center section max-width optimization */
+    #about .max-w-5xl {
+        max-width: 100% !important;
+        padding: 0 1rem !important;
+    }
+    
+    /* Mobile word spacing adjustment */
+    #about .word-animate {
+        word-spacing: normal !important;
+    }
+    
+    /* Quote text mobile optimization */
+    #about .text-decoration-animate div:last-child .word-animate {
+        display: inline !important;
+        margin: 0 0.15em !important;
+    }
+} 

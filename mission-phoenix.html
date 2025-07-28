@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission Phoenix - Anka Space</title>
+    <meta name="description" content="Pioneering reusable rocket technology for space exploration.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/favicon.png">
+    <link rel="shortcut icon" href="assets/icons/favicon.png">
+    <link rel="icon" href="assets/icons/favicon.png">
+    <meta name="msapplication-TileImage" content="assets/icons/favicon.png">
+    <meta name="msapplication-TileColor" content="#030014">
+    <meta name="theme-color" content="#030014">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Lucide Icons for Social Media -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/mission-phoenix.css">
+</head>
+<body class="font-inter bg-black text-white overflow-x-hidden" style="margin: 0; padding: 0;">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
+        <div class="w-full px-6 lg:px-12">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Left Menu Items -->
+                <div class="desktop-nav hidden lg:flex items-center space-x-12">
+                    <a href="index.html" class="nav-link">
+                        Home
+                    </a>
+                    <a href="about-us" class="nav-link">
+                        About Us
+                    </a>
+                    <a href="mission-phoenix" class="nav-link text-white font-semibold">
+                        Mission Phoenix
+                    </a>
+                </div>
+                
+                <!-- Logo - Centered -->
+                <div class="absolute left-1/2 transform -translate-x-1/2">
+                    <img src="assets/images/AnkaSpace_wordmark-white.webp" alt="Anka Space" style="width: 165px; height: auto;">
+                </div>
+                
+                <!-- Right Menu Items -->
+                <div class="desktop-nav hidden lg:flex items-center space-x-12">
+                    <a href="https://ankaspace.store/" target="_blank" class="nav-link">
+                        Shop
+                    </a>
+                    <a href="careers.html" class="nav-link">
+                        Careers
+                    </a>
+                    <a href="contact-us.html" class="nav-link">
+                        Contact Us
+                    </a>
+                </div>
+                
+                <!-- Mobile Hamburger Button - Right positioned -->
+                <button class="lg:hidden p-3 absolute right-6" id="mobile-toggle">
+                    <div class="w-6 h-6 flex flex-col justify-center" id="hamburger-icon">
+                        <span class="block h-0.5 w-6 bg-white mb-1 transition-all duration-300" id="line1"></span>
+                        <span class="block h-0.5 w-6 bg-white mb-1 transition-all duration-300" id="line2"></span>
+                        <span class="block h-0.5 w-6 bg-white transition-all duration-300" id="line3"></span>
+                    </div>
+                </button>
+                
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-95 z-50">
+            <div class="flex flex-col h-full justify-center items-start pl-8 space-y-6">
+                <a href="index.html" class="text-white text-3xl font-inter font-medium mobile-link">Home</a>
+                <a href="about-us.html" class="text-white text-3xl font-inter font-medium mobile-link">About Us</a>
+                <a href="mission-phoenix.html" class="text-white text-3xl font-inter font-medium mobile-link">Mission Phoenix</a>
+                <a href="https://ankaspace.store/" target="_blank" class="text-white text-3xl font-inter font-medium mobile-link">Shop</a>
+                <a href="careers.html" class="text-white text-3xl font-inter font-medium mobile-link">Careers</a>
+                <a href="contact-us.html" class="text-white text-3xl font-inter font-medium mobile-link">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mission Phoenix Hero Section -->
+    <section id="mission-hero" class="relative pt-24 min-h-screen" style="background-color: #030014;">
+        
+        <!-- Animated Grid Background -->
+        <svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+                <pattern id="gridDarkResponsive" width="60" height="60" patternUnits="userSpaceOnUse">
+                    <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(100, 116, 139, 0.15)" stroke-width="0.6"/>
+                </pattern>
+                <filter id="gridGlow">
+                    <feGaussianBlur stdDeviation="0.5" result="coloredBlur"/>
+                    <feMerge> 
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#gridDarkResponsive)" filter="url(#gridGlow)" />
+            <line x1="0" y1="20%" x2="100%" y2="20%" class="grid-line" style="animation-delay: 0.5s;" />
+            <line x1="0" y1="80%" x2="100%" y2="80%" class="grid-line" style="animation-delay: 1s;" />
+            <line x1="20%" y1="0" x2="20%" y2="100%" class="grid-line" style="animation-delay: 1.5s;" />
+            <line x1="80%" y1="0" x2="80%" y2="100%" class="grid-line" style="animation-delay: 2s;" />
+            <line x1="50%" y1="0" x2="50%" y2="100%" class="grid-line" style="animation-delay: 2.5s; opacity: 0.05;" />
+            <line x1="0" y1="50%" x2="100%" y2="50%" class="grid-line" style="animation-delay: 3s; opacity: 0.05;" />
+            <circle cx="20%" cy="20%" r="2" class="detail-dot" style="animation-delay: 3s;" />
+            <circle cx="80%" cy="20%" r="2" class="detail-dot" style="animation-delay: 3.2s;" />
+            <circle cx="20%" cy="80%" r="2" class="detail-dot" style="animation-delay: 3.4s;" />
+            <circle cx="80%" cy="80%" r="2" class="detail-dot" style="animation-delay: 3.6s;" />
+            <circle cx="50%" cy="50%" r="1.5" class="detail-dot" style="animation-delay: 4s;" />
+        </svg>
+
+        <!-- Floating Elements -->
+        <div class="floating-element-animate" style="top: 25%; left: 15%; animation-delay: 0.5s;"></div>
+        <div class="floating-element-animate" style="top: 60%; left: 85%; animation-delay: 1s;"></div>
+        <div class="floating-element-animate" style="top: 40%; left: 10%; animation-delay: 1.5s;"></div>
+        <div class="floating-element-animate" style="top: 75%; left: 90%; animation-delay: 2s;"></div>
+
+        <!-- Main Content -->
+        <div class="relative z-10 min-h-screen flex flex-col justify-between items-center px-6 py-10 sm:px-8 sm:py-12 md:px-16 md:py-20">
+            
+            <!-- Top Section -->
+            <div class="text-center">
+                <h2 class="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80">
+                    <span class="word-animate" data-delay="0">Mission</span>
+                    <span class="word-animate" data-delay="300">Phoenix.</span>
+                </h2>
+                <div class="mt-4 w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent opacity-30 mx-auto"></div>
+            </div>
+
+            <!-- Center Section -->
+            <div class="text-center max-w-5xl mx-auto relative">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extralight leading-tight tracking-tight text-slate-50 text-decoration-animate">
+                    <div class="mb-4 md:mb-6">
+                        <span class="word-animate" data-delay="700">The</span>
+                        <span class="word-animate" data-delay="850">First</span>
+                        <span class="word-animate" data-delay="1000">Step</span>
+                        <span class="word-animate" data-delay="1150">to</span>
+                        <span class="word-animate" data-delay="1300">Reusability</span>
+                    </div>
+                    <div class="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-thin text-slate-300 leading-relaxed tracking-wide">
+                        <span class="word-animate" data-delay="1600">"Building</span>
+                        <span class="word-animate" data-delay="1750">a</span>
+                        <span class="word-animate" data-delay="1900">fully</span>
+                        <span class="word-animate" data-delay="2050">reusable</span>
+                        <span class="word-animate" data-delay="2200">rocket</span>
+                        <span class="word-animate" data-delay="2350">to</span>
+                        <span class="word-animate" data-delay="2500">push</span>
+                        <span class="word-animate" data-delay="2650">the</span>
+                        <span class="word-animate" data-delay="2800">boundaries</span>
+                        <span class="word-animate" data-delay="2950">of</span>
+                        <span class="word-animate" data-delay="3100">cost-efficient</span>
+                        <span class="word-animate" data-delay="3250">spaceflight."</span>
+                    </div>
+                </h1>
+                <!-- Detail Lines -->
+                <div class="absolute -left-6 sm:-left-8 top-1/2 transform -translate-y-1/2 w-3 sm:w-4 h-px bg-slate-300 opacity-0" style="animation: word-appear 1s ease-out forwards; animation-delay: 3.2s;"></div>
+                <div class="absolute -right-6 sm:-right-8 top-1/2 transform -translate-y-1/2 w-3 sm:w-4 h-px bg-slate-300 opacity-0" style="animation: word-appear 1s ease-out forwards; animation-delay: 3.4s;"></div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="text-center">
+                <div class="mb-4 w-12 sm:w-16 h-px bg-gradient-to-r from-transparent via-slate-300 to-transparent opacity-30 mx-auto"></div>
+                <h2 class="text-xs sm:text-sm font-mono font-light text-slate-300 uppercase tracking-[0.2em] opacity-80">
+                    <span class="word-animate" data-delay="3400">Anka</span>
+                    <span class="word-animate" data-delay="3550">Space</span>
+                </h2>
+                <div class="mt-6 flex justify-center space-x-4 opacity-0" style="animation: word-appear 1s ease-out forwards; animation-delay: 4.2s;">
+                    <div class="w-1 h-1 bg-slate-300 rounded-full opacity-40"></div>
+                    <div class="w-1 h-1 bg-slate-300 rounded-full opacity-60"></div>
+                    <div class="w-1 h-1 bg-slate-300 rounded-full opacity-40"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mouse Gradient -->
+        <div id="mouse-gradient" class="fixed pointer-events-none rounded-full w-80 h-80 blur-2xl sm:w-96 sm:h-96 sm:blur-3xl md:w-[32rem] md:h-[32rem] md:blur-[4rem]" style="background-image: radial-gradient(circle, rgba(255, 255, 255, 0.15), rgba(200, 200, 200, 0.1), rgba(150, 150, 150, 0.05), transparent 60%); transform: translate(-50%, -50%); will-change: left, top, opacity; transition: left 50ms linear, top 50ms linear, opacity 200ms ease-out; opacity: 0;"></div>
+
+        <!-- Ripple Container -->
+        <div id="ripple-container"></div>
+    </section>
+
+    <!-- Main Content Section - Placeholder -->
+    <section class="relative" style="background-color: #030014;">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0">
+            <!-- Static dots background -->
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0); background-size: 50px 50px;"></div>
+            <!-- Floating orbs - subtle -->
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-cyan-500/3 to-blue-600/2 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-purple-500/3 to-pink-600/2 rounded-full blur-3xl"></div>
+            <!-- Interactive twinkling dots -->
+            <div id="content-stars-container" class="absolute inset-0"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-12">
+            
+            <!-- Mission Overview Section -->
+            <div class="mb-16 sm:mb-20 lg:mb-24">
+                <div class="relative card-hover-container" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="glass rounded-2xl p-6 sm:p-8 lg:p-12 backdrop-blur-xl bg-white/5 border border-white/10 transition-all duration-500 hover:bg-white/10 hover:border-cyan-400/30 hover:shadow-2xl hover:shadow-cyan-400/10">
+                        <!-- Decorative Elements -->
+                        <div class="absolute top-4 left-4 w-8 h-8 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-full blur-sm"></div>
+                        <div class="absolute bottom-4 right-4 w-6 h-6 bg-gradient-to-br from-yellow-400/20 to-orange-500/20 rounded-full blur-sm"></div>
+                        
+                        <div class="relative z-10">
+                            <!-- Title -->
+                            <h2 class="font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 sm:mb-8 text-center">
+                                Building a fully reusable rocket to push the boundaries of cost-efficient spaceflight.
+                            </h2>
+                            
+                            <!-- Description Text -->
+                            <div class="mb-8 sm:mb-12">
+                                <p class="font-geist-mono text-base sm:text-lg text-gray-300 leading-relaxed text-center max-w-4xl mx-auto">
+                                    Mission Phoenix is Anka Space's first step toward developing reusable rocket technology. The first flight will demonstrate a vertical takeoff and vertical landing (VTVL) rocket, reaching 100 meters in altitude before landing precisely back on the launch pad. After successful initial flights, we will push for higher altitudes, eventually reaching a stage where we perform main engine cutoff (MECO) and relight the engine mid-descent for a controlled landing. This mission is a critical milestone in reducing the cost of spaceflight and proving the viability of rapid reusability, setting the foundation for more advanced developments.
+                                </p>
+                            </div>
+                            
+                            <!-- Rocket Image -->
+                            <div class="flex justify-center">
+                                <div class="relative">
+                                    <img src="assets/images/Phoenix-1.png" alt="Mission Phoenix Rocket" class="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl h-auto object-contain">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="mb-16 sm:mb-20">
+                <h2 class="font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 sm:mb-12 text-center" data-aos="fade-up">
+                    Frequently Asked Questions
+                </h2>
+                
+                <div class="space-y-4 sm:space-y-6 max-w-4xl mx-auto">
+                    
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item relative card-hover-container" data-aos="fade-up" data-aos-delay="100">
+                        <div class="glass rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 transition-all duration-500 hover:bg-white/8 hover:border-white/20">
+                            <button class="w-full text-left p-6 sm:p-8 focus:outline-none faq-toggle" type="button">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="font-inter text-lg sm:text-xl font-semibold text-white pr-4">
+                                        What is Mission Phoenix?
+                                    </h3>
+                                    <div class="faq-icon text-white/60 transition-transform duration-300">
+                                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+                                    <p class="font-geist-mono text-base text-gray-300 leading-relaxed">
+                                        Mission Phoenix is Anka Space's first step in developing reusable rocket technology. It is a vertical takeoff and vertical landing (VTVL) rocket designed to reach 100 meters in altitude before landing precisely back on the launch pad. Future tests will push for higher altitudes, including main engine cutoff (MECO) and relight for controlled descent.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item relative card-hover-container" data-aos="fade-up" data-aos-delay="200">
+                        <div class="glass rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 transition-all duration-500 hover:bg-white/8 hover:border-white/20">
+                            <button class="w-full text-left p-6 sm:p-8 focus:outline-none faq-toggle" type="button">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="font-inter text-lg sm:text-xl font-semibold text-white pr-4">
+                                        Why is this mission important?
+                                    </h3>
+                                    <div class="faq-icon text-white/60 transition-transform duration-300">
+                                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+                                    <p class="font-geist-mono text-base text-gray-300 leading-relaxed">
+                                        This mission serves as a crucial milestone in proving rapid reusability, which is essential for reducing spaceflight costs and increasing launch frequency. By successfully demonstrating controlled landing and reusability, we are laying the foundation for more advanced orbital and deep-space missions.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item relative card-hover-container" data-aos="fade-up" data-aos-delay="300">
+                        <div class="glass rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 transition-all duration-500 hover:bg-white/8 hover:border-white/20">
+                            <button class="w-full text-left p-6 sm:p-8 focus:outline-none faq-toggle" type="button">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="font-inter text-lg sm:text-xl font-semibold text-white pr-4">
+                                        How does the rocket land itself?
+                                    </h3>
+                                    <div class="faq-icon text-white/60 transition-transform duration-300">
+                                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+                                    <p class="font-geist-mono text-base text-gray-300 leading-relaxed">
+                                        The rocket utilizes a combination of thrust vector control, landing gear, and precision guidance systems to autonomously navigate back to its launch pad. Future missions will involve engine relight mid-air to refine the landing process.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="faq-item relative card-hover-container" data-aos="fade-up" data-aos-delay="400">
+                        <div class="glass rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 transition-all duration-500 hover:bg-white/8 hover:border-white/20">
+                            <button class="w-full text-left p-6 sm:p-8 focus:outline-none faq-toggle" type="button">
+                                <div class="flex justify-between items-centers">
+                                    <h3 class="font-inter text-lg sm:text-xl font-semibold text-white pr-4">
+                                        Who is working on Mission Phoenix?
+                                    </h3>
+                                    <div class="faq-icon text-white/60 transition-transform duration-300">
+                                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+                                    <p class="font-geist-mono text-base text-gray-300 leading-relaxed">
+                                        Anka Space has assembled a growing team of aerospace, mechanical, structural, and software engineers to design, build, and test the vehicle. We are currently expanding our core team and working with industry partners to bring this mission to reality.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 5 -->
+                    <div class="faq-item relative card-hover-container" data-aos="fade-up" data-aos-delay="500">
+                        <div class="glass rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 transition-all duration-500 hover:bg-white/8 hover:border-white/20">
+                            <button class="w-full text-left p-6 sm:p-8 focus:outline-none faq-toggle" type="button">
+                                <div class="flex justify-between items-center">
+                                    <h3 class="font-inter text-lg sm:text-xl font-semibold text-white pr-4">
+                                        How can I get involved?
+                                    </h3>
+                                    <div class="faq-icon text-white/60 transition-transform duration-300">
+                                        <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </button>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                                <div class="px-6 sm:px-8 pb-6 sm:pb-8">
+                                    <p class="font-geist-mono text-base text-gray-300 leading-relaxed">
+                                        We are actively hiring engineers and specialists to join our mission. If you're interested in contributing, check out our Careers page for open positions or reach out via our Contact Us section.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Stay Updated Section -->
+    <section id="stay-updated" class="relative" style="background-color: #030014;">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0">
+            <!-- Static dots background -->
+            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0); background-size: 50px 50px;"></div>
+            <!-- Floating orbs - subtle -->
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-cyan-500/3 to-blue-600/2 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-purple-500/3 to-pink-600/2 rounded-full blur-3xl"></div>
+            <!-- Interactive twinkling dots -->
+            <div id="newsletter-stars-container" class="absolute inset-0"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-20">
+            <!-- Newsletter Card -->
+            <div class="newsletter-card text-center" data-aos="fade-up" data-aos-duration="1000">
+                <!-- Moving Border -->
+                <div class="moving-border-wrapper">
+                    <svg class="moving-border-svg" xmlns="http://www.w3.org/2000/svg">
+                        <rect id="newsletter-border-path" 
+                              width="100%" 
+                              height="100%" 
+                              rx="16" 
+                              ry="16" 
+                              fill="none" 
+                              stroke="none" />
+                    </svg>
+                    <div class="moving-border-element" id="newsletter-moving-element"></div>
+                </div>
+                
+                <div class="relative z-10">
+                    <h2 class="font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 px-2">
+                        Stay Updated
+                    </h2>
+                    <p class="font-inter text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+                        Join our mission updates and be the first to hear about launches, breakthroughs, and behind-the-scenes progress.
+                    </p>
+                    
+                    <form class="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-lg mx-auto px-4 sm:px-0" id="newsletter-form">
+                        <input 
+                            type="email" 
+                            placeholder="Enter your email address"
+                            class="newsletter-enhanced-input flex-1"
+                            required
+                        >
+                        <button 
+                            type="submit"
+                            class="scramble-btn bg-white text-black font-geist-mono font-medium px-6 py-3 rounded-md hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center"
+                        >
+                            <span class="scramble-text">Sign up</span>
+                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video + Footer Combined Section -->
+    <div class="video-footer-section relative w-full" style="height: 100vh; background-color: #000;">
+        <!-- Video Background -->
+        <video 
+            autoplay 
+            muted 
+            loop 
+            playsinline
+            class="absolute inset-0 w-full h-full object-cover"
+        >
+            <source src="assets/videos/anka.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Footer Overlay -->
+        <footer class="absolute bottom-0 left-0 right-0 footer-bg" style="border-top: 1px solid #333; background: rgba(0, 0, 0, 0.9); height: 50vh;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-6 sm:py-8">
+            <!-- Logo and Subtitle - Centered -->
+            <div class="text-center mb-4 sm:mb-6" style="padding-bottom: 4rem;">
+                <img src="assets/images/AnkaSpace_wordmark-white.webp" alt="Anka Space" class="h-8 sm:h-10 mx-auto mb-3 sm:mb-4">
+                <p class="text-gray-400 text-xs sm:text-sm max-w-md mx-auto px-4 mb-8">
+                    Pioneering the future of space technology with innovative rocket systems and cutting-edge solutions.
+                </p>
+                <!-- Anka Space Mark -->
+                <div class="flex justify-center items-center" style="height: 200px; margin-top: 8rem; margin-bottom: 2rem;">
+                    <img src="assets/images/AnkaSpace_mark.svg" alt="Anka Space Mark" class="w-64 h-80 opacity-20 hover:opacity-30 transition-opacity duration-300" style="filter: brightness(0) invert(1);">
+                </div>
+            </div>
+            
+            <!-- 6-Column Grid System -->
+            <div class="footer-grid grid grid-cols-2 md:grid-cols-6 gap-4 sm:gap-6 mb-4 sm:mb-6 w-full justify-items-stretch" style="padding-top: 2rem;">
+                <div class="w-full text-center md:text-left">
+                    <a href="index.html" class="footer-heading">Home</a>
+                </div>
+                
+                <div class="w-full text-center md:text-left">
+                    <a href="about-us.html" class="footer-heading">About Us</a>
+                </div>
+                
+                <div class="w-full text-center">
+                    <a href="mission-phoenix.html" class="footer-heading">Mission Phoenix</a>
+                </div>
+                
+                <div class="w-full text-center">
+                    <a href="https://ankaspace.store/" target="_blank" class="footer-heading">Shop</a>
+                </div>
+                
+                <div class="w-full text-center md:text-center">
+                    <a href="careers.html" class="footer-heading">Careers</a>
+                </div>
+                
+                <div class="w-full text-center md:text-right">
+                    <a href="contact-us.html" class="footer-heading">Contact Us</a>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center footer-copyright">
+                <div class="flex items-center space-x-4 justify-center md:justify-start">
+                    <p>©Copyright © 2025 Anka Space  - All Rights Reserved.</p>
+                </div>
+                
+                <div class="flex space-x-4 justify-center md:justify-end">
+                    <a href="https://www.instagram.com/ankaspacecorp" target="_blank" class="footer-social">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/company/anka-space/" target="_blank" class="footer-social">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://www.x.com/ankaspacecorp" target="_blank" class="footer-social">
+                        <i data-lucide="twitter" class="w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Umay Ajans Signature -->
+            <div class="text-center mt-8 pt-6 border-t border-gray-800">
+                <p class="text-gray-500 text-sm font-geist-mono flex items-center justify-center gap-2">
+                    Crafted with 
+                    <span class="heart-icon text-red-500 animate-pulse">
+                        <i data-lucide="heart" class="w-4 h-4 fill-current"></i>
+                    </span>
+                    by award-winning 
+                    <a href="https://www.umayajans.com" target="_blank" class="umay-link transition-colors duration-200 font-medium relative" style="color: #0057FF;">
+                        <span class="umay-text">Umay Ajans</span>
+                        <div class="umay-particles"></div>
+                    </a>
+                </p>
+            </div>
+        </div>
+        </footer>
+    </div>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/mission-phoenix.js"></script>
+    
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html> 

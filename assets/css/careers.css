@@ -1,0 +1,511 @@
+/*
+ * ========================================
+ * UMAY AJANS - MARKANIZI ÖNE ÇIKARALIM!
+ * ========================================
+ * Website: https://www.umayajans.com
+ * Email: hi@umayajans.com
+ * Phone: +90 (850) 242 56 40
+ * 
+ * Project: Anka Space Website
+ * File: Careers CSS Styles
+ * Version: 1.0
+ * Date: 2025
+ * 
+ * © 2025 Umay Ajans. All rights reserved.
+ * ========================================
+ */
+
+
+
+/* Hero Section Styles */
+#careers-hero {
+    background: #000000;
+    position: relative;
+}
+
+/* Sparkles Effect */
+#sparkles-container {
+    pointer-events: none;
+}
+
+.sparkle {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: sparkle-twinkle 3s infinite ease-in-out;
+}
+
+@keyframes sparkle-twinkle {
+    0%, 100% {
+        opacity: 0.1;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.sparkle.moving {
+    animation: sparkle-move 8s infinite linear, sparkle-twinkle 3s infinite ease-in-out;
+}
+
+@keyframes sparkle-move {
+    0% {
+        transform: translateY(0px) translateX(0px) scale(0.8);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) translateX(20px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* Floating particles under title */
+.floating-particle {
+    position: absolute;
+    background: #ffffff;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float-up 6s infinite linear;
+}
+
+@keyframes float-up {
+    0% {
+        transform: translateY(0px) translateX(0px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(-200px) translateX(var(--drift, 0px));
+        opacity: 0;
+    }
+}
+
+/* Concentrated particles area */
+.particles-zone {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 200px;
+    pointer-events: none;
+}
+
+/* Responsive Title */
+@media (max-width: 768px) {
+    #careers-hero h1 {
+        font-size: 2.5rem !important;
+        line-height: 1.1 !important;
+    }
+    
+    #careers-hero .w-\[40rem\] {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 640px) {
+    #careers-hero h1 {
+        font-size: 2rem !important;
+        line-height: 1.1 !important;
+    }
+}
+
+/* Content Section Styles */
+#careers-content {
+    /* İçerik stilleri buraya gelecek */
+}
+
+/* Careers Specific Animations */
+@keyframes careers-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Careers Specific Components */
+.careers-card {
+    /* Kart stilleri buraya gelecek */
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+    #careers-hero {
+        /* Mobil hero stilleri */
+    }
+    
+    #careers-content {
+        /* Mobil içerik stilleri */
+    }
+}
+
+/* ===================================
+   CAREERS PAGE STYLES
+   Crafted with ❤️ by Umay Ajans
+   https://www.umayajans.com
+   =================================== */
+
+/* Careers Hero Section */
+.careers-hero {
+    height: 40rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.careers-hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    position: relative;
+}
+
+/* Responsive typography */
+@media (max-width: 1024px) {
+    .careers-hero h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    .careers-hero h1 {
+        font-size: 32px;
+    }
+}
+
+/* Gradient Lines */
+.gradient-line {
+    position: absolute;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #4f46e5, #0ea5e9, transparent);
+    animation: gradientMove 3s ease-in-out infinite;
+}
+
+.gradient-line:nth-child(1) {
+    top: 60%;
+    left: 0;
+    right: 0;
+    animation-delay: 0s;
+}
+
+.gradient-line:nth-child(2) {
+    top: 65%;
+    left: 0;
+    right: 0;
+    animation-delay: 1s;
+}
+
+@keyframes gradientMove {
+    0%, 100% { opacity: 0.3; transform: scaleX(0.8); }
+    50% { opacity: 0.8; transform: scaleX(1.2); }
+}
+
+/* Sparkles Container */
+#sparkles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Individual Sparkle */
+.sparkle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: twinkle 2s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Click Sparkles */
+.click-sparkle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #4f46e5;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: clickSparkle 1s ease-out forwards;
+}
+
+@keyframes clickSparkle {
+    0% { opacity: 1; transform: scale(0) rotate(0deg); }
+    50% { opacity: 0.8; transform: scale(1.5) rotate(180deg); }
+    100% { opacity: 0; transform: scale(0.5) rotate(360deg); }
+}
+
+/* Floating Particles */
+.floating-particle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: floatUp var(--duration) linear forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 0;
+        transform: translateY(0) translateX(0);
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-200px) translateX(var(--drift));
+    }
+}
+
+/* Position Cards Styles */
+.position-card {
+    transition: all 0.3s ease;
+}
+
+.position-card:hover {
+    transform: translateY(-4px);
+}
+
+.position-card h4 {
+    position: relative;
+}
+
+.position-card h4::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: currentColor;
+    opacity: 0.6;
+}
+
+/* Form Styles */
+#career-application-form input,
+#career-application-form select,
+#career-application-form textarea {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: all 0.2s ease;
+}
+
+#career-application-form input:focus,
+#career-application-form select:focus,
+#career-application-form textarea:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #06b6d4;
+    box-shadow: 0 0 0 2px rgba(6, 182, 212, 0.2);
+}
+
+#career-application-form input::placeholder,
+#career-application-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* File Input Styling */
+#career-application-form input[type="file"] {
+    padding: 12px;
+}
+
+#career-application-form input[type="file"]::file-selector-button {
+    margin-right: 16px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    background: #06b6d4;
+    color: black;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#career-application-form input[type="file"]::file-selector-button:hover {
+    background: #0891b2;
+}
+
+/* Radio Button Styling */
+#career-application-form input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #06b6d4;
+}
+
+/* Submit Button */
+#career-application-form button[type="submit"] {
+    background: white;
+    color: black;
+    font-family: 'Geist Mono', monospace;
+    font-weight: 500;
+    padding: 16px 32px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#career-application-form button[type="submit"]:hover {
+    background: #f3f4f6;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Stars Containers for Different Sections */
+#content-stars-container,
+#positions-stars-container,
+#form-stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Twinkling Stars */
+.twinkling-star {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    animation: starTwinkle 3s ease-in-out infinite;
+}
+
+@keyframes starTwinkle {
+    0%, 100% { opacity: 0.3; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.5); }
+}
+
+/* Card Hover Effects */
+.card-hover-container {
+    transition: all 0.3s ease;
+}
+
+.card-hover-container:hover {
+    transform: translateY(-2px);
+}
+
+/* Glass Effect Enhancement */
+.glass {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .position-card .grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .careers-hero {
+        height: 35rem;
+        padding: 1rem;
+    }
+    
+    .careers-hero h1 {
+        font-size: 48px !important;
+        margin-bottom: 2rem;
+    }
+    
+    /* Mobile gradient lines adjustments */
+    .careers-hero .relative.mx-auto {
+        max-width: 280px !important;
+        height: 120px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .careers-hero {
+        height: 32rem;
+        padding: 0.5rem;
+    }
+    
+    .careers-hero h1 {
+        font-size: 36px !important;
+        margin-bottom: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    /* Extra small mobile adjustments */
+    .careers-hero .relative.mx-auto {
+        max-width: 240px !important;
+        height: 100px !important;
+    }
+    
+    .position-card {
+        padding: 1.5rem;
+    }
+    
+    #career-application-form {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .careers-hero {
+        height: 30rem;
+    }
+    
+    .careers-hero h1 {
+        font-size: 32px !important;
+        margin-bottom: 1rem;
+    }
+    
+    /* Very small mobile adjustments */
+    .careers-hero .relative.mx-auto {
+        max-width: 200px !important;
+        height: 80px !important;
+    }
+} 
