@@ -6,7 +6,7 @@
  * Email: hi@umayajans.com
  * Phone: +90 (850) 242 56 40
  * 
- * Project: Anka Space Website - About Us Page
+ * Project: Rabus Website - About Us Page
  * File: About Us Specific CSS Styles
  * Version: 1.0
  * Date: 2025
@@ -137,7 +137,7 @@
 
 /* Mobile Hero Typography Optimization */
 @media (max-width: 640px) {
-    /* About Anka Space header - mobile optimization */
+    /* About Rabus header - mobile optimization */
     #about .text-center h2.font-mono {
         font-size: 0.625rem !important;
         letter-spacing: 0.1em !important;

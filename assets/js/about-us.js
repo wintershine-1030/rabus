@@ -6,7 +6,7 @@
  * Email: hi@umayajans.com
  * Phone: +90 (850) 242 56 40
  * 
- * Project: Anka Space Website - About Us Page
+ * Project: Rabus Website - About Us Page
  * File: About Us Specific JavaScript
  * Version: 1.0
  * Date: 2025
