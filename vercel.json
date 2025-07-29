@@ -1,9 +1,9 @@
 {
     "rewrites": [
-      { "source": "/(.*)", "destination": "/index.html" },
       { "source": "/about-us", "destination": "/about-us.html" },
       { "source": "/careers", "destination": "/careers.html" },
       { "source": "/contact-us", "destination": "/contact-us.html" },
-      { "source": "/mission-phoenix", "destination": "/mission-phoenix.html" }
+      { "source": "/mission-phoenix", "destination": "/mission-phoenix.html" },
+      { "source": "/(.*)", "destination": "/index.html" }
     ]
   }
