@@ -1,713 +1,1455 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rabus - Innovative Rocket Engines for Next-Gen Space Missions</title>
-    <meta name="description" content="Leading the way in space technology and engineering.">
+    <meta
+      name="description"
+      content="Leading the way in space technology and engineering."
+    />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/favicon.png">
-    <link rel="shortcut icon" href="assets/icons/favicon.png">
-    <link rel="icon" href="assets/icons/favicon.png">
-    <meta name="msapplication-TileImage" content="assets/icons/favicon.png">
-    <meta name="msapplication-TileColor" content="#030014">
-    <meta name="theme-color" content="#030014">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="assets/icons/favicon.png"
+    />
+    <link rel="shortcut icon" href="assets/icons/favicon.png" />
+    <link rel="icon" href="assets/icons/favicon.png" />
+    <meta name="msapplication-TileImage" content="assets/icons/favicon.png" />
+    <meta name="msapplication-TileColor" content="#030014" />
+    <meta name="theme-color" content="#030014" />
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Custom Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
     <!-- Lucide Icons for Social Media -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 
-
-
     <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <link rel="stylesheet" href="assets/css/styles.css">
-</head>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
 
-<body class="font-inter bg-black text-white overflow-x-hidden" style="margin: 0; padding: 0;">
+  <body
+    class="font-inter bg-black text-white overflow-x-hidden"
+    style="margin: 0; padding: 0"
+  >
     <!-- <div id="awwwards" style="position: fixed; z-index: 999; transform: translateY(-50%); top: 50%;  right: 0"><a href="https://www.awwwards.com/sites/anka-space" target="_blank"><svg width="53.08" height="171.358"><path class="js-color-bg" fill="white" d="M0 0h53.08v171.358H0z"></path><g class="js-color-text" fill="black"><path d="M20.048 153.585v-2.002l6.752-3.757h-6.752v-1.9h10.23v2.002l-6.752 3.757h6.752v1.9zM29.899 142.382a3.317 3.317 0 0 1-1.359 1.293c-.575.297-1.223.446-1.944.446-.721 0-1.369-.149-1.944-.446a3.317 3.317 0 0 1-1.359-1.293c-.331-.564-.497-1.232-.497-2.003 0-.769.166-1.437.497-2.002a3.332 3.332 0 0 1 1.359-1.294c.575-.297 1.224-.445 1.944-.445.722 0 1.369.148 1.944.445a3.326 3.326 0 0 1 1.359 1.294c.33.565.496 1.233.496 2.002.001.77-.166 1.438-.496 2.003m-1.703-3.348c-.435-.331-.967-.497-1.601-.497s-1.167.166-1.601.497c-.434.332-.65.78-.65 1.345s.217 1.014.65 1.346c.434.33.967.496 1.601.496s1.166-.166 1.601-.496c.434-.332.649-.78.649-1.346.001-.565-.215-1.013-.649-1.345M22.912 134.996v-1.812h1.185c-.43-.283-.752-.593-.973-.929-.219-.336-.329-.732-.329-1.19 0-.479.127-.902.38-1.272.254-.37.635-.633 1.141-.79-.478-.262-.851-.591-1.118-.985a2.221 2.221 0 0 1-.402-1.265c0-.682.2-1.218.599-1.607.4-.391.957-.585 1.668-.585h5.218v1.812H25.37c-.682 0-1.023.303-1.023.907 0 .467.264.85.789 1.146.527.299 1.286.446 2.28.446h2.865v1.813H25.37c-.682 0-1.023.303-1.023.906 0 .468.275.851.826 1.147.551.298 1.352.446 2.404.446h2.704v1.812h-7.369zM21.626 122.457c-.225.224-.502.336-.833.336s-.608-.112-.833-.336a1.128 1.128 0 0 1-.336-.833c0-.331.111-.609.336-.833.225-.225.502-.336.833-.336s.608.111.833.336c.225.224.337.502.337.833 0 .332-.112.608-.337.833m1.286-1.739h7.366v1.813h-7.366v-1.813zM22.912 118.668v-1.812h1.185a3.348 3.348 0 0 1-.951-1.009 2.434 2.434 0 0 1-.351-1.272c0-.681.19-1.229.57-1.644.38-.414.931-.621 1.651-.621h5.263v1.812h-4.722c-.418 0-.727.096-.92.285-.195.19-.293.447-.293.769 0 .302.116.58.351.833.233.254.577.458 1.03.613.453.156.992.234 1.615.234h2.938v1.812h-7.366zM29.833 109.129a3.33 3.33 0 0 1-1.432 1.169 4.535 4.535 0 0 1-1.805.373 4.537 4.537 0 0 1-1.807-.373c-.579-.248-1.057-.638-1.432-1.169s-.563-1.196-.563-1.995c0-.771.183-1.413.549-1.93a3.28 3.28 0 0 1 1.382-1.141 4.221 4.221 0 0 1 1.709-.364h.746v5.071c.447-.02.838-.183 1.168-.49.332-.307.498-.724.498-1.248 0-.41-.093-.754-.277-1.031-.186-.278-.473-.529-.863-.753l.542-1.462c.69.303 1.224.724 1.592 1.265.371.541.556 1.235.556 2.083 0 .799-.188 1.464-.563 1.995m-4.085-3.574c-.41.088-.746.261-1.009.52-.262.258-.395.61-.395 1.06 0 .428.137.784.409 1.067.272.282.604.458.994.525v-3.172zM29.833 100.878c-.375.531-.852.921-1.432 1.169a4.552 4.552 0 0 1-3.612 0c-.579-.248-1.057-.638-1.432-1.169s-.563-1.196-.563-1.995c0-.77.183-1.412.549-1.93a3.278 3.278 0 0 1 1.382-1.14 4.222 4.222 0 0 1 1.709-.365h.746v5.072a1.794 1.794 0 0 0 1.168-.49c.332-.307.498-.724.498-1.249 0-.41-.093-.753-.277-1.031-.186-.277-.473-.528-.863-.753l.542-1.462c.69.302 1.224.724 1.592 1.265.371.541.556 1.234.556 2.083 0 .799-.188 1.464-.563 1.995m-4.085-3.573c-.41.088-.746.261-1.009.519-.262.258-.395.611-.395 1.06 0 .429.137.784.409 1.067.272.282.604.458.994.526v-3.172zM35.481 16.926l-4.782 14.969h-3.266l-2.584-9.682-2.584 9.682h-3.268l-4.781-14.969h3.713l2.673 10.276 2.524-10.276h3.445l2.524 10.276 2.674-10.276zM37.979 27.083c1.426 0 2.495 1.068 2.495 2.495 0 1.425-1.069 2.495-2.495 2.495-1.425 0-2.495-1.07-2.495-2.495-.001-1.427 1.07-2.495 2.495-2.495"></path></g></svg></a></div> -->
 
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
-        <div class="w-full px-6 lg:px-12">
-            <div class="flex items-center justify-between h-20">
+    <nav
+      class="fixed top-0 w-full z-50 transition-all duration-300"
+      id="navbar"
+    >
+      <div class="w-full px-6 lg:px-12">
+        <div class="flex items-center justify-between h-20">
+          <!-- Left Menu Items -->
+          <div class="desktop-nav hidden lg:flex items-center space-x-12">
+            <a href="index.html" class="nav-link"> Home </a>
+            <a href="about-us" class="nav-link"> About Us </a>
+            <a href="mission-phoenix" class="nav-link"> Mission Phoenix </a>
+          </div>
 
-                <!-- Left Menu Items -->
-                <div class="desktop-nav hidden lg:flex items-center space-x-12">
-                    <a href="index.html" class="nav-link">
-                        Home
-                    </a>
-                    <a href="about-us" class="nav-link">
-                        About Us
-                    </a>
-                    <a href="mission-phoenix" class="nav-link">
-                        Mission Phoenix
-                    </a>
-                </div>
+          <!-- Logo - Centered -->
+          <div class="absolute left-1/2 transform -translate-x-1/2">
+            <img
+              src="assets/images/AnkaSpace_wordmark-white.webp"
+              alt="Rabus"
+              style="width: 165px; height: auto"
+            />
+          </div>
 
-                <!-- Logo - Centered -->
-                <div class="absolute left-1/2 transform -translate-x-1/2">
-                    <img src="assets/images/AnkaSpace_wordmark-white.webp" alt="Rabus" style="width: 165px; height: auto;">
-                </div>
+          <!-- Right Menu Items -->
+          <div class="desktop-nav hidden lg:flex items-center space-x-12">
+            <a
+              href="https://rabus-store.vercel.app/"
+              target="_blank"
+              class="nav-link"
+            >
+              Shop
+            </a>
+            <a href="careers" class="nav-link"> Careers </a>
+            <a href="contact-us" class="nav-link"> Contact Us </a>
+          </div>
 
-                <!-- Right Menu Items -->
-                <div class="desktop-nav hidden lg:flex items-center space-x-12">
-                    <a href="https://rabus-store.vercel.app/" target="_blank" class="nav-link">
-                        Shop
-                    </a>
-                    <a href="careers" class="nav-link">
-                        Careers
-                    </a>
-                    <a href="contact-us" class="nav-link">
-                        Contact Us
-                    </a>
-                </div>
-
-                <!-- Mobile Hamburger Button - Right positioned -->
-                <button class="lg:hidden p-3 absolute right-6" id="mobile-toggle">
-                    <div class="w-6 h-6 flex flex-col justify-center" id="hamburger-icon">
-                        <span class="block h-0.5 w-6 bg-white mb-1 transition-all duration-300" id="line1"></span>
-                        <span class="block h-0.5 w-6 bg-white mb-1 transition-all duration-300" id="line2"></span>
-                        <span class="block h-0.5 w-6 bg-white transition-all duration-300" id="line3"></span>
-                    </div>
-                </button>
-
+          <!-- Mobile Hamburger Button - Right positioned -->
+          <button class="lg:hidden p-3 absolute right-6" id="mobile-toggle">
+            <div
+              class="w-6 h-6 flex flex-col justify-center"
+              id="hamburger-icon"
+            >
+              <span
+                class="block h-0.5 w-6 bg-white mb-1 transition-all duration-300"
+                id="line1"
+              ></span>
+              <span
+                class="block h-0.5 w-6 bg-white mb-1 transition-all duration-300"
+                id="line2"
+              ></span>
+              <span
+                class="block h-0.5 w-6 bg-white transition-all duration-300"
+                id="line3"
+              ></span>
             </div>
+          </button>
         </div>
+      </div>
 
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-95 z-50">
-            <div class="flex flex-col h-full justify-center items-start pl-8 space-y-6">
-                <a href="index.html" class="text-white text-3xl font-inter font-medium mobile-link">Home</a>
-                <a href="about-us" class="text-white text-3xl font-inter font-medium mobile-link">About Us</a>
-                <a href="mission-phoenix" class="text-white text-3xl font-inter font-medium mobile-link">Mission Phoenix</a>
-                <a href="https://rabus-store.vercel.app/" target="_blank" class="text-white text-3xl font-inter font-medium mobile-link">Shop</a>
-                <a href="careers" class="text-white text-3xl font-inter font-medium mobile-link">Careers</a>
-                <a href="contact-us" class="text-white text-3xl font-inter font-medium mobile-link">Contact Us</a>
-            </div>
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden fixed inset-0 bg-black bg-opacity-95 z-50"
+      >
+        <div
+          class="flex flex-col h-full justify-center items-start pl-8 space-y-6"
+        >
+          <a
+            href="index.html"
+            class="text-white text-3xl font-inter font-medium mobile-link"
+            >Home</a
+          >
+          <a
+            href="about-us"
+            class="text-white text-3xl font-inter font-medium mobile-link"
+            >About Us</a
+          >
+          <a
+            href="mission-phoenix"
+            class="text-white text-3xl font-inter font-medium mobile-link"
+            >Mission Phoenix</a
+          >
+          <a
+            href="https://rabus-store.vercel.app/"
+            target="_blank"
+            class="text-white text-3xl font-inter font-medium mobile-link"
+            >Shop</a
+          >
+          <a
+            href="careers"
+            class="text-white text-3xl font-inter font-medium mobile-link"
+            >Careers</a
+          >
+          <a
+            href="contact-us"
+            class="text-white text-3xl font-inter font-medium mobile-link"
+            >Contact Us</a
+          >
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="space-bg relative flex items-center justify-center">
-        <!-- Radar Background -->
-        <div class="radar-background"></div>
+    <section
+      id="home"
+      class="space-bg relative flex items-center justify-center"
+    >
+      <!-- Radar Background -->
+      <div class="radar-background"></div>
 
+      <!-- Floating Glow Effects -->
+      <div class="floating-glow"></div>
+      <div class="floating-glow"></div>
 
+      <!-- Twinkling Stars -->
+      <div id="stars-container" class="absolute inset-0"></div>
 
-        <!-- Floating Glow Effects -->
-        <div class="floating-glow"></div>
-        <div class="floating-glow"></div>
+      <div
+        class="hero-content relative w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 text-center flex flex-col justify-center"
+        style="min-height: 100vh; z-index: 10"
+      >
+        <!-- Main Content -->
+        <div
+          class="space-y-6 sm:space-y-8"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <!-- Main Heading -->
+          <h1
+            class="hero-title font-inter text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight"
+          >
+            Building the Future of
+            <br class="hidden sm:block" />
+            <span class="text-white">reusable blockchain infrastructure</span>
+          </h1>
 
-        <!-- Twinkling Stars -->
-        <div id="stars-container" class="absolute inset-0"></div>
+          <!-- Subtitle -->
+          <p
+            class="hero-subtitle font-inter text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed px-2 sm:px-0"
+          >
+            Leading the way in decentralized technology and Web3 engineering.
+          </p>
 
-        <div class="hero-content relative w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 text-center flex flex-col justify-center" style="min-height: 100vh; z-index: 10;">
-            <!-- Main Content -->
-            <div class="space-y-6 sm:space-y-8" data-aos="fade-up" data-aos-duration="1000">
-
-                <!-- Main Heading -->
-                <h1 class="hero-title font-inter text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-                    Building the Future of
-                    <br class="hidden sm:block">
-                    <span class="text-white">reusable rocket technology</span>
-                </h1>
-
-                <!-- Subtitle -->
-                <p class="hero-subtitle font-inter text-base sm:text-lg md:text-xl text-gray-400 max-w-2xl mx-auto leading-relaxed px-2 sm:px-0">
-                    Leading the way in space technology and engineering.
-                </p>
-
-                <!-- CTA Buttons -->
-                <div class="hero-buttons flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-6 sm:pt-8 px-4 sm:px-0">
-                    <a href="careers"><button class="scramble-btn bg-white text-black font-geist-mono font-medium px-6 py-3 rounded-md hover:bg-gray-100 transition-colors duration-200 flex items-center">
-                         <span class="scramble-text">Join the Mission</span>
-                         <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                         </svg>
-                     </button></a>
-                    <a href="mission-phoenix"><button class="scramble-btn border border-gray-600 text-white font-geist-mono font-medium px-6 py-3 rounded-md hover:border-gray-500 hover:bg-gray-900 transition-all duration-200 flex items-center">
-                         <span class="scramble-text">Learn More</span>
-                         <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                         </svg>
-                     </button></a>
-                </div>
-            </div>
-
-
+          <!-- CTA Buttons -->
+          <div
+            class="hero-buttons flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center pt-6 sm:pt-8 px-4 sm:px-0"
+          >
+            <a href="careers"
+              ><button
+                class="scramble-btn bg-white text-black font-geist-mono font-medium px-6 py-3 rounded-md hover:bg-gray-100 transition-colors duration-200 flex items-center"
+              >
+                <span class="scramble-text">Join the Mission</span>
+                <svg
+                  class="ml-2 w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg></button
+            ></a>
+            <a href="mission-phoenix"
+              ><button
+                class="scramble-btn border border-gray-600 text-white font-geist-mono font-medium px-6 py-3 rounded-md hover:border-gray-500 hover:bg-gray-900 transition-all duration-200 flex items-center"
+              >
+                <span class="scramble-text">Learn More</span>
+                <svg
+                  class="ml-2 w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg></button
+            ></a>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Mission Phoenix 1 Section -->
-    <section id="mission" class="relative" style="background-color: #030014!important;">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0">
-            <!-- Static dots background -->
-            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0); background-size: 50px 50px;"></div>
-            <!-- Floating orbs - subtle -->
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-cyan-500/3 to-blue-600/2 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-purple-500/3 to-pink-600/2 rounded-full blur-3xl"></div>
-            <div class="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-br from-teal-500/2 to-green-600/1 rounded-full blur-2xl"></div>
-            <!-- Interactive twinkling dots -->
-            <div id="mission-stars-container" class="absolute inset-0"></div>
+    <section
+      id="mission"
+      class="relative"
+      style="background-color: #030014 !important"
+    >
+      <!-- Background Pattern -->
+      <div class="absolute inset-0">
+        <!-- Static dots background -->
+        <div
+          class="absolute inset-0"
+          style="
+            background-image: radial-gradient(
+              circle at 1px 1px,
+              rgba(255, 255, 255, 0.06) 1px,
+              transparent 0
+            );
+            background-size: 50px 50px;
+          "
+        ></div>
+        <!-- Floating orbs - subtle -->
+        <div
+          class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-cyan-500/3 to-blue-600/2 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-purple-500/3 to-pink-600/2 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-br from-teal-500/2 to-green-600/1 rounded-full blur-2xl"
+        ></div>
+        <!-- Interactive twinkling dots -->
+        <div id="mission-stars-container" class="absolute inset-0"></div>
+      </div>
+
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-12"
+      >
+        <!-- Header Decoration Image with Overlaid Text -->
+        <div
+          class="text-center mb-6 sm:mb-8 relative"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          <img
+            src="assets/images/header_dec.png"
+            alt="Header Decoration"
+            class="decoration-image mx-auto opacity-80 max-w-full h-auto"
+            style="width: 806px; height: 849px"
+          />
+
+          <!-- Rising Stars Animation -->
+          <div class="absolute inset-0 pointer-events-none">
+            <div class="stars-rising"></div>
+          </div>
+
+          <!-- Text Overlay - Positioned in the middle of the image -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center"
+            style="top: 45%"
+          >
+            <h2
+              class="font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 text-center px-2"
+            >
+              Mission Phoenix 1
+            </h2>
+            <p
+              class="font-inter text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 leading-relaxed max-w-3xl mx-auto text-center px-4 sm:px-6"
+            >
+              The first fully on-chain reusable protocol prototype, developed by
+              Rabus and powered by Solana.
+            </p>
+          </div>
         </div>
 
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-12">
-
-            <!-- Header Decoration Image with Overlaid Text -->
-            <div class="text-center mb-6 sm:mb-8 relative" data-aos="fade-up" data-aos-duration="800">
-                <img src="assets/images/header_dec.png" alt="Header Decoration" class="decoration-image mx-auto opacity-80 max-w-full h-auto" style="width: 806px; height: 849px;">
-
-                <!-- Rising Stars Animation -->
-                <div class="absolute inset-0 pointer-events-none">
-                    <div class="stars-rising"></div>
+        <div
+          class="mission-grid grid lg:grid-cols-2 gap-6 sm:gap-8 items-stretch"
+          style="margin-top: -160px; position: relative; z-index: 10"
+        >
+          <!-- Left Column - Mission Cards -->
+          <div
+            class="flex flex-col space-y-6 sm:space-y-8"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
+            <!-- Mission Goals Card -->
+            <div
+              class="glass rounded-2xl p-4 sm:p-6 lg:p-8 backdrop-blur-xl bg-white/5 border border-white/10 flex-1"
+            >
+              <div class="space-y-4">
+                <div class="space-y-2">
+                  <h3
+                    class="font-geist-mono text-white-400 font-medium text-sm uppercase tracking-wider"
+                  >
+                    Goal
+                  </h3>
+                  <p class="font-inter text-gray-300 leading-relaxed text-sm">
+                    Demonstrate sub-second transaction finality using Solana's
+                    hybrid consensus model
+                  </p>
                 </div>
 
-                <!-- Text Overlay - Positioned in the middle of the image -->
-                <div class="absolute inset-0 flex flex-col items-center justify-center" style="top: 45%;">
-                    <h2 class="font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 text-center px-2">
-                        Mission Phoenix 1
-                    </h2>
-                    <p class="font-inter text-sm sm:text-base md:text-lg lg:text-xl text-gray-400 leading-relaxed max-w-3xl mx-auto text-center px-4 sm:px-6">
-                        Mission Phoenix is the first fully reusable prototype rocket developed by Rabus.
-                    </p>
+                <div class="space-y-2">
+                  <h3
+                    class="font-geist-mono text-white-400 font-medium text-sm uppercase tracking-wider"
+                  >
+                    Objective
+                  </h3>
+                  <p class="font-inter text-gray-300 leading-relaxed text-sm">
+                    Process 100M transactions with 100% uptime and no skipped
+                    blocks
+                  </p>
                 </div>
+
+                <div class="space-y-2">
+                  <h3
+                    class="font-geist-mono text-white-400 font-medium text-sm uppercase tracking-wider"
+                  >
+                    Purpose
+                  </h3>
+                  <p class="font-inter text-gray-300 leading-relaxed text-sm">
+                    Validate the network architecture, validator performance,
+                    and scalability for next-gen Web3 applications
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div class="mission-grid grid lg:grid-cols-2 gap-6 sm:gap-8 items-stretch" style="margin-top: -160px; position: relative; z-index: 10;">
-
-                <!-- Left Column - Mission Cards -->
-                <div class="flex flex-col space-y-6 sm:space-y-8" data-aos="fade-right" data-aos-duration="1000">
-
-                    <!-- Mission Goals Card -->
-                    <div class="glass rounded-2xl p-4 sm:p-6 lg:p-8 backdrop-blur-xl bg-white/5 border border-white/10 flex-1">
-                        <div class="space-y-4">
-                            <div class="space-y-2">
-                                <h3 class="font-geist-mono text-white-400 font-medium text-sm uppercase tracking-wider">Goal</h3>
-                                <p class="font-inter text-gray-300 leading-relaxed text-sm">
-                                    Demonstrate vertical takeoff, controlled hover, and precision landing using a LOX-based propulsion system.
-                                </p>
-                            </div>
-
-                            <div class="space-y-2">
-                                <h3 class="font-geist-mono text-white-400 font-medium text-sm uppercase tracking-wider">Objective</h3>
-                                <p class="font-inter text-gray-300 leading-relaxed text-sm">
-                                    100m altitude flight with full landing recovery.
-                                </p>
-                            </div>
-
-                            <div class="space-y-2">
-                                <h3 class="font-geist-mono text-white-400 font-medium text-sm uppercase tracking-wider">Purpose</h3>
-                                <p class="font-inter text-gray-300 leading-relaxed text-sm">
-                                    Validate the propulsion system, avionics, and reusability for future larger-scale vehicles.
-                                </p>
-                            </div>
-                        </div>
+            <!-- Technical Overview Card -->
+            <div
+              class="glass rounded-2xl p-4 sm:p-6 lg:p-8 backdrop-blur-xl bg-white/5 border border-white/10 flex-1"
+            >
+              <div class="space-y-6">
+                <!-- Specifications -->
+                <div>
+                  <h3
+                    class="font-geist-mono text-white font-medium text-sm uppercase tracking-wider mb-4"
+                  >
+                    Technical Overview
+                  </h3>
+                  <div class="space-y-3">
+                    <div class="flex justify-between items-center">
+                      <span class="font-geist-mono text-gray-400 text-sm"
+                        >Network Height:</span
+                      >
+                      <span class="font-geist-mono text-white text-sm"
+                        >~4.5 million blocks</span
+                      >
                     </div>
-
-                    <!-- Technical Overview Card -->
-                    <div class="glass rounded-2xl p-4 sm:p-6 lg:p-8 backdrop-blur-xl bg-white/5 border border-white/10 flex-1">
-                        <div class="space-y-6">
-                            <!-- Specifications -->
-                            <div>
-                                <h3 class="font-geist-mono text-white font-medium text-sm uppercase tracking-wider mb-4">Technical Overview</h3>
-                                <div class="space-y-3">
-                                    <div class="flex justify-between items-center">
-                                        <span class="font-geist-mono text-gray-400 text-sm">Rocket Height:</span>
-                                        <span class="font-geist-mono text-white text-sm">~4.5 meters</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="font-geist-mono text-gray-400 text-sm">Diameter:</span>
-                                        <span class="font-geist-mono text-white text-sm">~0.6 meters</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="font-geist-mono text-gray-400 text-sm">Propulsion:</span>
-                                        <span class="font-geist-mono text-white text-sm">LOX based pressure-fed engine</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Flight Profile -->
-                            <div class="border-t border-white/10 pt-6">
-                                <h4 class="font-geist-mono text-white-400 font-medium text-sm uppercase tracking-wider mb-4">Flight Profile</h4>
-                                <div class="space-y-3">
-                                    <div class="flex items-center space-x-2">
-                                        <span class="font-geist-mono text-white-400 text-sm">→</span>
-                                        <span class="font-inter text-gray-300 text-sm"><strong>Vertical Takeoff</strong> — Engine ignites, vehicle ascends.</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <span class="font-geist-mono text-white-400 text-sm">→</span>
-                                        <span class="font-inter text-gray-300 text-sm"><strong>Controlled Hover (~5s)</strong> — Stabilization using thrust vector control (TVC).</span>
-                                    </div>
-                                    <div class="flex items-center space-x-2">
-                                        <span class="font-geist-mono text-white-400 text-sm">→</span>
-                                        <span class="font-inter text-gray-300 text-sm"><strong>Precision Landing</strong> — Slow descent, touchdown with landing legs.</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="flex justify-between items-center">
+                      <span class="font-geist-mono text-gray-400 text-sm"
+                        >Throughput:</span
+                      >
+                      <span class="font-geist-mono text-white text-sm"
+                        >~0.6 second block times</span
+                      >
                     </div>
+                    <div class="flex justify-between items-center">
+                      <span class="font-geist-mono text-gray-400 text-sm"
+                        >Consensus:</span
+                      >
+                      <span class="font-geist-mono text-white text-sm"
+                        >Proof-of-History accelerated engine</span
+                      >
+                    </div>
+                  </div>
                 </div>
 
-                <!-- Right Column - Rocket Visual -->
-                <div class="relative flex" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="glass rounded-2xl p-2 sm:p-4 backdrop-blur-xl bg-white/5 border border-white/10 w-full flex flex-col">
-
-                        <!-- Phoenix 1 Rocket Image Container -->
-                        <div class="rocket-image-container w-full flex-1 flex items-center justify-center" style="min-height: 400px;">
-                            <div class="rocket-image-inner w-full h-full flex items-center justify-center">
-
-                                <!-- Phoenix 1 Image -->
-                                <div class="relative w-full h-full flex items-center justify-center">
-                                    <img src="assets/images/Phoenix-1.png" alt="Phoenix 1 Rocket" class="max-w-full max-h-full object-contain" style="margin: 10px;">
-                                </div>
-                            </div>
-                        </div>
+                <!-- Flight Profile -->
+                <div class="border-t border-white/10 pt-6">
+                  <h4
+                    class="font-geist-mono text-white-400 font-medium text-sm uppercase tracking-wider mb-4"
+                  >
+                    Web3 Execution Profile
+                  </h4>
+                  <div class="space-y-3">
+                    <div class="flex items-center space-x-2">
+                      <span class="font-geist-mono text-white-400 text-sm"
+                        >→</span
+                      >
+                      <span class="font-inter text-gray-300 text-sm"
+                        ><strong>Vertical Takeoff</strong> — Network genesis,
+                        validator activation</span
+                      >
                     </div>
+                    <div class="flex items-center space-x-2">
+                      <span class="font-geist-mono text-white-400 text-sm"
+                        >→</span
+                      >
+                      <span class="font-inter text-gray-300 text-sm"
+                        ><strong>Stabilized Throughput</strong> — 5-second epoch
+                        transitions with dynamic adjustment</span
+                      >
+                    </div>
+                    <div class="flex items-center space-x-2">
+                      <span class="font-geist-mono text-white-400 text-sm"
+                        >→</span
+                      >
+                      <span class="font-inter text-gray-300 text-sm"
+                        ><strong>Precision Finality</strong> — Deterministic
+                        state confirmation with validator quorum</span
+                      >
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
+
+          <!-- Right Column - Rocket Visual -->
+          <div
+            class="relative flex"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <div
+              class="glass rounded-2xl p-2 sm:p-4 backdrop-blur-xl bg-white/5 border border-white/10 w-full flex flex-col"
+            >
+              <!-- Phoenix 1 Rocket Image Container -->
+              <div
+                class="rocket-image-container w-full flex-1 flex items-center justify-center"
+                style="min-height: 400px"
+              >
+                <div
+                  class="rocket-image-inner w-full h-full flex items-center justify-center"
+                >
+                  <!-- Phoenix 1 Image -->
+                  <div
+                    class="relative w-full h-full flex items-center justify-center"
+                  >
+                    <img
+                      src="assets/images/Phoenix-1.png"
+                      alt="Phoenix 1 Rocket"
+                      class="max-w-full max-h-full object-contain"
+                      style="margin: 10px"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Harvard Advantage Section -->
-    <section id="harvard-advantage" class="relative" style="background-color: #030014;">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0">
-            <!-- Static dots background -->
-            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0); background-size: 50px 50px;"></div>
-            <!-- Floating orbs - subtle -->
-            <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-cyan-500/3 to-blue-600/2 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-purple-500/3 to-pink-600/2 rounded-full blur-3xl"></div>
-            <!-- Interactive twinkling dots -->
-            <div id="harvard-advantage-stars-container" class="absolute inset-0"></div>
+    <section
+      id="harvard-advantage"
+      class="relative"
+      style="background-color: #030014"
+    >
+      <!-- Background Pattern -->
+      <div class="absolute inset-0">
+        <!-- Static dots background -->
+        <div
+          class="absolute inset-0"
+          style="
+            background-image: radial-gradient(
+              circle at 1px 1px,
+              rgba(255, 255, 255, 0.06) 1px,
+              transparent 0
+            );
+            background-size: 50px 50px;
+          "
+        ></div>
+        <!-- Floating orbs - subtle -->
+        <div
+          class="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-cyan-500/3 to-blue-600/2 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-purple-500/3 to-pink-600/2 rounded-full blur-3xl"
+        ></div>
+        <!-- Interactive twinkling dots -->
+        <div
+          id="harvard-advantage-stars-container"
+          class="absolute inset-0"
+        ></div>
+      </div>
+
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-12"
+      >
+        <!-- Header Decoration Image with Overlaid Text -->
+        <div
+          class="text-center mb-6 sm:mb-8 relative"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          <img
+            src="assets/images/harvard_dec.png"
+            alt="Harvard Advantage Decoration"
+            class="decoration-image mx-auto opacity-80 max-w-full h-auto"
+            style="width: 50%"
+          />
+
+          <!-- Rising Stars Animation -->
+          <div class="absolute inset-0 pointer-events-none">
+            <div class="harvard-stars-rising"></div>
+          </div>
+
+          <!-- Text Overlay - Positioned in the middle of the image -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center harvard-title-position"
+          >
+            <h2
+              class="font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center px-2"
+            >
+              Harvard Advantage
+            </h2>
+          </div>
         </div>
 
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-12">
-
-            <!-- Header Decoration Image with Overlaid Text -->
-            <div class="text-center mb-6 sm:mb-8 relative" data-aos="fade-up" data-aos-duration="800">
-                <img src="assets/images/harvard_dec.png" alt="Harvard Advantage Decoration" class="decoration-image mx-auto opacity-80 max-w-full h-auto" style="width: 50%;">
-
-                <!-- Rising Stars Animation -->
-                <div class="absolute inset-0 pointer-events-none">
-                    <div class="harvard-stars-rising"></div>
-                </div>
-
-                <!-- Text Overlay - Positioned in the middle of the image -->
-                <div class="absolute inset-0 flex flex-col items-center justify-center harvard-title-position">
-                    <h2 class="font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center px-2">
-                        Harvard Advantage
-                    </h2>
-                </div>
+        <!-- 2-Column Grid: Image Left, Content Right -->
+        <div
+          class="grid lg:grid-cols-2 gap-8 sm:gap-12 items-stretch"
+          style="margin-top: -200px; position: relative; z-index: 10"
+        >
+          <!-- Left Column - Harvard Image -->
+          <div class="relative" data-aos="fade-right" data-aos-duration="1000">
+            <div
+              class="glass rounded-2xl p-4 sm:p-6 backdrop-blur-xl bg-white/5 border border-white/10 h-full flex items-center"
+            >
+              <img
+                src="assets/images/Harvard-ilab-building.webp"
+                alt="Harvard i-lab Building"
+                class="w-full h-auto rounded-xl object-cover"
+              />
             </div>
+          </div>
 
-            <!-- 2-Column Grid: Image Left, Content Right -->
-            <div class="grid lg:grid-cols-2 gap-8 sm:gap-12 items-stretch" style="margin-top: -200px; position: relative; z-index: 10;">
+          <!-- Right Column - Content -->
+          <div
+            class="relative"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <!-- Main Content Card -->
+            <div
+              class="glass rounded-2xl p-6 sm:p-8 lg:p-10 backdrop-blur-xl bg-white/5 border border-white/10 h-full flex flex-col justify-center"
+            >
+              <!-- Decorative Elements -->
+              <div
+                class="absolute top-6 left-6 w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-sm"
+              ></div>
+              <div
+                class="absolute bottom-6 right-6 w-8 h-8 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-full blur-sm"
+              ></div>
 
-                <!-- Left Column - Harvard Image -->
-                <div class="relative" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="glass rounded-2xl p-4 sm:p-6 backdrop-blur-xl bg-white/5 border border-white/10 h-full flex items-center">
-                        <img src="assets/images/Harvard-ilab-building.webp" alt="Harvard i-lab Building" class="w-full h-auto rounded-xl object-cover">
-                    </div>
+              <div class="relative z-10 space-y-6">
+                <!-- Highlight Text -->
+                <div class="text-center lg:text-left">
+                  <p
+                    class="font-geist-mono text-sm sm:text-base text-white-400 font-medium uppercase tracking-wider leading-relaxed"
+                  >
+                    LEVERAGING HARVARD’S REEF MAKERSPACE AND<br />
+                    SEAS FABRICATION LAB TURNS A TYPICAL HARDWARE<br />
+                    STARTUP BURDEN INTO OUR SOLANA-POWERED COMPETITIVE EDGE.
+                  </p>
                 </div>
 
-                <!-- Right Column - Content -->
-                <div class="relative" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                <!-- Main Content -->
+                <div class="space-y-4 text-center lg:text-left">
+                  <p
+                    class="font-inter text-base sm:text-lg text-gray-300 leading-relaxed"
+                  >
+                    Because machine time and raw stock are free for Harvard
+                    students, we save ≈
+                    <span class="text-white-400 font-semibold"
+                      >$115k on Year‑1 prototype parts</span
+                    >
+                    and cut weeks of vendor lead time from weeks to hours—giving
+                    us
+                    <span class="text-white-400 font-semibold"
+                      >10× more design cycles</span
+                    >. hat capital efficiency lets every dollar of investment
+                    reach further—funding more on-chain testing and real-time
+                    Solana data validation, not invoices.
+                  </p>
 
-                    <!-- Main Content Card -->
-                    <div class="glass rounded-2xl p-6 sm:p-8 lg:p-10 backdrop-blur-xl bg-white/5 border border-white/10 h-full flex flex-col justify-center">
-                        <!-- Decorative Elements -->
-                        <div class="absolute top-6 left-6 w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-sm"></div>
-                        <div class="absolute bottom-6 right-6 w-8 h-8 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-full blur-sm"></div>
+                  <p
+                    class="font-inter text-base sm:text-lg text-gray-300 leading-relaxed"
+                  >
+                    Rapid in‑house iteration also shortens our path to
+                    blockchain-integrated milestones, keeping Rabus ahead of
+                    larger, slower‑moving rivals.
+                    <span class="text-white-400 font-semibold"
+                      >24/7 swipe access</span
+                    >
+                    as a Harvard graduate student lets the team build
+                    hardware/Web3 hybrids on nights/weekends.
+                  </p>
 
-                        <div class="relative z-10 space-y-6">
-                            <!-- Highlight Text -->
-                            <div class="text-center lg:text-left">
-                                <p class="font-geist-mono text-sm sm:text-base text-white-400 font-medium uppercase tracking-wider leading-relaxed">
-                                    LEVERAGING HARVARD'S REEF MAKERSPACE AND<br> SEAS FABRICATION LAB TURNS A TYPICAL HARDWARE<br> STARTUP BURDEN INTO OUR COMPETITIVE EDGE.
-                                </p>
-                            </div>
-
-                            <!-- Main Content -->
-                            <div class="space-y-4 text-center lg:text-left">
-                                <p class="font-inter text-base sm:text-lg text-gray-300 leading-relaxed">
-                                    Because machine time and raw stock are free for Harvard students, we save ≈ <span class="text-white-400 font-semibold">$115k on Year‑1 prototype parts</span> and cut weeks of vendor lead time from weeks to hours—giving
-                                    us <span class="text-white-400 font-semibold">10× more design cycles</span>. That capital efficiency lets every dollar of investment reach further—funding more testing, not invoices.
-                                </p>
-
-                                <p class="font-inter text-base sm:text-lg text-gray-300 leading-relaxed">
-                                    Rapid in‑house iteration also shortens our path to key milestones, keeping Rabus ahead of larger, slower‑moving rivals. <span class="text-white-400 font-semibold">24/7 swipe access</span> as a Harvard graduate
-                                    student lets the team prototype on nights/weekends.
-                                </p>
-
-                                <p class="font-inter text-base sm:text-lg text-gray-300 leading-relaxed">
-                                    Harvard also supplies office space, legal counsel, and fundraising coaching at no cost, stretching every investor dollar.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                  <p
+                    class="font-inter text-base sm:text-lg text-gray-300 leading-relaxed"
+                  >
+                    Harvard also supplies office space, legal counsel, and
+                    fundraising coaching at no cost, stretching every investor
+                    dollar to accelerate our Solana ecosystem impact.
+                  </p>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- What We Do Section -->
-    <section id="what-we-do" class="relative" style="background-color: #030014;">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0">
-            <!-- Static dots background -->
-            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0); background-size: 50px 50px;"></div>
-            <!-- Floating orbs - subtle -->
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-cyan-500/3 to-blue-600/2 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-purple-500/3 to-pink-600/2 rounded-full blur-3xl"></div>
-            <!-- Interactive twinkling dots -->
-            <div id="what-we-do-stars-container" class="absolute inset-0"></div>
+    <section id="what-we-do" class="relative" style="background-color: #030014">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0">
+        <!-- Static dots background -->
+        <div
+          class="absolute inset-0"
+          style="
+            background-image: radial-gradient(
+              circle at 1px 1px,
+              rgba(255, 255, 255, 0.06) 1px,
+              transparent 0
+            );
+            background-size: 50px 50px;
+          "
+        ></div>
+        <!-- Floating orbs - subtle -->
+        <div
+          class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-cyan-500/3 to-blue-600/2 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-purple-500/3 to-pink-600/2 rounded-full blur-3xl"
+        ></div>
+        <!-- Interactive twinkling dots -->
+        <div id="what-we-do-stars-container" class="absolute inset-0"></div>
+      </div>
+
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-12"
+      >
+        <!-- Header Decoration Image with Overlaid Text -->
+        <div
+          class="text-center mb-6 sm:mb-8 relative"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          <img
+            src="assets/images/wwd_dec.png"
+            alt="What We Do Decoration"
+            class="decoration-image mx-auto opacity-80 max-w-full h-auto"
+          />
+
+          <!-- Rising Stars Animation -->
+          <div class="absolute inset-0 pointer-events-none">
+            <div class="www-stars-rising"></div>
+          </div>
+
+          <!-- Text Overlay - Positioned in the middle of the image -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center"
+            style="top: 45%"
+          >
+            <h2
+              class="font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center px-2"
+            >
+              What We Do
+            </h2>
+          </div>
         </div>
 
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-12">
+        <div
+          class="grid lg:grid-cols-1 gap-8 sm:gap-12 items-center justify-center what-we-do-grid"
+          style="margin-top: -120px; position: relative; z-index: 10"
+        >
+          <!-- What We Do Card - Enhanced Design -->
+          <div
+            class="relative max-w-5xl mx-auto"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div
+              class="glass rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12 backdrop-blur-xl bg-white/5 border border-white/10"
+            >
+              <!-- Decorative Elements -->
+              <div
+                class="absolute top-6 left-6 w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-sm"
+              ></div>
+              <div
+                class="absolute bottom-6 right-6 w-8 h-8 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-full blur-sm"
+              ></div>
+              <div
+                class="absolute top-1/2 right-8 w-6 h-6 bg-gradient-to-br from-teal-400/15 to-green-500/15 rounded-full blur-sm"
+              ></div>
 
-            <!-- Header Decoration Image with Overlaid Text -->
-            <div class="text-center mb-6 sm:mb-8 relative" data-aos="fade-up" data-aos-duration="800">
-                <img src="assets/images/wwd_dec.png" alt="What We Do Decoration" class="decoration-image mx-auto opacity-80 max-w-full h-auto">
+              <div class="relative z-10">
+                <!-- Content -->
+                <div class="text-center space-y-6">
+                  <p
+                    class="font-inter text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto"
+                  >
+                    Rabus is pioneering the future of
+                    <span class="text-white-400 font-semibold"
+                      >reusable blockchain infrastructure</span
+                    >. Our goal is to build sustainable, cost-effective
+                    protocols that enable research institutions, developers, and
+                    enterprises to access decentralized systems more efficiently
+                    on Solana.
+                  </p>
 
-                <!-- Rising Stars Animation -->
-                <div class="absolute inset-0 pointer-events-none">
-                    <div class="www-stars-rising"></div>
-                </div>
-
-                <!-- Text Overlay - Positioned in the middle of the image -->
-                <div class="absolute inset-0 flex flex-col items-center justify-center" style="top: 45%;">
-                    <h2 class="font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center px-2">
-                        What We Do
-                    </h2>
-                </div>
-            </div>
-
-            <div class="grid lg:grid-cols-1 gap-8 sm:gap-12 items-center justify-center what-we-do-grid" style="margin-top: -120px; position: relative; z-index: 10;">
-
-                <!-- What We Do Card - Enhanced Design -->
-                <div class="relative max-w-5xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="glass rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12 backdrop-blur-xl bg-white/5 border border-white/10">
-                        <!-- Decorative Elements -->
-                        <div class="absolute top-6 left-6 w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-sm"></div>
-                        <div class="absolute bottom-6 right-6 w-8 h-8 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-full blur-sm"></div>
-                        <div class="absolute top-1/2 right-8 w-6 h-6 bg-gradient-to-br from-teal-400/15 to-green-500/15 rounded-full blur-sm"></div>
-
-                        <div class="relative z-10">
-
-                            <!-- Content -->
-                            <div class="text-center space-y-6">
-                                <p class="font-inter text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
-                                    Rabus is pioneering the future of <span class="text-white-400 font-semibold">reusable rocket technology</span>. Our goal is to build sustainable, cost-effective launch systems that enable research institutions,
-                                    commercial companies, and governments to access space more easily.
-                                </p>
-
-                                <div class="grid md:grid-cols-3 gap-6 mt-10 mb-10">
-                                    <!-- Feature 1 -->
-                                    <div class="feature-card sustainable text-center p-4">
-                                        <div class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 border" style="background: linear-gradient(to bottom right, #c588f020, #c588f020); border-color: #c588f030;">
-                                            <svg class="w-6 h-6" style="color: #c588f0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                                            </svg>
-                                        </div>
-                                        <h4 class="feature-title font-geist-mono text-sm font-medium uppercase tracking-wider mb-2" style="color: #c588f0;">Sustainable</h4>
-                                        <p class="feature-description text-gray-400 text-sm">Cost-effective launch systems</p>
-                                    </div>
-
-                                    <!-- Feature 2 -->
-                                    <div class="feature-card innovative text-center p-4">
-                                        <div class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 border" style="background: linear-gradient(to bottom right, #e7d0f920, #e7d0f920); border-color: #e7d0f930;">
-                                            <svg class="w-6 h-6" style="color: #e7d0f9;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                                            </svg>
-                                        </div>
-                                        <h4 class="feature-title font-geist-mono text-sm font-medium uppercase tracking-wider mb-2" style="color: #e7d0f9;">Innovative</h4>
-                                        <p class="feature-description text-gray-400 text-sm">Cutting-edge technology</p>
-                                    </div>
-
-                                    <!-- Feature 3 -->
-                                    <div class="feature-card accessible text-center p-4">
-                                        <div class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 border" style="background: linear-gradient(to bottom right, #7a39e620, #7a39e620); border-color: #7a39e630;">
-                                            <svg class="w-6 h-6" style="color: #7a39e6;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"/>
-                                            </svg>
-                                        </div>
-                                        <h4 class="feature-title font-geist-mono text-sm font-medium uppercase tracking-wider mb-2" style="color: #7a39e6;">Accessible</h4>
-                                        <p class="feature-description text-gray-400 text-sm">Space for everyone</p>
-                                    </div>
-                                </div>
-
-                                <p class="font-inter text-gray-400 leading-relaxed max-w-3xl mx-auto text-base">
-                                    By lowering launch costs and increasing launch frequency, we are laying the groundwork for the next era of space exploration.
-                                </p>
-
-                                <div class="pt-6">
-                                    <a href="mission-phoenix"><button class="scramble-btn border border-gray-600 text-white font-geist-mono font-medium px-6 py-3 rounded-md hover:border-gray-500 hover:bg-gray-900 transition-all duration-200 flex items-center mx-auto">
-                                        <span class="scramble-text">Explore Our Technology</span>
-                                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                        </svg>
-                                    </button></a>
-                                </div>
-                            </div>
-                        </div>
+                  <div class="grid md:grid-cols-3 gap-6 mt-10 mb-10">
+                    <!-- Feature 1 -->
+                    <div class="feature-card sustainable text-center p-4">
+                      <div
+                        class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 border"
+                        style="
+                          background: linear-gradient(
+                            to bottom right,
+                            #c588f020,
+                            #c588f020
+                          );
+                          border-color: #c588f030;
+                        "
+                      >
+                        <svg
+                          class="w-6 h-6"
+                          style="color: #c588f0"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                          />
+                        </svg>
+                      </div>
+                      <h4
+                        class="feature-title font-geist-mono text-sm font-medium uppercase tracking-wider mb-2"
+                        style="color: #c588f0"
+                      >
+                        Sustainable
+                      </h4>
+                      <p class="feature-description text-gray-400 text-sm">
+                        Cost-efficient blockchain infrastructure
+                      </p>
                     </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card innovative text-center p-4">
+                      <div
+                        class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 border"
+                        style="
+                          background: linear-gradient(
+                            to bottom right,
+                            #e7d0f920,
+                            #e7d0f920
+                          );
+                          border-color: #e7d0f930;
+                        "
+                      >
+                        <svg
+                          class="w-6 h-6"
+                          style="color: #e7d0f9"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z"
+                          />
+                        </svg>
+                      </div>
+                      <h4
+                        class="feature-title font-geist-mono text-sm font-medium uppercase tracking-wider mb-2"
+                        style="color: #e7d0f9"
+                      >
+                        Innovative
+                      </h4>
+                      <p class="feature-description text-gray-400 text-sm">
+                        Cutting-edge Web3 technology
+                      </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card accessible text-center p-4">
+                      <div
+                        class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 border"
+                        style="
+                          background: linear-gradient(
+                            to bottom right,
+                            #7a39e620,
+                            #7a39e620
+                          );
+                          border-color: #7a39e630;
+                        "
+                      >
+                        <svg
+                          class="w-6 h-6"
+                          style="color: #7a39e6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"
+                          />
+                        </svg>
+                      </div>
+                      <h4
+                        class="feature-title font-geist-mono text-sm font-medium uppercase tracking-wider mb-2"
+                        style="color: #7a39e6"
+                      >
+                        Accessible
+                      </h4>
+                      <p class="feature-description text-gray-400 text-sm">
+                        Decentralization for everyone
+                      </p>
+                    </div>
+                  </div>
+
+                  <p
+                    class="font-inter text-gray-400 leading-relaxed max-w-3xl mx-auto text-base"
+                  >
+                    By reducing transaction costs and increasing on-chain
+                    scalability, we’re building the foundation for the next era
+                    of decentralized systems.
+                  </p>
+
+                  <div class="pt-6">
+                    <a href="mission-phoenix"
+                      ><button
+                        class="scramble-btn border border-gray-600 text-white font-geist-mono font-medium px-6 py-3 rounded-md hover:border-gray-500 hover:bg-gray-900 transition-all duration-200 flex items-center mx-auto"
+                      >
+                        <span class="scramble-text"
+                          >Explore Our Technology</span
+                        >
+                        <svg
+                          class="ml-2 w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg></button
+                    ></a>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Why This Matters Section -->
-    <section id="why-this-matters" class="relative" style="background-color: #030014;">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0">
-            <!-- Static dots background -->
-            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0); background-size: 50px 50px;"></div>
-            <!-- Floating orbs - subtle -->
-            <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-500/3 to-pink-600/2 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-teal-500/3 to-green-600/2 rounded-full blur-3xl"></div>
-            <!-- Interactive twinkling dots -->
-            <div id="why-this-matters-stars-container" class="absolute inset-0"></div>
+    <section
+      id="why-this-matters"
+      class="relative"
+      style="background-color: #030014"
+    >
+      <!-- Background Pattern -->
+      <div class="absolute inset-0">
+        <!-- Static dots background -->
+        <div
+          class="absolute inset-0"
+          style="
+            background-image: radial-gradient(
+              circle at 1px 1px,
+              rgba(255, 255, 255, 0.06) 1px,
+              transparent 0
+            );
+            background-size: 50px 50px;
+          "
+        ></div>
+        <!-- Floating orbs - subtle -->
+        <div
+          class="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-purple-500/3 to-pink-600/2 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-teal-500/3 to-green-600/2 rounded-full blur-3xl"
+        ></div>
+        <!-- Interactive twinkling dots -->
+        <div
+          id="why-this-matters-stars-container"
+          class="absolute inset-0"
+        ></div>
+      </div>
+
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-12"
+      >
+        <!-- Header Decoration Image with Overlaid Text -->
+        <div
+          class="text-center mb-6 sm:mb-8 relative"
+          data-aos="fade-up"
+          data-aos-duration="800"
+        >
+          <img
+            src="assets/images/wtm_dec.png"
+            alt="Why This Matters Decoration"
+            class="decoration-image mx-auto opacity-80 max-w-full h-auto"
+          />
+
+          <!-- Rising Stars Animation -->
+          <div class="absolute inset-0 pointer-events-none">
+            <div class="wtm-stars-rising"></div>
+          </div>
+
+          <!-- Text Overlay - Positioned in the middle of the image -->
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center"
+            style="top: 45%"
+          >
+            <h2
+              class="font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center px-2"
+            >
+              Why This Matters
+            </h2>
+          </div>
         </div>
 
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-12">
+        <div
+          class="grid lg:grid-cols-1 gap-8 sm:gap-12 items-center justify-center why-this-matters-grid"
+          style="margin-top: -120px; position: relative; z-index: 10"
+        >
+          <!-- Why This Matters Card - Enhanced Design -->
+          <div
+            class="relative max-w-5xl mx-auto"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div
+              class="glass rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12 backdrop-blur-xl bg-white/5 border border-white/10"
+            >
+              <!-- Decorative Elements -->
+              <div
+                class="absolute top-6 left-6 w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-sm"
+              ></div>
+              <div
+                class="absolute bottom-6 right-6 w-8 h-8 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-full blur-sm"
+              ></div>
+              <div
+                class="absolute top-1/2 right-8 w-6 h-6 bg-gradient-to-br from-teal-400/15 to-green-500/15 rounded-full blur-sm"
+              ></div>
 
-            <!-- Header Decoration Image with Overlaid Text -->
-            <div class="text-center mb-6 sm:mb-8 relative" data-aos="fade-up" data-aos-duration="800">
-                <img src="assets/images/wtm_dec.png" alt="Why This Matters Decoration" class="decoration-image mx-auto opacity-80 max-w-full h-auto">
+              <div class="relative z-10">
+                <!-- Content -->
+                <div class="text-center space-y-6">
+                  <p
+                    class="font-inter text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto"
+                  >
+                    Humanity's future is on-chain. Advancing
+                    <span class="text-white-400 font-semibold"
+                      >reusable blockchain infrastructure</span
+                    >
+                    is the first step toward building a decentralized future. By
+                    making Web3 more accessible, we empower innovation,
+                    scientific collaboration, and digital sovereignty.
+                  </p>
 
-                <!-- Rising Stars Animation -->
-                <div class="absolute inset-0 pointer-events-none">
-                    <div class="wtm-stars-rising"></div>
-                </div>
-
-                <!-- Text Overlay - Positioned in the middle of the image -->
-                <div class="absolute inset-0 flex flex-col items-center justify-center" style="top: 45%;">
-                    <h2 class="font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center px-2">
-                        Why This Matters
-                    </h2>
-                </div>
-            </div>
-
-            <div class="grid lg:grid-cols-1 gap-8 sm:gap-12 items-center justify-center why-this-matters-grid" style="margin-top: -120px; position: relative; z-index: 10;">
-
-                <!-- Why This Matters Card - Enhanced Design -->
-                <div class="relative max-w-5xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="glass rounded-2xl p-6 sm:p-8 md:p-10 lg:p-12 backdrop-blur-xl bg-white/5 border border-white/10">
-                        <!-- Decorative Elements -->
-                        <div class="absolute top-6 left-6 w-12 h-12 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-sm"></div>
-                        <div class="absolute bottom-6 right-6 w-8 h-8 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-full blur-sm"></div>
-                        <div class="absolute top-1/2 right-8 w-6 h-6 bg-gradient-to-br from-teal-400/15 to-green-500/15 rounded-full blur-sm"></div>
-
-                        <div class="relative z-10">
-
-                            <!-- Content -->
-                            <div class="text-center space-y-6">
-                                <p class="font-inter text-lg md:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
-                                    Humanity's future is beyond Earth. Advancing <span class="text-white-400 font-semibold">reusable spaceflight technology</span> is the first step toward becoming a multi-planetary species. By making space more accessible,
-                                    we empower innovation, scientific progress, and exploration.
-                                </p>
-
-                                <div class="grid md:grid-cols-3 gap-6 mt-10 mb-10">
-                                    <!-- Feature 1 -->
-                                    <div class="feature-card sustainable text-center p-4">
-                                        <div class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 border" style="background: linear-gradient(to bottom right, #c588f020, #c588f020); border-color: #c588f030;">
-                                            <svg class="w-6 h-6" style="color: #c588f0;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"/>
-                                            </svg>
-                                        </div>
-                                        <h4 class="feature-title font-geist-mono text-sm font-medium uppercase tracking-wider mb-2" style="color: #c588f0;">Multi-Planetary</h4>
-                                        <p class="feature-description text-gray-400 text-sm">Expanding human presence</p>
-                                    </div>
-
-                                    <!-- Feature 2 -->
-                                    <div class="feature-card innovative text-center p-4">
-                                        <div class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 border" style="background: linear-gradient(to bottom right, #e7d0f920, #e7d0f920); border-color: #e7d0f930;">
-                                            <svg class="w-6 h-6" style="color: #e7d0f9;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                                            </svg>
-                                        </div>
-                                        <h4 class="feature-title font-geist-mono text-sm font-medium uppercase tracking-wider mb-2" style="color: #e7d0f9;">Innovation</h4>
-                                        <p class="feature-description text-gray-400 text-sm">Scientific progress</p>
-                                    </div>
-
-                                    <!-- Feature 3 -->
-                                    <div class="feature-card accessible text-center p-4">
-                                        <div class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 border" style="background: linear-gradient(to bottom right, #7a39e620, #7a39e620); border-color: #7a39e630;">
-                                            <svg class="w-6 h-6" style="color: #7a39e6;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-                                            </svg>
-                                        </div>
-                                        <h4 class="feature-title font-geist-mono text-sm font-medium uppercase tracking-wider mb-2" style="color: #7a39e6;">Exploration</h4>
-                                        <p class="feature-description text-gray-400 text-sm">Future of civilization</p>
-                                    </div>
-                                </div>
-
-                                <p class="font-inter text-gray-400 leading-relaxed max-w-3xl mx-auto text-base">
-                                    This will define the future of civilization and ensure humanity's survival beyond our home planet.
-                                </p>
-
-                                <div class="pt-6">
-                                    <a href="about-us"><button class="scramble-btn border border-gray-600 text-white font-geist-mono font-medium px-6 py-3 rounded-md hover:border-gray-500 hover:bg-gray-900 transition-all duration-200 flex items-center mx-auto">
-                                        <span class="scramble-text">Read More About Our Vision</span>
-                                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                                        </svg>
-                                    </button></a>
-                                </div>
-                            </div>
-                        </div>
+                  <div class="grid md:grid-cols-3 gap-6 mt-10 mb-10">
+                    <!-- Feature 1 -->
+                    <div class="feature-card sustainable text-center p-4">
+                      <div
+                        class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 border"
+                        style="
+                          background: linear-gradient(
+                            to bottom right,
+                            #c588f020,
+                            #c588f020
+                          );
+                          border-color: #c588f030;
+                        "
+                      >
+                        <svg
+                          class="w-6 h-6"
+                          style="color: #c588f0"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9"
+                          />
+                        </svg>
+                      </div>
+                      <h4
+                        class="feature-title font-geist-mono text-sm font-medium uppercase tracking-wider mb-2"
+                        style="color: #c588f0"
+                      >
+                        Decentralized Future
+                      </h4>
+                      <p class="feature-description text-gray-400 text-sm">
+                        Expanding human-centric systems
+                      </p>
                     </div>
+
+                    <!-- Feature 2 -->
+                    <div class="feature-card innovative text-center p-4">
+                      <div
+                        class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 border"
+                        style="
+                          background: linear-gradient(
+                            to bottom right,
+                            #e7d0f920,
+                            #e7d0f920
+                          );
+                          border-color: #e7d0f930;
+                        "
+                      >
+                        <svg
+                          class="w-6 h-6"
+                          style="color: #e7d0f9"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                          />
+                        </svg>
+                      </div>
+                      <h4
+                        class="feature-title font-geist-mono text-sm font-medium uppercase tracking-wider mb-2"
+                        style="color: #e7d0f9"
+                      >
+                        Innovation
+                      </h4>
+                      <p class="feature-description text-gray-400 text-sm">
+                        Open-source progress
+                      </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="feature-card accessible text-center p-4">
+                      <div
+                        class="feature-icon w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-3 border"
+                        style="
+                          background: linear-gradient(
+                            to bottom right,
+                            #7a39e620,
+                            #7a39e620
+                          );
+                          border-color: #7a39e630;
+                        "
+                      >
+                        <svg
+                          class="w-6 h-6"
+                          style="color: #7a39e6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z"
+                          />
+                        </svg>
+                      </div>
+                      <h4
+                        class="feature-title font-geist-mono text-sm font-medium uppercase tracking-wider mb-2"
+                        style="color: #7a39e6"
+                      >
+                        Exploration
+                      </h4>
+                      <p class="feature-description text-gray-400 text-sm">
+                        New frontiers of digital civilization
+                      </p>
+                    </div>
+                  </div>
+
+                  <p
+                    class="font-inter text-gray-400 leading-relaxed max-w-3xl mx-auto text-base"
+                  >
+                    This will define the next era of human collaboration and
+                    ensure resilient systems beyond centralized control.
+                  </p>
+
+                  <div class="pt-6">
+                    <a href="about-us"
+                      ><button
+                        class="scramble-btn border border-gray-600 text-white font-geist-mono font-medium px-6 py-3 rounded-md hover:border-gray-500 hover:bg-gray-900 transition-all duration-200 flex items-center mx-auto"
+                      >
+                        <span class="scramble-text"
+                          >Read More About Our Vision</span
+                        >
+                        <svg
+                          class="ml-2 w-4 h-4"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg></button
+                    ></a>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Stay Updated Section -->
-    <section id="stay-updated" class="relative" style="background-color: #030014;">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0">
-            <!-- Static dots background -->
-            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0); background-size: 50px 50px;"></div>
-            <!-- Floating orbs - subtle -->
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-cyan-500/3 to-blue-600/2 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-purple-500/3 to-pink-600/2 rounded-full blur-3xl"></div>
-            <!-- Interactive twinkling dots -->
-            <div id="newsletter-stars-container" class="absolute inset-0"></div>
+    <section
+      id="stay-updated"
+      class="relative"
+      style="background-color: #030014"
+    >
+      <!-- Background Pattern -->
+      <div class="absolute inset-0">
+        <!-- Static dots background -->
+        <div
+          class="absolute inset-0"
+          style="
+            background-image: radial-gradient(
+              circle at 1px 1px,
+              rgba(255, 255, 255, 0.06) 1px,
+              transparent 0
+            );
+            background-size: 50px 50px;
+          "
+        ></div>
+        <!-- Floating orbs - subtle -->
+        <div
+          class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-cyan-500/3 to-blue-600/2 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-purple-500/3 to-pink-600/2 rounded-full blur-3xl"
+        ></div>
+        <!-- Interactive twinkling dots -->
+        <div id="newsletter-stars-container" class="absolute inset-0"></div>
+      </div>
+
+      <div
+        class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-20"
+      >
+        <!-- Newsletter Card -->
+        <div
+          class="newsletter-card text-center"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <!-- Moving Border -->
+          <div class="moving-border-wrapper">
+            <svg class="moving-border-svg" xmlns="http://www.w3.org/2000/svg">
+              <rect
+                id="newsletter-border-path"
+                width="100%"
+                height="100%"
+                rx="16"
+                ry="16"
+                fill="none"
+                stroke="none"
+              />
+            </svg>
+            <div
+              class="moving-border-element"
+              id="newsletter-moving-element"
+            ></div>
+          </div>
+
+          <div class="relative z-10">
+            <h2
+              class="font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 px-2"
+            >
+              Stay Updated
+            </h2>
+            <p
+              class="font-inter text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-4"
+            >
+              Join our mission updates and be the first to hear about launches,
+              breakthroughs, and behind-the-scenes progress.
+            </p>
+
+            <form
+              class="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-lg mx-auto px-4 sm:px-0"
+              id="newsletter-form"
+            >
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                class="newsletter-enhanced-input flex-1"
+                required
+              />
+              <button
+                type="submit"
+                class="scramble-btn bg-white text-black font-geist-mono font-medium px-6 py-3 rounded-md hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center"
+              >
+                <span class="scramble-text">Sign up</span>
+                <svg
+                  class="ml-2 w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
         </div>
-
-        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-16 lg:py-20">
-            <!-- Newsletter Card -->
-            <div class="newsletter-card text-center" data-aos="fade-up" data-aos-duration="1000">
-                <!-- Moving Border -->
-                <div class="moving-border-wrapper">
-                    <svg class="moving-border-svg" xmlns="http://www.w3.org/2000/svg">
-                        <rect id="newsletter-border-path" 
-                              width="100%" 
-                              height="100%" 
-                              rx="16" 
-                              ry="16" 
-                              fill="none" 
-                              stroke="none" />
-                    </svg>
-                    <div class="moving-border-element" id="newsletter-moving-element"></div>
-                </div>
-
-                <div class="relative z-10">
-                    <h2 class="font-inter text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 sm:mb-4 px-2">
-                        Stay Updated
-                    </h2>
-                    <p class="font-inter text-base sm:text-lg md:text-xl text-gray-300 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
-                        Join our mission updates and be the first to hear about launches, breakthroughs, and behind-the-scenes progress.
-                    </p>
-
-                    <form class="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-lg mx-auto px-4 sm:px-0" id="newsletter-form">
-                        <input type="email" placeholder="Enter your email address" class="newsletter-enhanced-input flex-1" required>
-                        <button type="submit" class="scramble-btn bg-white text-black font-geist-mono font-medium px-6 py-3 rounded-md hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center">
-                            <span class="scramble-text">Sign up</span>
-                            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                            </svg>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
     <!-- Video + Footer Combined Section -->
-    <div class="video-footer-section relative w-full" style="height: 100vh; background-color: #000;">
-        <!-- Video Background -->
-        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
-                                    <source src="assets/videos/anka.webm" type="video/webm">
-            Your browser does not support the video tag.
-        </video>
+    <div
+      class="video-footer-section relative w-full"
+      style="height: 100vh; background-color: #000"
+    >
+      <!-- Video Background -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="assets/videos/anka.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
 
-        <!-- Footer Overlay -->
-        <footer class="absolute bottom-0 left-0 right-0 footer-bg" style="border-top: 1px solid #333; background: rgba(0, 0, 0, 0.9); height: 50vh;">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-6 sm:py-8">
-                <!-- Logo and Subtitle - Centered -->
-                <div class="text-center mb-4 sm:mb-6" style="padding-bottom: 4rem;">
-                    <img src="assets/images/AnkaSpace_wordmark-white.webp" alt="Rabus" class="h-8 sm:h-10 mx-auto mb-3 sm:mb-4">
-                    <p class="text-gray-400 text-xs sm:text-sm max-w-md mx-auto px-4 mb-8">
-                        Pioneering the future of space technology with innovative rocket systems and cutting-edge solutions.
-                    </p>
-                    <!-- Rabus Mark -->
-                    <div class="flex justify-center items-center" style="height: 200px; margin-top: 8rem; margin-bottom: 2rem;">
-                        <img src="assets/images/AnkaSpace_mark.svg" alt="Rabus Mark" class="w-64 h-80 opacity-20 hover:opacity-30 transition-opacity duration-300" style="filter: brightness(0) invert(1);">
-                    </div>
-                </div>
+      <!-- Footer Overlay -->
+      <footer
+        class="absolute bottom-0 left-0 right-0 footer-bg"
+        style="
+          border-top: 1px solid #333;
+          background: rgba(0, 0, 0, 0.9);
+          height: 50vh;
+        "
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-6 sm:py-8">
+          <!-- Logo and Subtitle - Centered -->
+          <div class="text-center mb-4 sm:mb-6" style="padding-bottom: 4rem">
+            <img
+              src="assets/images/AnkaSpace_wordmark-white.webp"
+              alt="Rabus"
+              class="h-8 sm:h-10 mx-auto mb-3 sm:mb-4"
+            />
+            <p
+              class="text-gray-400 text-xs sm:text-sm max-w-md mx-auto px-4 mb-8"
+            >
+              Pioneering the future of decentralized technology with innovative
+              blockchain systems and cutting-edge Web3 solutions.
+            </p>
+            <!-- Rabus Mark -->
+            <div
+              class="flex justify-center items-center"
+              style="height: 200px; margin-top: 8rem; margin-bottom: 2rem"
+            >
+              <img
+                src="assets/images/AnkaSpace_mark.svg"
+                alt="Rabus Mark"
+                class="w-64 h-80 opacity-20 hover:opacity-30 transition-opacity duration-300"
+                style="filter: brightness(0) invert(1)"
+              />
+            </div>
+          </div>
 
-                <!-- 6-Column Grid System -->
-                <div class="footer-grid grid grid-cols-2 md:grid-cols-6 gap-4 sm:gap-6 mb-4 sm:mb-6 w-full justify-items-stretch" style="padding-top: 2rem;">
-                    <div class="w-full text-center md:text-left">
-                        <a href="index.html" class="footer-heading">Home</a>
-                    </div>
+          <!-- 6-Column Grid System -->
+          <div
+            class="footer-grid grid grid-cols-2 md:grid-cols-6 gap-4 sm:gap-6 mb-4 sm:mb-6 w-full justify-items-stretch"
+            style="padding-top: 2rem"
+          >
+            <div class="w-full text-center md:text-left">
+              <a href="index.html" class="footer-heading">Home</a>
+            </div>
 
-                    <div class="w-full text-center md:text-left">
-                        <a href="about-us" class="footer-heading">About Us</a>
-                    </div>
+            <div class="w-full text-center md:text-left">
+              <a href="about-us" class="footer-heading">About Us</a>
+            </div>
 
-                    <div class="w-full text-center">
-                        <a href="mission-phoenix" class="footer-heading">Mission Phoenix</a>
-                    </div>
+            <div class="w-full text-center">
+              <a href="mission-phoenix" class="footer-heading"
+                >Mission Phoenix</a
+              >
+            </div>
 
-                    <div class="w-full text-center">
-                        <a href="https://rabus-store.vercel.app/" target="_blank" class="footer-heading">Shop</a>
-                    </div>
+            <div class="w-full text-center">
+              <a
+                href="https://rabus-store.vercel.app/"
+                target="_blank"
+                class="footer-heading"
+                >Shop</a
+              >
+            </div>
 
-                    <div class="w-full text-center md:text-center">
-                        <a href="careers" class="footer-heading">Careers</a>
-                    </div>
+            <div class="w-full text-center md:text-center">
+              <a href="careers" class="footer-heading">Careers</a>
+            </div>
 
-                    <div class="w-full text-center md:text-right">
-                        <a href="contact-us" class="footer-heading">Contact Us</a>
-                    </div>
-                </div>
+            <div class="w-full text-center md:text-right">
+              <a href="contact-us" class="footer-heading">Contact Us</a>
+            </div>
+          </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center footer-copyright">
-                    <div class="flex items-center space-x-4 justify-center md:justify-start">
-                        <p>©Copyright 2025 Rabus - All Rights Reserved.</p>
-                    </div>
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center footer-copyright"
+          >
+            <div
+              class="flex items-center space-x-4 justify-center md:justify-start"
+            >
+              <p>©Copyright 2025 Rabus - All Rights Reserved.</p>
+            </div>
 
-                    <div class="flex space-x-4 justify-center md:justify-end">
-                        <!-- <a href="https://www.instagram.com/ankaspacecorp" target="_blank" class="footer-social">
+            <div class="flex space-x-4 justify-center md:justify-end">
+              <!-- <a href="https://www.instagram.com/ankaspacecorp" target="_blank" class="footer-social">
                         <i data-lucide="instagram" class="w-5 h-5"></i>
                     </a>
                         <a href="https://www.linkedin.com/company/anka-space/" target="_blank" class="footer-social">
                         <i data-lucide="linkedin" class="w-5 h-5"></i>
                     </a> -->
-                        <a href="https://www.x.com/rabus" target="_blank" class="footer-social">
-                        <i data-lucide="twitter" class="w-5 h-5"></i>
-                    </a>
-                    </div>
-                </div>
-
+              <a
+                href="https://www.x.com/rabus"
+                target="_blank"
+                class="footer-social"
+              >
+                <i data-lucide="twitter" class="w-5 h-5"></i>
+              </a>
             </div>
-        </footer>
+          </div>
+        </div>
+      </footer>
     </div>
 
     <!-- AOS Animation Library -->
@@ -718,13 +1460,12 @@
 
     <!-- Initialize Lucide Icons -->
     <script>
-        lucide.createIcons();
+      lucide.createIcons();
     </script>
 
     <!-- 3D Rocket Model System - Production Ready -->
     <script>
-        // 3D Roket sistemi script.js üzerinden yönetiliyor
+      // 3D Roket sistemi script.js üzerinden yönetiliyor
     </script>
-</body>
-
+  </body>
 </html>

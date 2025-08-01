@@ -1,638 +1,1158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Careers - Rabus</title>
-    <meta name="description" content="Join our mission to make space accessible for everyone.">
-    
+    <meta
+      name="description"
+      content="Join our mission to make space accessible for everyone."
+    />
+
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/favicon.png">
-    <link rel="shortcut icon" href="assets/icons/favicon.png">
-    <link rel="icon" href="assets/icons/favicon.png">
-    <meta name="msapplication-TileImage" content="assets/icons/favicon.png">
-    <meta name="msapplication-TileColor" content="#030014">
-    <meta name="theme-color" content="#030014">
-    
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="assets/icons/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="assets/icons/favicon.png"
+    />
+    <link rel="shortcut icon" href="assets/icons/favicon.png" />
+    <link rel="icon" href="assets/icons/favicon.png" />
+    <meta name="msapplication-TileImage" content="assets/icons/favicon.png" />
+    <meta name="msapplication-TileColor" content="#030014" />
+    <meta name="theme-color" content="#030014" />
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        // Suppress Tailwind CDN warning for development
-        if (typeof console !== 'undefined' && console.warn) {
-            const originalWarn = console.warn;
-            console.warn = function(...args) {
-                if (args[0] && args[0].includes && args[0].includes('cdn.tailwindcss.com')) {
-                    return;
-                }
-                originalWarn.apply(console, args);
-            };
-        }
+      // Suppress Tailwind CDN warning for development
+      if (typeof console !== "undefined" && console.warn) {
+        const originalWarn = console.warn;
+        console.warn = function (...args) {
+          if (
+            args[0] &&
+            args[0].includes &&
+            args[0].includes("cdn.tailwindcss.com")
+          ) {
+            return;
+          }
+          originalWarn.apply(console, args);
+        };
+      }
     </script>
-    
+
     <!-- Custom Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
     <!-- Lucide Icons for Social Media -->
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-    
+
     <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/careers.css">
-</head>
-<body class="font-inter bg-black text-white overflow-x-hidden" style="margin: 0; padding: 0;">
-    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/careers.css" />
+  </head>
+  <body
+    class="font-inter bg-black text-white overflow-x-hidden"
+    style="margin: 0; padding: 0"
+  >
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
-        <div class="w-full px-6 lg:px-12">
-            <div class="flex items-center justify-between h-20">
-                
-                <!-- Left Menu Items -->
-                <div class="desktop-nav hidden lg:flex items-center space-x-12">
-                    <a href="index.html" class="nav-link">
-                        Home
-                    </a>
-                    <a href="about-us" class="nav-link">
-                        About Us
-                    </a>
-                    <a href="mission-phoenix" class="nav-link">
-                        Mission Phoenix
-                    </a>
-                </div>
-                
-                <!-- Logo - Centered -->
-                <div class="absolute left-1/2 transform -translate-x-1/2">
-                    <img src="assets/images/AnkaSpace_wordmark-white.webp" alt="Rabus" style="width: 165px; height: auto;">
-                </div>
-                
-                <!-- Right Menu Items -->
-                <div class="desktop-nav hidden lg:flex items-center space-x-12">
-                    <a href="https://rabus-store.vercel.app/" target="_blank" class="nav-link">
-                        Shop
-                    </a>
-                    <a href="careers" class="nav-link text-white font-semibold">
-                        Careers
-                    </a>
-                    <a href="contact-us" class="nav-link">
-                        Contact Us
-                    </a>
-                </div>
-                
-                <!-- Mobile Hamburger Button - Right positioned -->
-                <button class="lg:hidden p-3 absolute right-6" id="mobile-toggle">
-                    <div class="w-6 h-6 flex flex-col justify-center" id="hamburger-icon">
-                        <span class="block h-0.5 w-6 bg-white mb-1 transition-all duration-300" id="line1"></span>
-                        <span class="block h-0.5 w-6 bg-white mb-1 transition-all duration-300" id="line2"></span>
-                        <span class="block h-0.5 w-6 bg-white transition-all duration-300" id="line3"></span>
-                    </div>
-                </button>
-                
+    <nav
+      class="fixed top-0 w-full z-50 transition-all duration-300"
+      id="navbar"
+    >
+      <div class="w-full px-6 lg:px-12">
+        <div class="flex items-center justify-between h-20">
+          <!-- Left Menu Items -->
+          <div class="desktop-nav hidden lg:flex items-center space-x-12">
+            <a href="index.html" class="nav-link"> Home </a>
+            <a href="about-us" class="nav-link"> About Us </a>
+            <a href="mission-phoenix" class="nav-link"> Mission Phoenix </a>
+          </div>
+
+          <!-- Logo - Centered -->
+          <div class="absolute left-1/2 transform -translate-x-1/2">
+            <img
+              src="assets/images/AnkaSpace_wordmark-white.webp"
+              alt="Rabus"
+              style="width: 165px; height: auto"
+            />
+          </div>
+
+          <!-- Right Menu Items -->
+          <div class="desktop-nav hidden lg:flex items-center space-x-12">
+            <a
+              href="https://rabus-store.vercel.app/"
+              target="_blank"
+              class="nav-link"
+            >
+              Shop
+            </a>
+            <a href="careers" class="nav-link text-white font-semibold">
+              Careers
+            </a>
+            <a href="contact-us" class="nav-link"> Contact Us </a>
+          </div>
+
+          <!-- Mobile Hamburger Button - Right positioned -->
+          <button class="lg:hidden p-3 absolute right-6" id="mobile-toggle">
+            <div
+              class="w-6 h-6 flex flex-col justify-center"
+              id="hamburger-icon"
+            >
+              <span
+                class="block h-0.5 w-6 bg-white mb-1 transition-all duration-300"
+                id="line1"
+              ></span>
+              <span
+                class="block h-0.5 w-6 bg-white mb-1 transition-all duration-300"
+                id="line2"
+              ></span>
+              <span
+                class="block h-0.5 w-6 bg-white transition-all duration-300"
+                id="line3"
+              ></span>
             </div>
+          </button>
         </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden fixed inset-0 bg-black bg-opacity-95 z-50">
-            <div class="flex flex-col h-full justify-center items-start pl-8 space-y-6">
-                <a href="index.html" class="text-white text-3xl font-inter font-medium mobile-link">Home</a>
-                <a href="about-us" class="text-white text-3xl font-inter font-medium mobile-link">About Us</a>
-                <a href="mission-phoenix" class="text-white text-3xl font-inter font-medium mobile-link">Mission Phoenix</a>
-                <a href="https://rabus-store.vercel.app/" target="_blank" class="text-white text-3xl font-inter font-medium mobile-link">Shop</a>
-                <a href="careers" class="text-white text-3xl font-inter font-medium mobile-link">Careers</a>
-                <a href="contact-us" class="text-white text-3xl font-inter font-medium mobile-link">Contact Us</a>
-            </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden fixed inset-0 bg-black bg-opacity-95 z-50"
+      >
+        <div
+          class="flex flex-col h-full justify-center items-start pl-8 space-y-6"
+        >
+          <a
+            href="index.html"
+            class="text-white text-3xl font-inter font-medium mobile-link"
+            >Home</a
+          >
+          <a
+            href="about-us"
+            class="text-white text-3xl font-inter font-medium mobile-link"
+            >About Us</a
+          >
+          <a
+            href="mission-phoenix"
+            class="text-white text-3xl font-inter font-medium mobile-link"
+            >Mission Phoenix</a
+          >
+          <a
+            href="https://rabus-store.vercel.app/"
+            target="_blank"
+            class="text-white text-3xl font-inter font-medium mobile-link"
+            >Shop</a
+          >
+          <a
+            href="careers"
+            class="text-white text-3xl font-inter font-medium mobile-link"
+            >Careers</a
+          >
+          <a
+            href="contact-us"
+            class="text-white text-3xl font-inter font-medium mobile-link"
+            >Contact Us</a
+          >
         </div>
+      </div>
     </nav>
 
     <!-- Hero Section - Sparkles Effect -->
-    <section id="careers-hero" class="relative pt-20 sm:pt-24 h-[30rem] sm:h-[35rem] md:h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden px-4">
-        <!-- Sparkles Background -->
-        <div id="sparkles-container" class="absolute inset-0 w-full h-full"></div>
-        
-        <!-- Floating Particles Zone -->
-        <div id="particles-zone" class="particles-zone"></div>
-        
-        <!-- Main Title -->
-        <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-center text-white relative z-20 font-inter mb-8">
-            Careers
-        </h1>
-        
-        <!-- Gradient Lines Container - Responsive -->
-        <div class="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-[40rem] h-32 sm:h-36 md:h-40 relative mx-auto">
-            <!-- Gradients - Mobile Optimized -->
-            <div class="absolute left-1/2 transform -translate-x-1/2 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm"></div>
-            <div class="absolute left-1/2 transform -translate-x-1/2 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4"></div>
-            <div class="absolute left-1/2 transform -translate-x-1/2 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[3px] sm:h-[4px] md:h-[5px] w-1/4 blur-sm"></div>
-            <div class="absolute left-1/2 transform -translate-x-1/2 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4"></div>
+    <section
+      id="careers-hero"
+      class="relative pt-20 sm:pt-24 h-[30rem] sm:h-[35rem] md:h-[40rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden px-4"
+    >
+      <!-- Sparkles Background -->
+      <div id="sparkles-container" class="absolute inset-0 w-full h-full"></div>
 
-            <!-- Radial Gradient to prevent sharp edges - Responsive -->
-            <div class="absolute inset-0 w-full h-full bg-black" style="mask-image: radial-gradient(250px 150px at top, transparent 20%, white);"></div>
-        </div>
+      <!-- Floating Particles Zone -->
+      <div id="particles-zone" class="particles-zone"></div>
+
+      <!-- Main Title -->
+      <h1
+        class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-center text-white relative z-20 font-inter mb-8"
+      >
+        Careers
+      </h1>
+
+      <!-- Gradient Lines Container - Responsive -->
+      <div
+        class="w-full max-w-xs sm:max-w-md md:max-w-lg lg:max-w-2xl xl:max-w-[40rem] h-32 sm:h-36 md:h-40 relative mx-auto"
+      >
+        <!-- Gradients - Mobile Optimized -->
+        <div
+          class="absolute left-1/2 transform -translate-x-1/2 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm"
+        ></div>
+        <div
+          class="absolute left-1/2 transform -translate-x-1/2 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4"
+        ></div>
+        <div
+          class="absolute left-1/2 transform -translate-x-1/2 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[3px] sm:h-[4px] md:h-[5px] w-1/4 blur-sm"
+        ></div>
+        <div
+          class="absolute left-1/2 transform -translate-x-1/2 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4"
+        ></div>
+
+        <!-- Radial Gradient to prevent sharp edges - Responsive -->
+        <div
+          class="absolute inset-0 w-full h-full bg-black"
+          style="
+            mask-image: radial-gradient(
+              250px 150px at top,
+              transparent 20%,
+              white
+            );
+          "
+        ></div>
+      </div>
     </section>
 
     <!-- Section 1: Why Join Rabus -->
-    <section id="careers-content" class="relative py-16 sm:py-20" style="background-color: #000000;">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0">
-            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0); background-size: 50px 50px;"></div>
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-cyan-500/3 to-blue-600/2 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-purple-500/3 to-pink-600/2 rounded-full blur-3xl"></div>
-            <div id="content-stars-container" class="absolute inset-0"></div>
+    <section
+      id="careers-content"
+      class="relative py-16 sm:py-20"
+      style="background-color: #000000"
+    >
+      <!-- Background Pattern -->
+      <div class="absolute inset-0">
+        <div
+          class="absolute inset-0"
+          style="
+            background-image: radial-gradient(
+              circle at 1px 1px,
+              rgba(255, 255, 255, 0.06) 1px,
+              transparent 0
+            );
+            background-size: 50px 50px;
+          "
+        ></div>
+        <div
+          class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-cyan-500/3 to-blue-600/2 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-purple-500/3 to-pink-600/2 rounded-full blur-3xl"
+        ></div>
+        <div id="content-stars-container" class="absolute inset-0"></div>
+      </div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <!-- Section Title -->
+        <div
+          class="text-center mb-12 sm:mb-16"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <h2
+            class="font-inter text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
+          >
+            Careers at Rabus
+          </h2>
         </div>
-        
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
-            <!-- Section Title -->
-            <div class="text-center mb-12 sm:mb-16" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="font-inter text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
-                    Careers at Rabus
-                </h2>
+
+        <!-- 3-Column Cards -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12">
+          <!-- Why Join Rabus Card -->
+          <div
+            class="relative card-hover-container"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div
+              class="glass rounded-2xl p-6 sm:p-8 backdrop-blur-xl bg-white/5 border border-white/10 h-full transition-all duration-500 hover:bg-white/10 hover:border-cyan-400/30 hover:shadow-2xl hover:shadow-cyan-400/10"
+            >
+              <div
+                class="absolute top-4 left-4 w-8 h-8 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-sm"
+              ></div>
+              <div
+                class="absolute bottom-4 right-4 w-6 h-6 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-full blur-sm"
+              ></div>
+
+              <div class="relative z-10">
+                <h3
+                  class="font-inter text-xl sm:text-2xl font-bold text-white mb-6 text-left"
+                >
+                  Why Join Rabus?
+                </h3>
+                <div class="text-left space-y-4">
+                  <p class="font-inter text-base text-gray-300 leading-relaxed">
+                    At Rabus, we’re not just building blockchain
+                    infrastructure—we’re shaping the future of decentralized
+                    technology. Our mission is to pioneer reusable protocols
+                    that make Web3 more accessible and efficient.
+                  </p>
+                  <p class="font-inter text-base text-gray-300 leading-relaxed">
+                    We’re a team of relentless builders who thrive on solving
+                    hard problems and breaking new ground. If you want to work
+                    where code matters more than slide decks, where ideas become
+                    live protocols, and where your work directly impacts the
+                    future of the open internet, this is your launchpad.
+                  </p>
+                </div>
+              </div>
             </div>
-            
-            <!-- 3-Column Cards -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12">
-                
-                <!-- Why Join Rabus Card -->
-                <div class="relative card-hover-container" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="glass rounded-2xl p-6 sm:p-8 backdrop-blur-xl bg-white/5 border border-white/10 h-full transition-all duration-500 hover:bg-white/10 hover:border-cyan-400/30 hover:shadow-2xl hover:shadow-cyan-400/10">
-                        <div class="absolute top-4 left-4 w-8 h-8 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-sm"></div>
-                        <div class="absolute bottom-4 right-4 w-6 h-6 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-full blur-sm"></div>
-                        
-                        <div class="relative z-10">
-                            <h3 class="font-inter text-xl sm:text-2xl font-bold text-white mb-6 text-left">
-                                Why Join Rabus?
-                            </h3>
-                            <div class="text-left space-y-4">
-                                <p class="font-inter text-base text-gray-300 leading-relaxed">
-                                    At Rabus, we are not just building rockets—we are shaping the future of space travel. Our mission is to develop reusable rocket technology that will make spaceflight more accessible and affordable.
-                                </p>
-                                <p class="font-inter text-base text-gray-300 leading-relaxed">
-                                    We are a team of driven, hands-on individuals who thrive on challenges and believe in pushing boundaries. If you want to work in an environment where execution matters more than PowerPoints, where ideas turn into real hardware, and where you can have a direct impact on the future of spaceflight, this is the place for you.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+
+          <!-- What You'll Gain Card -->
+          <div
+            class="relative card-hover-container"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
+            <div
+              class="glass rounded-2xl p-6 sm:p-8 backdrop-blur-xl bg-white/5 border border-white/10 h-full transition-all duration-500 hover:bg-white/10 hover:border-purple-400/30 hover:shadow-2xl hover:shadow-purple-400/10"
+            >
+              <div
+                class="absolute top-4 left-4 w-8 h-8 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-full blur-sm"
+              ></div>
+              <div
+                class="absolute bottom-4 right-4 w-6 h-6 bg-gradient-to-br from-teal-400/15 to-green-500/15 rounded-full blur-sm"
+              ></div>
+
+              <div class="relative z-10">
+                <h3
+                  class="font-inter text-xl sm:text-2xl font-bold text-white mb-6 text-left"
+                >
+                  What You'll Gain
+                </h3>
+                <div class="text-left space-y-4">
+                  <p class="font-inter text-base text-gray-300 leading-relaxed">
+                    At Rabus, you'll gain hands-on experience building core
+                    blockchain protocols—no theoretical debates, just shipping
+                    code that runs on thousands of nodes.
+                  </p>
+                  <p class="font-inter text-base text-gray-300 leading-relaxed">
+                    You'll work in a hyper-focused environment alongside
+                    engineers, cryptographers, and Web3 pioneers who live to
+                    break new ground. We value execution above all, giving you
+                    ownership of critical systems from day one.
+                  </p>
+                  <p class="font-inter text-base text-gray-300 leading-relaxed">
+                    This isn't about tweaking existing frameworks—we're building
+                    the next generation of decentralized infrastructure from
+                    first principles.
+                  </p>
                 </div>
-                
-                <!-- What You'll Gain Card -->
-                <div class="relative card-hover-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                    <div class="glass rounded-2xl p-6 sm:p-8 backdrop-blur-xl bg-white/5 border border-white/10 h-full transition-all duration-500 hover:bg-white/10 hover:border-purple-400/30 hover:shadow-2xl hover:shadow-purple-400/10">
-                        <div class="absolute top-4 left-4 w-8 h-8 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-full blur-sm"></div>
-                        <div class="absolute bottom-4 right-4 w-6 h-6 bg-gradient-to-br from-teal-400/15 to-green-500/15 rounded-full blur-sm"></div>
-                        
-                        <div class="relative z-10">
-                            <h3 class="font-inter text-xl sm:text-2xl font-bold text-white mb-6 text-left">
-                                What You'll Gain
-                            </h3>
-                            <div class="text-left space-y-4">
-                                <p class="font-inter text-base text-gray-300 leading-relaxed">
-                                    At Rabus, you'll gain hands-on experience working directly on hardware, design, testing, and integration—no endless paperwork, just real work that flies.
-                                </p>
-                                <p class="font-inter text-base text-gray-300 leading-relaxed">
-                                    You'll be part of a fast-paced environment alongside engineers, entrepreneurs, and visionaries who are obsessed with getting things done. We value execution, giving you the opportunity to take ownership and make a direct impact from day one.
-                                </p>
-                                <p class="font-inter text-base text-gray-300 leading-relaxed">
-                                    This isn't about maintaining the status quo—we are here to build the next generation of rockets and space infrastructure.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Who We're Looking For Card -->
-                <div class="relative card-hover-container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="glass rounded-2xl p-6 sm:p-8 backdrop-blur-xl bg-white/5 border border-white/10 h-full transition-all duration-500 hover:bg-white/10 hover:border-green-400/30 hover:shadow-2xl hover:shadow-green-400/10">
-                        <div class="absolute top-4 left-4 w-8 h-8 bg-gradient-to-br from-green-400/20 to-blue-500/20 rounded-full blur-sm"></div>
-                        <div class="absolute bottom-4 right-4 w-6 h-6 bg-gradient-to-br from-cyan-400/15 to-purple-500/15 rounded-full blur-sm"></div>
-                        
-                        <div class="relative z-10">
-                            <h3 class="font-inter text-xl sm:text-2xl font-bold text-white mb-6 text-left">
-                                Who We're Looking For
-                            </h3>
-                            <div class="text-left space-y-4">
-                                <p class="font-inter text-base text-gray-300 leading-relaxed">
-                                    We need problem solvers, builders, and risk-takers—people who don't wait for permission to innovate.
-                                </p>
-                                <p class="font-inter text-base text-gray-300 leading-relaxed">
-                                    If you thrive in fast-moving environments and want to be part of a team that's actually building hardware, you belong here.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
+              </div>
             </div>
+          </div>
+
+          <!-- Who We're Looking For Card -->
+          <div
+            class="relative card-hover-container"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <div
+              class="glass rounded-2xl p-6 sm:p-8 backdrop-blur-xl bg-white/5 border border-white/10 h-full transition-all duration-500 hover:bg-white/10 hover:border-green-400/30 hover:shadow-2xl hover:shadow-green-400/10"
+            >
+              <div
+                class="absolute top-4 left-4 w-8 h-8 bg-gradient-to-br from-green-400/20 to-blue-500/20 rounded-full blur-sm"
+              ></div>
+              <div
+                class="absolute bottom-4 right-4 w-6 h-6 bg-gradient-to-br from-cyan-400/15 to-purple-500/15 rounded-full blur-sm"
+              ></div>
+
+              <div class="relative z-10">
+                <h3
+                  class="font-inter text-xl sm:text-2xl font-bold text-white mb-6 text-left"
+                >
+                  Who We're Looking For
+                </h3>
+                <div class="text-left space-y-4">
+                  <p class="font-inter text-base text-gray-300 leading-relaxed">
+                    We need relentless problem-solvers, protocol-native
+                    builders, and those who ship first and ask later.
+                  </p>
+                  <p class="font-inter text-base text-gray-300 leading-relaxed">
+                    If you thrive in chaotic-creative environments and want to
+                    build infrastructure that redefines blockchain's limits,
+                    this is your crew.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Section 2: Open Positions -->
-    <section id="open-positions" class="relative py-16 sm:py-20" style="background-color: #000000;">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0">
-            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0); background-size: 50px 50px;"></div>
-            <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-orange-500/3 to-red-600/2 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-blue-500/3 to-indigo-600/2 rounded-full blur-3xl"></div>
-            <div id="positions-stars-container" class="absolute inset-0"></div>
+    <section
+      id="open-positions"
+      class="relative py-16 sm:py-20"
+      style="background-color: #000000"
+    >
+      <!-- Background Pattern -->
+      <div class="absolute inset-0">
+        <div
+          class="absolute inset-0"
+          style="
+            background-image: radial-gradient(
+              circle at 1px 1px,
+              rgba(255, 255, 255, 0.06) 1px,
+              transparent 0
+            );
+            background-size: 50px 50px;
+          "
+        ></div>
+        <div
+          class="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-orange-500/3 to-red-600/2 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-to-br from-blue-500/3 to-indigo-600/2 rounded-full blur-3xl"
+        ></div>
+        <div id="positions-stars-container" class="absolute inset-0"></div>
+      </div>
+
+      <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-12">
+        <!-- Section Title -->
+        <div
+          class="text-center mb-12 sm:mb-16"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <h2
+            class="font-inter text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4"
+          >
+            Open Positions
+          </h2>
         </div>
-        
-        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-12">
-            <!-- Section Title -->
-            <div class="text-center mb-12 sm:mb-16" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="font-inter text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-                    Open Positions
-                </h2>
+
+        <!-- Position Cards -->
+        <div class="space-y-8 sm:space-y-12">
+          <!-- Propulsion Engineer -->
+          <div
+            class="relative position-card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+          >
+            <div
+              class="glass rounded-2xl p-6 sm:p-8 lg:p-10 backdrop-blur-xl bg-white/5 border border-white/10 transition-all duration-500 hover:bg-white/8 hover:border-orange-400/30 hover:shadow-2xl hover:shadow-orange-400/10"
+            >
+              <div
+                class="absolute top-4 left-4 w-8 h-8 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-full blur-sm"
+              ></div>
+
+              <div class="relative z-10">
+                <h3
+                  class="font-inter text-2xl sm:text-3xl font-bold text-white mb-4"
+                >
+                  Protocol Engineer
+                </h3>
+                <p
+                  class="font-inter text-base text-gray-300 leading-relaxed mb-6"
+                >
+                  We’re seeking a relentless Systems Architect to design,
+                  develop, and optimize high-performance execution environments
+                  for our reusable blockchain infrastructure. In this role,
+                  you’ll be responsible for ensuring seamless state transitions
+                  and gas-efficient operations within an existing runtime
+                  framework—already battle-tested—while integrating new modules
+                  into the core protocol stack.
+                </p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+                  <div>
+                    <h4
+                      class="font-geist-mono text-orange-400 font-medium text-sm uppercase tracking-wider mb-4"
+                    >
+                      Responsibilities
+                    </h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                      <li>
+                        • Execution Environment Design - Develop and optimize
+                        gas-efficient runtime architectures
+                      </li>
+                      <li>
+                        • Module Integration - Seamlessly incorporate new
+                        components into existing protocol frameworks
+                      </li>
+                      <li>
+                        • Performance Benchmarking - Design and execute stress
+                        tests to validate throughput and finality
+                      </li>
+                      <li>
+                        • Failure Analysis & Optimization - Diagnose bottlenecks
+                        in state transitions or consensus
+                      </li>
+                      <li>
+                        • Cross-Stack Collaboration - Align with cryptography,
+                        networking, and smart contract teams
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4
+                      class="font-geist-mono text-cyan-400 font-medium text-sm uppercase tracking-wider mb-4"
+                    >
+                      Qualifications
+                    </h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                      <li>
+                        • Degree in Computer Science, Cryptography, or related
+                        field
+                      </li>
+                      <li>
+                        • Hands-on experience with blockchain runtimes
+                        (preferably Solana or Ethereum)
+                      </li>
+                      <li>
+                        • Experience with low-latency distributed systems and
+                        state management
+                      </li>
+                      <li>
+                        • Proficiency in protocol simulation and benchmarking
+                        tools
+                      </li>
+                      <li>
+                        • Experience designing and executing load/stress tests
+                        at scale
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <!-- Position Cards -->
-            <div class="space-y-8 sm:space-y-12">
-                
-                <!-- Propulsion Engineer -->
-                <div class="relative position-card" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="glass rounded-2xl p-6 sm:p-8 lg:p-10 backdrop-blur-xl bg-white/5 border border-white/10 transition-all duration-500 hover:bg-white/8 hover:border-orange-400/30 hover:shadow-2xl hover:shadow-orange-400/10">
-                        <div class="absolute top-4 left-4 w-8 h-8 bg-gradient-to-br from-orange-400/20 to-red-500/20 rounded-full blur-sm"></div>
-                        
-                        <div class="relative z-10">
-                            <h3 class="font-inter text-2xl sm:text-3xl font-bold text-white mb-4">
-                                Propulsion Engineer
-                            </h3>
-                            <p class="font-inter text-base text-gray-300 leading-relaxed mb-6">
-                                We are seeking a highly driven Propulsion Engineer to design, develop, and integrate a pressure-fed LOX-based propellant feed system for our first reusable rocket prototype. In this role, you will be responsible for ensuring the reliable delivery of propellants into an existing rocket engine—already designed and built—and for seamlessly integrating that engine into the overall vehicle structure.
-                            </p>
-                            
-                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-                                <div>
-                                    <h4 class="font-geist-mono text-orange-400 font-medium text-sm uppercase tracking-wider mb-4">Responsibilities</h4>
-                                    <ul class="space-y-2 text-sm text-gray-300">
-                                        <li>• Propellant Feed System Design - Develop and optimize the pressure-fed LOX propellant feed system</li>
-                                        <li>• Engine Integration - Work closely with teams to integrate the existing rocket engine into the vehicle</li>
-                                        <li>• Performance Verification - Plan and oversee ground tests to validate feed system performance</li>
-                                        <li>• Failure Analysis & Rapid Iteration - Diagnose and address propellant flow issues</li>
-                                        <li>• Cross-Functional Collaboration - Coordinate with structural, mechanical, and avionics teams</li>
-                                    </ul>
-                                </div>
-                                
-                                <div>
-                                    <h4 class="font-geist-mono text-cyan-400 font-medium text-sm uppercase tracking-wider mb-4">Qualifications</h4>
-                                    <ul class="space-y-2 text-sm text-gray-300">
-                                        <li>• Degree in Aerospace Engineering, Mechanical Engineering, or related field</li>
-                                        <li>• Hands-on experience with liquid rocket engines (preferably LOX-based)</li>
-                                        <li>• Experience with high-pressure fluid systems and propellant handling</li>
-                                        <li>• Proficiency in propulsion system modeling & simulation tools</li>
-                                        <li>• Experience designing and executing static fire tests</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+
+          <!-- Avionics Engineer -->
+          <div
+            class="relative position-card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+          >
+            <div
+              class="glass rounded-2xl p-6 sm:p-8 lg:p-10 backdrop-blur-xl bg-white/5 border border-white/10 transition-all duration-500 hover:bg-white/8 hover:border-blue-400/30 hover:shadow-2xl hover:shadow-blue-400/10"
+            >
+              <div
+                class="absolute top-4 left-4 w-8 h-8 bg-gradient-to-br from-blue-400/20 to-indigo-500/20 rounded-full blur-sm"
+              ></div>
+
+              <div class="relative z-10">
+                <h3
+                  class="font-inter text-2xl sm:text-3xl font-bold text-white mb-4"
+                >
+                  Consensus Engineer
+                </h3>
+                <p
+                  class="font-inter text-base text-gray-300 leading-relaxed mb-6"
+                >
+                  We're looking for a Distributed Systems Engineer to architect,
+                  integrate, and validate our protocol's node infrastructure. In
+                  this pivotal role, you'll ensure the network achieves
+                  deterministic finality and robust synchronization—enabling
+                  autonomous, trustless execution at scale.
+                </p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+                  <div>
+                    <h4
+                      class="font-geist-mono text-blue-400 font-medium text-sm uppercase tracking-wider mb-4"
+                    >
+                      Responsibilities
+                    </h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                      <li>
+                        • Design, develop, and integrate consensus mechanisms
+                        including validator clients and p2p networking
+                      </li>
+                      <li>
+                        • Work with Protocol Engineers to implement
+                        deterministic execution flows
+                      </li>
+                      <li>
+                        • Ensure real-time block propagation and node
+                        synchronization
+                      </li>
+                      <li>
+                        • Troubleshoot network latency and fork resolution
+                        issues
+                      </li>
+                      <li>
+                        • Develop slashing conditions and anti-fraud protocols
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h4
+                      class="font-geist-mono text-purple-400 font-medium text-sm uppercase tracking-wider mb-4"
+                    >
+                      Qualifications
+                    </h4>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                      <li>• Open to global talent (remote-first team)</li>
+                      <li>
+                        • Degree in computer science, cryptography, or related
+                        field
+                      </li>
+                      <li>
+                        • Hands-on experience with consensus protocols or
+                        distributed systems
+                      </li>
+                      <li>
+                        • Proficiency with Rust, Go, or distributed systems
+                        frameworks
+                      </li>
+                      <li>
+                        • Strong analytical and cryptoeconomic modeling skills
+                      </li>
+                      <li>
+                        • Collaborative contributor to open-source ecosystems
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                
-                <!-- Avionics Engineer -->
-                <div class="relative position-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
-                    <div class="glass rounded-2xl p-6 sm:p-8 lg:p-10 backdrop-blur-xl bg-white/5 border border-white/10 transition-all duration-500 hover:bg-white/8 hover:border-blue-400/30 hover:shadow-2xl hover:shadow-blue-400/10">
-                        <div class="absolute top-4 left-4 w-8 h-8 bg-gradient-to-br from-blue-400/20 to-indigo-500/20 rounded-full blur-sm"></div>
-                        
-                        <div class="relative z-10">
-                            <h3 class="font-inter text-2xl sm:text-3xl font-bold text-white mb-4">
-                                Avionics Engineer
-                            </h3>
-                            <p class="font-inter text-base text-gray-300 leading-relaxed mb-6">
-                                We're looking for an Avionics Engineer to spearhead the design, integration, and testing of our rocket's electronic systems. In this critical role, you'll ensure the guidance, navigation, and control systems operate flawlessly, enabling the rocket to achieve its autonomous flight goals.
-                            </p>
-                            
-                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-                                <div>
-                                    <h4 class="font-geist-mono text-blue-400 font-medium text-sm uppercase tracking-wider mb-4">Responsibilities</h4>
-                                    <ul class="space-y-2 text-sm text-gray-300">
-                                        <li>• Design, develop, and integrate avionics systems including sensors and flight computers</li>
-                                        <li>• Work with Control Systems Engineer to implement autonomous flight algorithms</li>
-                                        <li>• Ensure reliable telemetry and data transmission for real-time monitoring</li>
-                                        <li>• Troubleshoot hardware-software integration issues</li>
-                                        <li>• Develop safety protocols for electronic systems</li>
-                                    </ul>
-                                </div>
-                                
-                                <div>
-                                    <h4 class="font-geist-mono text-purple-400 font-medium text-sm uppercase tracking-wider mb-4">Qualifications</h4>
-                                    <ul class="space-y-2 text-sm text-gray-300">
-                                        <li>• U.S. citizen or U.S. permanent resident</li>
-                                        <li>• Degree in aerospace, electrical, or computer engineering</li>
-                                        <li>• Hands-on experience with avionics systems or embedded systems</li>
-                                        <li>• Proficiency with MATLAB, C/C++, or PCB design software</li>
-                                        <li>• Strong analytical and problem-solving skills</li>
-                                        <li>• Team player with collaborative mindset</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Mechanical Engineer -->
-                <div class="relative position-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <div class="glass rounded-2xl p-6 sm:p-8 lg:p-10 backdrop-blur-xl bg-white/5 border border-white/10 transition-all duration-500 hover:bg-white/8 hover:border-green-400/30 hover:shadow-2xl hover:shadow-green-400/10">
-                        <div class="absolute top-4 left-4 w-8 h-8 bg-gradient-to-br from-green-400/20 to-teal-500/20 rounded-full blur-sm"></div>
-                        
-                        <div class="relative z-10">
-                            <h3 class="font-inter text-2xl sm:text-3xl font-bold text-white mb-4">
-                                Mechanical Engineer – Rocket Systems
-                            </h3>
-                            <p class="font-inter text-sm text-gray-400 mb-4">(Landing, Valves, Gimbal Integration)</p>
-                            <p class="font-inter text-base text-gray-300 leading-relaxed mb-6">
-                                We are seeking Mechanical Engineers to design and integrate critical mechanical components for our first reusable rocket prototype. This role involves working on landing legs, high-pressure valves, structural reinforcements, and possibly the gimbal system for thrust vector control.
-                            </p>
-                            
-                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-                                <div>
-                                    <h4 class="font-geist-mono text-green-400 font-medium text-sm uppercase tracking-wider mb-4">Responsibilities</h4>
-                                    <ul class="space-y-2 text-sm text-gray-300">
-                                        <li>• Landing System Design: Develop lightweight, impact-resistant landing legs</li>
-                                        <li>• Valve & Fluid System Integration: Work on high-pressure LOX/Kerosene fuel valves</li>
-                                        <li>• Structural Optimization: Design lightweight but strong load-bearing components</li>
-                                        <li>• Gimbal System (Optional): Assist in designing thrust vector control mechanisms</li>
-                                        <li>• Vibration & Load Testing: Simulate mechanical stress under extreme conditions</li>
-                                        <li>• Manufacturing & Prototyping: Work with CNC machining and 3D printing</li>
-                                    </ul>
-                                </div>
-                                
-                                <div>
-                                    <h4 class="font-geist-mono text-teal-400 font-medium text-sm uppercase tracking-wider mb-4">Qualifications</h4>
-                                    <ul class="space-y-2 text-sm text-gray-300">
-                                        <li>• Degree in Mechanical Engineering, Aerospace Engineering, or related field</li>
-                                        <li>• Experience in mechanical system design, preferably for aerospace applications</li>
-                                        <li>• Strong understanding of material properties, loads, and failure analysis</li>
-                                        <li>• Experience with CAD (Fusion 360, SolidWorks, or equivalent)</li>
-                                        <li>• Experience with high-pressure fluid systems, valves, and actuation</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Section 3: Career Application Form -->
-    <section id="career-form" class="relative py-16 sm:py-20" style="background-color: #000000;">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0">
-            <div class="absolute inset-0" style="background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.06) 1px, transparent 0); background-size: 50px 50px;"></div>
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-purple-500/3 to-pink-600/2 rounded-full blur-3xl"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-cyan-500/3 to-blue-600/2 rounded-full blur-3xl"></div>
-            <div id="form-stars-container" class="absolute inset-0"></div>
+    <section
+      id="career-form"
+      class="relative py-16 sm:py-20"
+      style="background-color: #000000"
+    >
+      <!-- Background Pattern -->
+      <div class="absolute inset-0">
+        <div
+          class="absolute inset-0"
+          style="
+            background-image: radial-gradient(
+              circle at 1px 1px,
+              rgba(255, 255, 255, 0.06) 1px,
+              transparent 0
+            );
+            background-size: 50px 50px;
+          "
+        ></div>
+        <div
+          class="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-purple-500/3 to-pink-600/2 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-br from-cyan-500/3 to-blue-600/2 rounded-full blur-3xl"
+        ></div>
+        <div id="form-stars-container" class="absolute inset-0"></div>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-12">
+        <!-- Section Title -->
+        <div
+          class="text-center mb-12 sm:mb-16"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <h2
+            class="font-inter text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4"
+          >
+            Apply Now
+          </h2>
+          <p class="font-inter text-lg text-gray-400 max-w-2xl mx-auto">
+            Ready to build the future of decentralized infrastructure? Submit
+            your application below.
+          </p>
         </div>
-        
-        <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-12">
-            <!-- Section Title -->
-            <div class="text-center mb-12 sm:mb-16" data-aos="fade-up" data-aos-duration="1000">
-                <h2 class="font-inter text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-                    Apply Now
-                </h2>
-                <p class="font-inter text-lg text-gray-400 max-w-2xl mx-auto">
-                    Ready to join the future of space technology? Submit your application below.
-                </p>
-            </div>
-            
-            <!-- Career Application Form -->
-            <div class="relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                <div class="glass rounded-2xl p-6 sm:p-8 lg:p-10 backdrop-blur-xl bg-white/5 border border-white/10">
-                    <div class="absolute top-4 left-4 w-8 h-8 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-full blur-sm"></div>
-                    <div class="absolute bottom-4 right-4 w-6 h-6 bg-gradient-to-br from-cyan-400/15 to-blue-500/15 rounded-full blur-sm"></div>
-                    
-                    <form id="career-application-form" class="relative z-10 space-y-6">
-                        <!-- Personal Information -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="firstName" class="block text-sm font-medium text-gray-300 mb-2">First Name *</label>
-                                <input type="text" id="firstName" name="firstName" required 
-                                       class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200">
-                            </div>
-                            <div>
-                                <label for="lastName" class="block text-sm font-medium text-gray-300 mb-2">Last Name *</label>
-                                <input type="text" id="lastName" name="lastName" required 
-                                       class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200">
-                            </div>
-                        </div>
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address *</label>
-                                <input type="email" id="email" name="email" required 
-                                       class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200">
-                            </div>
-                            <div>
-                                <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" 
-                                       class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200">
-                            </div>
-                        </div>
-                        
-                        <!-- Position Information -->
-                        <div>
-                            <label for="position" class="block text-sm font-medium text-gray-300 mb-2">Position Applied For *</label>
-                            <select id="position" name="position" required 
-                                    class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200">
-                                <option value="" class="bg-gray-800">Select a position</option>
-                                <option value="propulsion-engineer" class="bg-gray-800">Propulsion Engineer</option>
-                                <option value="avionics-engineer" class="bg-gray-800">Avionics Engineer</option>
-                                <option value="mechanical-engineer" class="bg-gray-800">Mechanical Engineer – Rocket Systems</option>
-                                <option value="other" class="bg-gray-800">Other (specify in cover letter)</option>
-                            </select>
-                        </div>
-                        
-                        <!-- Experience -->
-                        <div>
-                            <label for="experience" class="block text-sm font-medium text-gray-300 mb-2">Years of Relevant Experience</label>
-                            <select id="experience" name="experience" 
-                                    class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200">
-                                <option value="" class="bg-gray-800">Select experience level</option>
-                                <option value="0-1" class="bg-gray-800">0-1 years (Entry Level)</option>
-                                <option value="2-5" class="bg-gray-800">2-5 years</option>
-                                <option value="6-10" class="bg-gray-800">6-10 years</option>
-                                <option value="10+" class="bg-gray-800">10+ years</option>
-                            </select>
-                        </div>
-                        
-                        <!-- Cover Letter -->
-                        <div>
-                            <label for="coverLetter" class="block text-sm font-medium text-gray-300 mb-2">Cover Letter / Why Rabus? *</label>
-                            <textarea id="coverLetter" name="coverLetter" rows="6" required 
-                                      placeholder="Tell us why you want to join Rabus and what makes you the right fit for this role..."
-                                      class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200 resize-vertical"></textarea>
-                        </div>
-                        
-                        <!-- File Uploads -->
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div>
-                                <label for="resume" class="block text-sm font-medium text-gray-300 mb-2">Resume/CV *</label>
-                                <div class="relative">
-                                    <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required 
-                                           class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-cyan-400 file:text-black hover:file:bg-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200">
-                                </div>
-                                <p class="text-xs text-gray-400 mt-1">PDF, DOC, or DOCX (max 10MB)</p>
-                            </div>
-                            <div>
-                                <label for="portfolio" class="block text-sm font-medium text-gray-300 mb-2">Portfolio/Additional Documents</label>
-                                <div class="relative">
-                                    <input type="file" id="portfolio" name="portfolio" accept=".pdf,.doc,.docx,.zip" 
-                                           class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-purple-400 file:text-black hover:file:bg-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-200">
-                                </div>
-                                <p class="text-xs text-gray-400 mt-1">Optional: Portfolio, projects, or additional documents</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Citizenship Status -->
-                        <div>
-                            <label class="block text-sm font-medium text-gray-300 mb-3">U.S. Work Authorization Status *</label>
-                            <div class="space-y-2">
-                                <label class="flex items-center">
-                                    <input type="radio" name="workAuth" value="citizen" required class="mr-3 text-cyan-400 focus:ring-cyan-400">
-                                    <span class="text-gray-300">U.S. Citizen</span>
-                                </label>
-                                <label class="flex items-center">
-                                    <input type="radio" name="workAuth" value="permanent-resident" required class="mr-3 text-cyan-400 focus:ring-cyan-400">
-                                    <span class="text-gray-300">U.S. Permanent Resident</span>
-                                </label>
-                                <label class="flex items-center">
-                                    <input type="radio" name="workAuth" value="visa" required class="mr-3 text-cyan-400 focus:ring-cyan-400">
-                                    <span class="text-gray-300">Work Visa Holder</span>
-                                </label>
-                                <label class="flex items-center">
-                                    <input type="radio" name="workAuth" value="other" required class="mr-3 text-cyan-400 focus:ring-cyan-400">
-                                    <span class="text-gray-300">Other (please specify in cover letter)</span>
-                                </label>
-                            </div>
-                        </div>
-                        
-                        <!-- Submit Button -->
-                        <div class="pt-6">
-                            <button type="submit" 
-                                    class="w-full scramble-btn bg-white text-black font-geist-mono font-medium px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center">
-                                <span class="scramble-text">Submit Application</span>
-                                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
-                                </svg>
-                            </button>
-                        </div>
-                        
-                        <!-- reCAPTCHA Notice -->
-                        <div class="text-center pt-4">
-                            <p class="text-xs text-gray-400">
-                                This site is protected by reCAPTCHA and the Google 
-                                <a href="https://policies.google.com/privacy" target="_blank" class="text-cyan-400 hover:text-cyan-300 underline">Privacy Policy</a> 
-                                and 
-                                <a href="https://policies.google.com/terms" target="_blank" class="text-cyan-400 hover:text-cyan-300 underline">Terms of Service</a> 
-                                apply.
-                            </p>
-                        </div>
-                    </form>
+
+        <!-- Career Application Form -->
+        <div
+          class="relative"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="200"
+        >
+          <div
+            class="glass rounded-2xl p-6 sm:p-8 lg:p-10 backdrop-blur-xl bg-white/5 border border-white/10"
+          >
+            <div
+              class="absolute top-4 left-4 w-8 h-8 bg-gradient-to-br from-purple-400/20 to-pink-500/20 rounded-full blur-sm"
+            ></div>
+            <div
+              class="absolute bottom-4 right-4 w-6 h-6 bg-gradient-to-br from-cyan-400/15 to-blue-500/15 rounded-full blur-sm"
+            ></div>
+
+            <form id="career-application-form" class="relative z-10 space-y-6">
+              <!-- Personal Information -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="firstName"
+                    class="block text-sm font-medium text-gray-300 mb-2"
+                    >First Name *</label
+                  >
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    required
+                    class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200"
+                  />
                 </div>
-            </div>
+                <div>
+                  <label
+                    for="lastName"
+                    class="block text-sm font-medium text-gray-300 mb-2"
+                    >Last Name *</label
+                  >
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    required
+                    class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="email"
+                    class="block text-sm font-medium text-gray-300 mb-2"
+                    >Email Address *</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200"
+                  />
+                </div>
+                <div>
+                  <label
+                    for="phone"
+                    class="block text-sm font-medium text-gray-300 mb-2"
+                    >Phone Number</label
+                  >
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200"
+                  />
+                </div>
+              </div>
+
+              <!-- Position Information -->
+              <div>
+                <label
+                  for="position"
+                  class="block text-sm font-medium text-gray-300 mb-2"
+                  >Position Applied For *</label
+                >
+                <select
+                  id="position"
+                  name="position"
+                  required
+                  class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200"
+                >
+                  <option value="" class="bg-gray-800">
+                    Select a position
+                  </option>
+                  <option value="propulsion-engineer" class="bg-gray-800">
+                    Propulsion Engineer
+                  </option>
+                  <option value="avionics-engineer" class="bg-gray-800">
+                    Avionics Engineer
+                  </option>
+                  <option value="mechanical-engineer" class="bg-gray-800">
+                    Mechanical Engineer – Rocket Systems
+                  </option>
+                  <option value="other" class="bg-gray-800">
+                    Other (specify in cover letter)
+                  </option>
+                </select>
+              </div>
+
+              <!-- Experience -->
+              <div>
+                <label
+                  for="experience"
+                  class="block text-sm font-medium text-gray-300 mb-2"
+                  >Years of Relevant Experience</label
+                >
+                <select
+                  id="experience"
+                  name="experience"
+                  class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200"
+                >
+                  <option value="" class="bg-gray-800">
+                    Select experience level
+                  </option>
+                  <option value="0-1" class="bg-gray-800">
+                    0-1 years (Entry Level)
+                  </option>
+                  <option value="2-5" class="bg-gray-800">2-5 years</option>
+                  <option value="6-10" class="bg-gray-800">6-10 years</option>
+                  <option value="10+" class="bg-gray-800">10+ years</option>
+                </select>
+              </div>
+
+              <!-- Cover Letter -->
+              <div>
+                <label
+                  for="coverLetter"
+                  class="block text-sm font-medium text-gray-300 mb-2"
+                  >Cover Letter / Why Rabus? *</label
+                >
+                <textarea
+                  id="coverLetter"
+                  name="coverLetter"
+                  rows="6"
+                  required
+                  placeholder="Tell us why you want to join Rabus and what makes you the right fit for this role..."
+                  class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200 resize-vertical"
+                ></textarea>
+              </div>
+
+              <!-- File Uploads -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label
+                    for="resume"
+                    class="block text-sm font-medium text-gray-300 mb-2"
+                    >Resume/CV *</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="file"
+                      id="resume"
+                      name="resume"
+                      accept=".pdf,.doc,.docx"
+                      required
+                      class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-cyan-400 file:text-black hover:file:bg-cyan-300 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:border-transparent transition-all duration-200"
+                    />
+                  </div>
+                  <p class="text-xs text-gray-400 mt-1">
+                    PDF, DOC, or DOCX (max 10MB)
+                  </p>
+                </div>
+                <div>
+                  <label
+                    for="portfolio"
+                    class="block text-sm font-medium text-gray-300 mb-2"
+                    >Portfolio/Additional Documents</label
+                  >
+                  <div class="relative">
+                    <input
+                      type="file"
+                      id="portfolio"
+                      name="portfolio"
+                      accept=".pdf,.doc,.docx,.zip"
+                      class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-medium file:bg-purple-400 file:text-black hover:file:bg-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-400 focus:border-transparent transition-all duration-200"
+                    />
+                  </div>
+                  <p class="text-xs text-gray-400 mt-1">
+                    Optional: Portfolio, projects, or additional documents
+                  </p>
+                </div>
+              </div>
+
+              <!-- Citizenship Status -->
+              <div>
+                <label class="block text-sm font-medium text-gray-300 mb-3"
+                  >U.S. Work Authorization Status *</label
+                >
+                <div class="space-y-2">
+                  <label class="flex items-center">
+                    <input
+                      type="radio"
+                      name="workAuth"
+                      value="citizen"
+                      required
+                      class="mr-3 text-cyan-400 focus:ring-cyan-400"
+                    />
+                    <span class="text-gray-300">U.S. Citizen</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input
+                      type="radio"
+                      name="workAuth"
+                      value="permanent-resident"
+                      required
+                      class="mr-3 text-cyan-400 focus:ring-cyan-400"
+                    />
+                    <span class="text-gray-300">U.S. Permanent Resident</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input
+                      type="radio"
+                      name="workAuth"
+                      value="visa"
+                      required
+                      class="mr-3 text-cyan-400 focus:ring-cyan-400"
+                    />
+                    <span class="text-gray-300">Work Visa Holder</span>
+                  </label>
+                  <label class="flex items-center">
+                    <input
+                      type="radio"
+                      name="workAuth"
+                      value="other"
+                      required
+                      class="mr-3 text-cyan-400 focus:ring-cyan-400"
+                    />
+                    <span class="text-gray-300"
+                      >Other (please specify in cover letter)</span
+                    >
+                  </label>
+                </div>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="pt-6">
+                <button
+                  type="submit"
+                  class="w-full scramble-btn bg-white text-black font-geist-mono font-medium px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors duration-200 flex items-center justify-center"
+                >
+                  <span class="scramble-text">Submit Application</span>
+                  <svg
+                    class="ml-2 w-5 h-5"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <!-- reCAPTCHA Notice -->
+              <div class="text-center pt-4">
+                <p class="text-xs text-gray-400">
+                  This site is protected by reCAPTCHA and the Google
+                  <a
+                    href="https://policies.google.com/privacy"
+                    target="_blank"
+                    class="text-cyan-400 hover:text-cyan-300 underline"
+                    >Privacy Policy</a
+                  >
+                  and
+                  <a
+                    href="https://policies.google.com/terms"
+                    target="_blank"
+                    class="text-cyan-400 hover:text-cyan-300 underline"
+                    >Terms of Service</a
+                  >
+                  apply.
+                </p>
+              </div>
+            </form>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Video + Footer Combined Section -->
-    <div class="video-footer-section relative w-full" style="height: 100vh; background-color: #000;">
-        <!-- Video Background -->
-        <video 
-            autoplay 
-            muted 
-            loop 
-            playsinline
-            class="absolute inset-0 w-full h-full object-cover"
-        >
-            <source src="assets/videos/anka.webm" type="video/webm">
-            Your browser does not support the video tag.
-        </video>
-        
-        <!-- Footer Overlay -->
-        <footer class="absolute bottom-0 left-0 right-0 footer-bg" style="border-top: 1px solid #333; background: rgba(0, 0, 0, 0.9); height: 50vh;">
+    <div
+      class="video-footer-section relative w-full"
+      style="height: 100vh; background-color: #000"
+    >
+      <!-- Video Background -->
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover"
+      >
+        <source src="assets/videos/anka.webm" type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Footer Overlay -->
+      <footer
+        class="absolute bottom-0 left-0 right-0 footer-bg"
+        style="
+          border-top: 1px solid #333;
+          background: rgba(0, 0, 0, 0.9);
+          height: 50vh;
+        "
+      >
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-6 sm:py-8">
-            <!-- Logo and Subtitle - Centered -->
-            <div class="text-center mb-4 sm:mb-6" style="padding-bottom: 4rem;">
-                <img src="assets/images/AnkaSpace_wordmark-white.webp" alt="Rabus" class="h-8 sm:h-10 mx-auto mb-3 sm:mb-4">
-                <p class="text-gray-400 text-xs sm:text-sm max-w-md mx-auto px-4 mb-8">
-                    Pioneering the future of space technology with innovative rocket systems and cutting-edge solutions.
-                </p>
-                <!-- Rabus Mark -->
-                <div class="flex justify-center items-center" style="height: 200px; margin-top: 8rem; margin-bottom: 2rem;">
-                    <img src="assets/images/AnkaSpace_mark.svg" alt="Rabus Mark" class="w-64 h-80 opacity-20 hover:opacity-30 transition-opacity duration-300" style="filter: brightness(0) invert(1);">
-                </div>
+          <!-- Logo and Subtitle - Centered -->
+          <div class="text-center mb-4 sm:mb-6" style="padding-bottom: 4rem">
+            <img
+              src="assets/images/AnkaSpace_wordmark-white.webp"
+              alt="Rabus"
+              class="h-8 sm:h-10 mx-auto mb-3 sm:mb-4"
+            />
+            <p
+              class="text-gray-400 text-xs sm:text-sm max-w-md mx-auto px-4 mb-8"
+            >
+              Pioneering the future of decentralized technology with innovative
+              blockchain systems and cutting-edge Web3 solutions.
+            </p>
+            <!-- Rabus Mark -->
+            <div
+              class="flex justify-center items-center"
+              style="height: 200px; margin-top: 8rem; margin-bottom: 2rem"
+            >
+              <img
+                src="assets/images/AnkaSpace_mark.svg"
+                alt="Rabus Mark"
+                class="w-64 h-80 opacity-20 hover:opacity-30 transition-opacity duration-300"
+                style="filter: brightness(0) invert(1)"
+              />
             </div>
-            
-            <!-- 6-Column Grid System -->
-            <div class="footer-grid grid grid-cols-2 md:grid-cols-6 gap-4 sm:gap-6 mb-4 sm:mb-6 w-full justify-items-stretch" style="padding-top: 2rem;">
-                <div class="w-full text-center md:text-left">
-                    <a href="index.html" class="footer-heading">Home</a>
-                </div>
-                
-                <div class="w-full text-center md:text-left">
-                    <a href="about-us" class="footer-heading">About Us</a>
-                </div>
-                
-                <div class="w-full text-center">
-                    <a href="mission-phoenix" class="footer-heading">Mission Phoenix</a>
-                </div>
-                
-                <div class="w-full text-center">
-                    <a href="https://rabus-store.vercel.app/" target="_blank" class="footer-heading">Shop</a>
-                </div>
-                
-                <div class="w-full text-center md:text-center">
-                    <a href="careers" class="footer-heading">Careers</a>
-                </div>
-                
-                <div class="w-full text-center md:text-right">
-                    <a href="contact-us" class="footer-heading">Contact Us</a>
-                </div>
+          </div>
+
+          <!-- 6-Column Grid System -->
+          <div
+            class="footer-grid grid grid-cols-2 md:grid-cols-6 gap-4 sm:gap-6 mb-4 sm:mb-6 w-full justify-items-stretch"
+            style="padding-top: 2rem"
+          >
+            <div class="w-full text-center md:text-left">
+              <a href="index.html" class="footer-heading">Home</a>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center footer-copyright">
-                <div class="flex items-center space-x-4 justify-center md:justify-start">
-                    <p>©Copyright 2025 Rabus  - All Rights Reserved.</p>
-                </div>
-                
-                <div class="flex space-x-4 justify-center md:justify-end">
-                    <!-- <a href="https://www.instagram.com/ankaspacecorp" target="_blank" class="footer-social">
+
+            <div class="w-full text-center md:text-left">
+              <a href="about-us" class="footer-heading">About Us</a>
+            </div>
+
+            <div class="w-full text-center">
+              <a href="mission-phoenix" class="footer-heading"
+                >Mission Phoenix</a
+              >
+            </div>
+
+            <div class="w-full text-center">
+              <a
+                href="https://rabus-store.vercel.app/"
+                target="_blank"
+                class="footer-heading"
+                >Shop</a
+              >
+            </div>
+
+            <div class="w-full text-center md:text-center">
+              <a href="careers" class="footer-heading">Careers</a>
+            </div>
+
+            <div class="w-full text-center md:text-right">
+              <a href="contact-us" class="footer-heading">Contact Us</a>
+            </div>
+          </div>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center footer-copyright"
+          >
+            <div
+              class="flex items-center space-x-4 justify-center md:justify-start"
+            >
+              <p>©Copyright 2025 Rabus - All Rights Reserved.</p>
+            </div>
+
+            <div class="flex space-x-4 justify-center md:justify-end">
+              <!-- <a href="https://www.instagram.com/ankaspacecorp" target="_blank" class="footer-social">
                         <i data-lucide="instagram" class="w-5 h-5"></i>
                     </a>
                     <a href="https://www.linkedin.com/company/anka-space/" target="_blank" class="footer-social">
                         <i data-lucide="linkedin" class="w-5 h-5"></i>
                     </a> -->
-                    <a href="https://www.x.com/rabus" target="_blank" class="footer-social">
-                        <i data-lucide="twitter" class="w-5 h-5"></i>
-                    </a>
-                </div>
+              <a
+                href="https://www.x.com/rabus"
+                target="_blank"
+                class="footer-social"
+              >
+                <i data-lucide="twitter" class="w-5 h-5"></i>
+              </a>
             </div>
-            
+          </div>
         </div>
-        </footer>
+      </footer>
     </div>
 
     <!-- AOS Animation Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
+
     <!-- Custom JavaScript -->
     <script src="assets/js/script.js"></script>
     <script src="assets/js/careers.js"></script>
-    
+
     <!-- Initialize Lucide Icons -->
     <script>
-        lucide.createIcons();
+      lucide.createIcons();
     </script>
-</body>
-</html> 
+  </body>
+</html>
